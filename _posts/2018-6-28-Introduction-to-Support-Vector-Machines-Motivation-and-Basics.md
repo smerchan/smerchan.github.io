@@ -11,4 +11,4 @@ In this post, you will learn about the basics of Support Vector Machines (SVM), 
 
 First, let us try to understand how SVM works in the context of a binary classification problem. In a binary classification problem, our data belong to two classes and we try to find a decision boundary that splits the data into those two classes while making minimum mistakes. Consider the diagram below which represents our (hypothetical) data on a 2-d plane. As we can see, the data is divided into two classes: Pluses and Stars.
 
-$$ \vec{w} . \vec{x} \ge c $$
+$$\begin{aligned} \dot{x} & = \sigma(y-x) \ \dot{y} & = \rho x - y - xz \ \dot{z} & = -\beta z + xy \end{aligned}$$
