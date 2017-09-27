@@ -63,26 +63,32 @@ $ d = (\vec{x}\_{+} - \vec{x}\_{-}) . \frac{\vec{w}}{\|w\|}$
 
 Since $\vec{x}\_{+}$ and $\vec{x}\_{-}$ are closest to the decision boundary and touch the dotted lines as mentioned earlier, they satisfy the following equations:
 
-$$ \vec{x}\_{+}\ .\ \vec{w} + b = 1$$
-$$ \vec{x}\_{-}\ .\ \vec{w} + b = -1$$
+$ \vec{x}\_{+}\ .\ \vec{w} + b = 1$
+
+$ \vec{x}\_{-}\ .\ \vec{w} + b = -1$
+
 Substituting $\vec{x}\_{+}\ .\ \vec{w}$ and $\vec{x}\_{-}\ .\ \vec{w}$ in the equation of d, we get:
 
-$$ d = \frac{2}{\|\vec{w}\|}$$  - (C)
+$ d = \frac{2}{\|\vec{w}\|}$  - (C)
+
 Thus, if we have to maximize $d$, we can equivalently minimize $\|\vec{w}\|$ or minimize $\frac{1}{2} {\|\vec{w}\|}^{2}$ (this transformation is done for mathematical convenience). However, this optimization must be subjected to a constraint of correctly classifying all the data points.  Hence, we'll make use of Lagrange Multiplier here to enforce the constraint from the equation (A).
 
 Now, it is time to do some mathematics. Formally, our objective is to minimize the following objective function:
-$$ L = \frac{1}{2} {\|\vec{w}\|}^{2} + \sum_{i} \lambda_{i} (y_{i} (\vec{w}\ .\ \vec{x}\_{i} + b) - 1)$$   -   (D)
+$ L = \frac{1}{2} {\|\vec{w}\|}^{2} + \sum_{i} \lambda_{i} (y_{i} (\vec{w}\ .\ \vec{x}\_{i} + b) - 1)$   -   (D)
 
 Differentiating $L$ with respect to $\vec{w}$, we would obtain the optimal $\vec{w}$ as
-$$ \vec{w} = \sum_{i} \lambda_{i} y_{i} \vec{x}\_{i}$$   -   (E)
+
+$ \vec{w} = \sum_{i} \lambda_{i} y_{i} \vec{x}\_{i}$   -   (E)
 
 The interesting thing to note here is that the decision vector $\vec{w}$ is a linear sum of the input vector (or data points) $\vec{x}\_{i}$s.
 
 Next step is to differentiate $L$ with respect to $b$. We would obtain the following equality
-$$ \sum_{i} \lambda_{i} y_{i} = 0$$   -   (F)
+
+$ \sum_{i} \lambda_{i} y_{i} = 0$   -   (F)
 
 Now, we will substitute (E) into (D) and use (F) to change the objective function into the following:
-$$ L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}\_{i}.\vec{x}\_{j}$$
+
+$ L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}\_{i}.\vec{x}\_{j}$
 
 If you look closely, you would notice that optimization function now depends on the dot product of the input vectors (that is, the data points). This is a nice property to have for the reasons we will discuss later on. Also, this optimization function is convex so we would not get stuck in the local maxima.
 
