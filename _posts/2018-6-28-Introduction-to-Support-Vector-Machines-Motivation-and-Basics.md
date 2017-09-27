@@ -46,3 +46,57 @@ $$ y_{i} (\vec{w} . \vec{x}\_{i} + b) \ge 1$$
 for each point $ \vec{x}\_{i}$ where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
 
 These two rules correspond to the dotted lines in the following diagram and the decision boundary is parallel and at equal distance from both. As we can see, the points closest to the decision boundary (on either side) get to dictate its position. Now, since the decision boundary has to be at a maximum distance from the data points, we have to maximize the distance $ d$ between the dotted lines. By the way, these dotted lines are called support vectors.
+
+<center>
+<img src="/images/svm/decision_boundary_width.PNG" width="600" height ="500"/>
+</center>
+
+Now, let us denote the closest plus to the decision boundary as $\vec{x}\_{-}$ and the closest star as $\vec{x}\_{+}$. Then, $d$ is the length of the vector $\vec{x}\_{+} - \vec{x}\_{-}$ when projected along $\vec{w}$ direction (that is perpendicular to the decision boundary).
+
+<center>
+<img src="/images/svm/distance_unit_vector.PNG" width="600" height ="500"/>
+</center>
+
+Mathematically, $d$ could be written as:
+$$ d = (\vec{x}\_{+} - \vec{x}\_{-}) . \frac{\vec{w}}{\|w\|}$$
+
+Since $\vec{x}\_{+}$ and $\vec{x}\_{-}$ are closest to the decision boundary and touch the dotted lines as mentioned earlier, they satisfy the following equations:
+
+$$\vec{x}\_{+}\ .\ \vec{w} + b = 1$$
+$$\vec{x}\_{-}\ .\ \vec{w} + b = -1$$
+Substituting $\vec{x}\_{+}\ .\ \vec{w}$ and $\vec{x}\_{-}\ .\ \vec{w}$ in the equation of d, we get:
+
+$$d = \frac{2}{\|\vec{w}\|}$$  - (C)
+Thus, if we have to maximize $d$, we can equivalently minimize $\|\vec{w}\|$ or minimize $\frac{1}{2} {\|\vec{w}\|}^{2}$ (this transformation is done for mathematical convenience). However, this optimization must be subjected to a constraint of correctly classifying all the data points.  Hence, we'll make use of Lagrange Multiplier here to enforce the constraint from the equation (A).
+
+Now, it is time to do some mathematics. Formally, our objective is to minimize the following objective function:
+$$L = \frac{1}{2} {\|\vec{w}\|}^{2} + \sum_{i} \lambda_{i} (y_{i} (\vec{w}\ .\ \vec{x}\_{i} + b) - 1)$$   -   (D)
+
+Differentiating $L$ with respect to $\vec{w}$, we would obtain the optimal $\vec{w}$ as
+$$\vec{w} = \sum_{i} \lambda_{i} y_{i} \vec{x}\_{i}$$   -   (E)
+
+The interesting thing to note here is that the decision vector $\vec{w}$ is a linear sum of the input vector (or data points) $\vec{x}\_{i}$s.
+
+Next step is to differentiate $L$ with respect to $b$. We would obtain the following equality
+$$\sum_{i} \lambda_{i} y_{i} = 0$$   -   (F)
+
+Now, we will substitute (E) into (D) and use (F) to change the objective function into the following:
+$$L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}\_{i}.\vec{x}\_{j}$$
+
+If you look closely, you would notice that optimization function now depends on the dot product of the input vectors (that is, the data points). This is a nice property to have for the reasons we will discuss later on. Also, this optimization function is convex so we would not get stuck in the local maxima.
+
+Now that we have everything, we could apply optimization routine like gradient descent to find the values of $\lambda$s. I would encourage you to implement it and observe the obtained values of$\lambda$s. Upon observing, you would notice that the value of $\lambda$ would be zero for all the points except the ones which are closest to the decision boundary on the either side. This means that the points which are far away from the decision boundary don't get a say in deciding where the decision boundary should be. All the importance (through non-zero $\lambda$s) is assigned to the points closest to the boundary, which was our understanding all along.
+
+So, now you know all about what SVM aims at and how it goes about it. But, what about the following case where the data points are not linearly separable:
+
+<center>
+<img src="/images/svm/non_separability.PNG" width="600" height ="500"/>
+</center>
+
+In this case, the SVM would get stuck in finding the optimal position of the decision boundary and we'll get a poor result at the end of our optimization. Does this mean we can't apply this technique anymore? The answer is, fortunately, no. For scenarios like these, we have two options:
+
+1 - We can allow our algorithm to make a certain number of mistakes so that other points can still be classified correctly. In this case, we'll modify our objective function to do just that. This is called the soft margin formulation of SVM.
+
+2 - We can transform our data space into a higher dimension (say from 2d to 3d, but higher dimensions are also possible) in the hope that the points would be linearly separable in that space. We'll use the "kernel trick" in this case, which would be computationally inexpensive because of the dependence of objective function on the dot product of the input vectors.
+
+But, for now, you can take a break. We'll learn about these two methods in the next post. If you have any questions or suggestions, please let me know in the comments. Thanks for reading.
