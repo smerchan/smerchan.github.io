@@ -1,6 +1,9 @@
 ---
 layout: post
-title: Introduction to Support Vector Machines - Motivation and Basics
+type: blog
+title: Introduction to Support Vector Machines
+excerpt: Motivation and Basics
+comments: true
 ---
 
 In this post, you will learn about the basics of Support Vector Machines (SVM), which is a well-regarded supervised machine learning algorithm. This technique needs to be in everyone's tool-bag especially people who aspire to be a data scientist one day. Since there's a lot to learn about, I'll introduce SVM to you across two posts so that you can have a coffee break in between :)
