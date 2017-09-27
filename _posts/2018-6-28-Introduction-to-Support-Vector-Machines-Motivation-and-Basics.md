@@ -14,13 +14,13 @@ First, let us try to understand how SVM works in the context of a binary classi
 Note: For the sake of simplicity, we'll only consider linearly separable data for now and learn about not linearly separable cases later on.
 
 <center>
-<img src="/images/svm/data_points.PNG" width="600" height ="500"/>
+<img src="/images/svm/data_points.PNG" width="500" height ="400"/>
 </center>
 
 The goal of SVM, like any classification algorithm, is to find a decision boundary which splits the data into two classes. However, there could be many possible decision boundaries to achieve this purpose like shown below. Which one should we consider?
 
 <center>
-<img src="/images/svm/decision_boundaries.PNG" width="600" height ="500"/>
+<img src="/images/svm/decision_boundaries.PNG" width="500" height ="400"/>
 </center>
 
 The yellow and the black decision boundaries do not seem to be a good choice. Why, you ask? This is simply because they might not generalize well to new data points as each of them is awfully close to one of the classes. In this sense, the blue line seems to be a good candidate as it is far away from both classes. Hence, by extending this chain of thought, we can say that an ideal decision boundary would be a line that is at a maximum distance from any data point. In this sense, if we think of the decision boundary as a road, we want that road to be as wide as possible. This is exactly what SVM aims to do.
@@ -28,7 +28,7 @@ The yellow and the black decision boundaries do not seem to be a good choice. Wh
 Phew. Now that we understand what SVM aims to do, our next step is to understand how it finds this decision boundary. So, let's start from scratch with the help of the following diagram.
 
 <center>
-<img src="/images/svm/threshold_equation.PNG" width="600" height ="500"/>
+<img src="/images/svm/threshold_equation.PNG" width="500" height ="400"/>
 </center>
 
 First, we will derive the equation of the decision boundary in terms of the data points. To that end, let us suppose we already have a decision boundary (blue line in above diagram) and two unknown points which we have to classify. We represent these points as vectors $ \vec{u}$ and $ \vec{v}$ in the 2-d space. We also introduce a vector $ \vec{w}$ which we assume is perpendicular to the decision boundary. Now, we project $ \vec{u}$ and $ \vec{v}$ in the direction of $ \vec{w}$ and check whether the projected vector is on the left or right side of the decision boundary based on some threshold $ c$.
@@ -49,13 +49,13 @@ for each point $ \vec{x}\_{i}$, where we are considering $ y_{i}$ equal to -1 fo
 These two rules correspond to the dotted lines in the following diagram and the decision boundary is parallel and at equal distance from both. As we can see, the points closest to the decision boundary (on either side) get to dictate its position. Now, since the decision boundary has to be at a maximum distance from the data points, we have to maximize the distance $ d$ between the dotted lines. By the way, these dotted lines are called support vectors.
 
 <center>
-<img src="/images/svm/decision_boundary_width.PNG" width="600" height ="500"/>
+<img src="/images/svm/decision_boundary_width.PNG" width="500" height ="400"/>
 </center>
 
 Now, let us denote the closest plus to the decision boundary as $\vec{x}\_{-}$ and the closest star as $\vec{x}\_{+}$. Then, $d$ is the length of the vector $\vec{x}\_{+} - \vec{x}\_{-}$ when projected along $\vec{w}$ direction (that is perpendicular to the decision boundary).
 
 <center>
-<img src="/images/svm/distance_unit_vector.PNG" width="600" height ="500"/>
+<img src="/images/svm/distance_unit_vector.PNG" width="500" height ="400"/>
 </center>
 
 Mathematically, $d$ could be written as:
@@ -97,7 +97,7 @@ Now that we have everything, we could apply optimization routine like gradient d
 So, now you know all about what SVM aims at and how it goes about it. But, what about the following case where the data points are not linearly separable:
 
 <center>
-<img src="/images/svm/non_separability.PNG" width="600" height ="500"/>
+<img src="/images/svm/non_separability.PNG" width="500" height ="400"/>
 </center>
 
 In this case, the SVM would get stuck in finding the optimal position of the decision boundary and we'll get a poor result at the end of our optimization. Does this mean we can't apply this technique anymore? The answer is, fortunately, no. For scenarios like these, we have two options:
