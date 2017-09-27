@@ -42,9 +42,7 @@ Now we have the equation of our decision boundary but it is not yet immediately 
 
 Mathematically, $ \vec{x}$ should belong to class Star if $ \vec{w} . \vec{x} + b \ge 1$ and $ \vec{x}$ should belong to class Plus if $ \vec{w} . \vec{x} + b \le -1$ or equivalently, we can write 
 
-$$ y_{i} (\vec{w}\ . \vec{x}_{i} + b) \ge 1$$ 
-for each point $ \vec{x}_{i}$
-
-where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
+$$ y_{i} (\vec{w} . \vec{x}_{i} + b) \ge 1$$ 
+for each point $ \vec{x}_{i}$ where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
 
 These two rules correspond to the dotted lines in the following diagram and the decision boundary is parallel and at equal distance from both. As we can see, the points closest to the decision boundary (on either side) get to dictate its position. Now, since the decision boundary has to be at a maximum distance from the data points, we have to maximize the distance $ d$ between the dotted lines. By the way, these dotted lines are called support vectors.
