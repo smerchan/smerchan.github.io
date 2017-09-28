@@ -44,7 +44,7 @@ Now we have the equation of our decision boundary but it is not yet immediately 
 Mathematically, $ \vec{x}$ should belong to class Star if $ \vec{w} . \vec{x} + b \ge 1$ and $ \vec{x}$ should belong to class Plus if $ \vec{w} . \vec{x} + b \le -1$ or equivalently, we can write 
 
 <center>
-$ y_{i} (\vec{w} . \vec{x}\_{i} + b) \ge 1$ 
+$ y_{i} (\vec{w} . \vec{x}_{i} + b) \ge 1$ 
 </center>
 for each point $ \vec{x}\_{i}$, where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
 
@@ -61,7 +61,7 @@ Now, let us denote the closest plus to the decision boundary as $\vec{x}\_{-}$ a
 </center>
 
 Mathematically, $d$ could be written as:  
-<center> $ d = (\vec{x}\_{+} - \vec{x}\_{-}) . \frac{\vec{w}}{\|w\|}$ </center>
+<center> $ d = (\vec{x}_{+} - \vec{x}_{-}) . \frac{\vec{w}}{\|w\|}$ </center>
 
 Since $\vec{x}\_{+}$ and $\vec{x}\_{-}$ are closest to the decision boundary and touch the dotted lines as mentioned earlier, they satisfy the following equations:
 
