@@ -36,7 +36,7 @@ First, we will derive the equation of the decision boundary in terms of the data
 Mathematically, we say that a data point $ \vec{x}$ is on the right side of decision boundary (that is, in the Star class) if $ \vec{w} . \vec{x} \ge c$ else it is in the plus class. This means that the equation of the hyperplane (line in case of 2-d) that separates two classes, in terms of an arbitrary data point $ \vec{x}$, is following:
 
 <center>
-$ \vec{w} . \vec{x} + b = 0$ where $ b = -c$
+$ \vec{w} . \vec{x} + b = 0$, where $ b = -c$\ \ \ -\ \ \ (A)
 </center>
 
 Now we have the equation of our decision boundary but it is not yet immediately clear how it would help us in the maximizing its distance from the data points of both the classes. To that end, we would employ a trick which goes as follows. Usually, in a binary classification problem, the labels of data samples are + 1 or -1. Thus, it would be more convenient for us if our decision rule (i.e. $ \vec{w} . \vec{x} + b$) outputs quantity greater than or equal to +1 for all the data points belonging to star class and quantity less than or equal to -1 for all the data points belonging to plus class.
@@ -44,7 +44,7 @@ Now we have the equation of our decision boundary but it is not yet immediately 
 Mathematically, $ \vec{x}$ should belong to class Star if $ \vec{w} . \vec{x} + b \ge 1$ and $ \vec{x}$ should belong to class Plus if $ \vec{w} . \vec{x} + b \le -1$ or equivalently, we can write 
 
 <center>
-$ y_{i} (\vec{w} . \vec{x}_{i} + b) \ge 1$ 
+$ y_{i} (\vec{w} . \vec{x}_{i} + b) \ge 1$\ \ \ -\ \ \ (B)
 </center>
 for each point $ \vec{x}\_{i}$, where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
 
@@ -65,32 +65,32 @@ Mathematically, $d$ could be written as:
 
 Since $\vec{x}\_{+}$ and $\vec{x}\_{-}$ are closest to the decision boundary and touch the dotted lines as mentioned earlier, they satisfy the following equations:
 
-<center> $ \vec{x}\_{+}\ .\ \vec{w} + b = 1$ </center>  
-<center> $ \vec{x}\_{-}\ .\ \vec{w} + b = -1$ </center>
+<center> $ \vec{x}_{+}\ .\ \vec{w} + b = 1$ </center>  
+<center> $ \vec{x}_{-}\ .\ \vec{w} + b = -1$ </center>
 
 Substituting $\vec{x}\_{+}\ .\ \vec{w}$ and $\vec{x}\_{-}\ .\ \vec{w}$ in the equation of d, we get:
 
-<center> $ d = \frac{2}{\|\vec{w}\|}$  - (C) </center>
+<center> $ d = \frac{2}{\|\vec{w}\|}$\ \ \ -\ \ \ (C) </center>
 
 Thus, if we have to maximize $d$, we can equivalently minimize $\|\vec{w}\|$ or minimize $\frac{1}{2} {\|\vec{w}\|}^{2}$ (this transformation is done for mathematical convenience). However, this optimization must be subjected to a constraint of correctly classifying all the data points.  Hence, we'll make use of Lagrange Multiplier here to enforce the constraint from the equation (A).
 
 Now, it is time to do some mathematics. Formally, our objective is to minimize the following objective function:
 
-<center>$ L = \frac{1}{2} {\|\vec{w}\|}^{2} + \sum_{i} \lambda_{i} (y_{i} (\vec{w}\ .\ \vec{x}\_{i} + b) - 1)$   -   (D)</center>
+<center>$ L = \frac{1}{2} {\|\vec{w}\|}^{2} + \sum_{i} \lambda_{i} (y_{i} (\vec{w}\ .\ \vec{x}_{i} + b) - 1)$\ \ \ -\ \ \ (D)</center>
 
 Differentiating $L$ with respect to $\vec{w}$, we would obtain the optimal $\vec{w}$ as
 
-<center>$ \vec{w} = \sum_{i} \lambda_{i} y_{i} \vec{x}\_{i}$   -   (E)</center>
+<center>$ \vec{w} = \sum_{i} \lambda_{i} y_{i} \vec{x}_{i}$\ \ \ -\ \ \ (E)</center>
 
 The interesting thing to note here is that the decision vector $\vec{w}$ is a linear sum of the input vector (or data points) $\vec{x}\_{i}$s.
 
 Next step is to differentiate $L$ with respect to $b$. We would obtain the following equality
 
-<center>$ \sum_{i} \lambda_{i} y_{i} = 0$   -   (F)</center>
+<center>$ \sum_{i} \lambda_{i} y_{i} = 0$\ \ \ -\ \ \ (F)</center>
 
 Now, we will substitute (E) into (D) and use (F) to change the objective function into the following:
 
-<center>$ L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}\_{i}.\vec{x}\_{j}$</center>
+<center>$ L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}_{i}.\vec{x}_{j}$</center>
 
 If you look closely, you would notice that optimization function now depends on the dot product of the input vectors (that is, the data points). This is a nice property to have for the reasons we will discuss later on. Also, this optimization function is convex so we would not get stuck in the local maxima.
 
