@@ -35,15 +35,17 @@ First, we will derive the equation of the decision boundary in terms of the data
 
 Mathematically, we say that a data point $ \vec{x}$ is on the right side of decision boundary (that is, in the Star class) if $ \vec{w} . \vec{x} \ge c$ else it is in the plus class. This means that the equation of the hyperplane (line in case of 2-d) that separates two classes, in terms of an arbitrary data point $ \vec{x}$, is following:
 
-$ \vec{w} . \vec{x} + b = 0$ 
-where $ b = -c$
+<center>
+$ \vec{w} . \vec{x} + b = 0$ where $ b = -c$
+<center>
 
 Now we have the equation of our decision boundary but it is not yet immediately clear how it would help us in the maximizing its distance from the data points of both the classes. To that end, we would employ a trick which goes as follows. Usually, in a binary classification problem, the labels of data samples are + 1 or -1. Thus, it would be more convenient for us if our decision rule (i.e. $ \vec{w} . \vec{x} + b$) outputs quantity greater than or equal to +1 for all the data points belonging to star class and quantity less than or equal to -1 for all the data points belonging to plus class.
 
 Mathematically, $ \vec{x}$ should belong to class Star if $ \vec{w} . \vec{x} + b \ge 1$ and $ \vec{x}$ should belong to class Plus if $ \vec{w} . \vec{x} + b \le -1$ or equivalently, we can write 
 
+<center>
 $ y_{i} (\vec{w} . \vec{x}\_{i} + b) \ge 1$ 
-
+<center>
 for each point $ \vec{x}\_{i}$, where we are considering $ y_{i}$ equal to -1 for plus class and equal to +1 for star class.
 
 These two rules correspond to the dotted lines in the following diagram and the decision boundary is parallel and at equal distance from both. As we can see, the points closest to the decision boundary (on either side) get to dictate its position. Now, since the decision boundary has to be at a maximum distance from the data points, we have to maximize the distance $ d$ between the dotted lines. By the way, these dotted lines are called support vectors.
@@ -58,14 +60,13 @@ Now, let us denote the closest plus to the decision boundary as $\vec{x}\_{-}$ a
 <img src="/images/svm/distance_unit_vector.PNG" width="500" height ="400"/>
 </center>
 
-Mathematically, $d$ could be written as:
-$ d = (\vec{x}\_{+} - \vec{x}\_{-}) . \frac{\vec{w}}{\|w\|}$
+Mathematically, $d$ could be written as:  
+<center> $ d = (\vec{x}\_{+} - \vec{x}\_{-}) . \frac{\vec{w}}{\|w\|}$ <center>
 
 Since $\vec{x}\_{+}$ and $\vec{x}\_{-}$ are closest to the decision boundary and touch the dotted lines as mentioned earlier, they satisfy the following equations:
 
-$ \vec{x}\_{+}\ .\ \vec{w} + b = 1$
-
-$ \vec{x}\_{-}\ .\ \vec{w} + b = -1$
+<center> $ \vec{x}\_{+}\ .\ \vec{w} + b = 1$ <center>  
+<center> $ \vec{x}\_{-}\ .\ \vec{w} + b = -1$ <center>
 
 Substituting $\vec{x}\_{+}\ .\ \vec{w}$ and $\vec{x}\_{-}\ .\ \vec{w}$ in the equation of d, we get:
 
