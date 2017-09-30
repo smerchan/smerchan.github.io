@@ -14,4 +14,4 @@ My work experience has helped me in understanding the intricacies involved in de
 
 ### Contact me
 
-[email@domain.com](mailto:r1misra@ucsd.edu)
+[r1misra@ucsd.edu](mailto:r1misra@ucsd.edu)
