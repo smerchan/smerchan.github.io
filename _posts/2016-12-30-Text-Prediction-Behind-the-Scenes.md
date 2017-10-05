@@ -54,7 +54,7 @@ We can represent $L$ words bigram model in terms of BN as follows:
 <img src="/images/text-prediction/bigram-model.png" width="700" height ="125"/>
 </center>
 
-<left>CPTs of this model are: $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$</left> where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
+CPTs of this model are: <left> $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$ </left> where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
 
 ## Parameter Tuning
 
@@ -87,7 +87,7 @@ Let $x$ represent all the values $w_l$ can take, $\pi$ represent all the value
 <center>
 ${\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l)={\pi}) \right]$
 </center>
-or 
+<center>or</center> 
 <center>
 ${\cal L} = \sum_{\pi} {\cal L_{\pi}}$ where ${\cal L_{\pi}} = \sum_{x} C_{x\pi} log \left[ P(w_l = x | pa(w_l) = {\pi}) \right]$
 </center>
