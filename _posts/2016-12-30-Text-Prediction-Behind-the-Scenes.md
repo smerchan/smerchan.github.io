@@ -76,17 +76,17 @@ $P(w_1, w_2, ...., w_L) = \prod_{l=1}^{L} P(w_l | pa(w_l))$
 where $pa(w_l)$ are the parents of $w_l$ in BN.
 
 <center>
-$\implies {\cal L} = log \left[ \prod_{l=1}^{L} P(w_l | pa(w_l)) \right]$
+$\implies {\cal L} = log \left\[ \prod_{l=1}^{L} P(w_l | pa(w_l)) \right\]$
 </center>
 
 <center>
-$\implies {\cal L} = \sum_{l=1}^{L} log \left[ P(w_l | pa(w_l)) \right]$
+$\implies {\cal L} = \sum_{l=1}^{L} log \left\[ P(w_l | pa(w_l)) \right\]$
 </center>
 
 Let $x$ represent all the values $w_l$ can take, $\pi$ represent all the values $pa(w_l)$ can take and $C_{x\pi}$ represent number of times $w_l$ assumes value $x$ and $pa(w_l)$ assume value $\pi$ together. Then, the likelihood can be written as
 
 <center>
-$\implies {\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l)={\pi}) \right]$
+$\implies {\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left\[ P(w_l= x\,|\,pa(w_l)={\pi}) \right\]$
 </center>
 
 <center>
