@@ -54,9 +54,8 @@ We can represent $L$ words bigram model in terms of BN as follows:
 <img src="/images/text-prediction/bigram-model.png" width="700" height ="125"/>
 </center>
 
-CPTs of this model are:
-<center> $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'}) \forall l \in {2, 3, ....., L}$ where $w$ and $w^{'}$ could assume any value from vocabulary V </center>
-These CPTs are the parameters we have to tune in the next step.
+<center>CPTs of this model are: $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$</center> 
+where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
 
 ## Parameter Tuning
 
