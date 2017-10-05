@@ -26,9 +26,8 @@ This step is also called the Representation step where we represent our knowledg
 
 One of the popular class of models for the applications of text prediction is called Markov models of language. The idea of [Markov models of language](http://www.cs.princeton.edu/courses/archive/spr05/cos126/assignments/markov.html) is that the likelihood of occurrence of a word depends on the words preceding it. This is quite understandable as any text has a certain well-defined structure. This structure governs the upcoming words in the text. Mathematically, we can represent this in terms of [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability) as 
 <center>
-$P(w_l | w_1, w_2, ...., w_{l-1})$
+$P(w_l | w_1, w_2, ...., w_{l-1})$, $w_l$ being the $l^{th}$ word in the text.
 </center>
-$w_l$ being the $l^{th}$ word in the text.
 
 One thing to note at this point is that this is a very complex model, as we are considering all the preceding words to define the likelihood of the current word. However, in reality, the occurrence of a word is only impacted by few words preceding it i.e each word is defined by a finite context. Mathematically, this could be represented as:
 
