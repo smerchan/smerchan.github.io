@@ -89,11 +89,15 @@ Let $x$ represent all the values $w_l$ can take, $\pi$ represent all the value
 $\implies {\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l)={\pi}) \right]$
 </center>
 
+
 <center>
 $\implies {\cal L} = \sum_{\pi} {\cal L_{\pi}}$ where ${\cal L_{\pi}} = \sum_{x} C_{x\pi} log \left[ P(w_l = x | pa(w_l) = {\pi}) \right]$
 </center>
 
-<left> Writing log-likelihood in this form would allow CPTs to be optimized independently for each parent configuration $\pi$. Since, $P(w_l=x | pa(w_i)={\pi})$ is a probability distribution for a given $\pi$, it must sum to 1. To take this constraint into consideration while maximizing the log-likelihood, we will make use of a [Lagrange multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier). Hence, the function to optimize becomes </left>
+
+<left> Writing log-likelihood in this form would allow CPTs to be optimized independently for each parent configuration $\pi$. Since, $P(w_l=x | pa(w_i)={\pi})$ is a probability distribution for a given $\pi$, it must sum to 1.</left>
+
+To take this constraint into consideration while maximizing the log-likelihood, we will make use of a [Lagrange multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier). Hence, the function to optimize becomes
 
 <center>${\cal L_{\pi}} + \lambda (\sum_{x} P(w_i = x | pa(w_i) = {\pi}) -1)$ </center>
 
