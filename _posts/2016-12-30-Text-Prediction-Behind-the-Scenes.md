@@ -54,7 +54,7 @@ We can represent $L$ words bigram model in terms of BN as follows:
 <img src="/images/text-prediction/bigram-model.png" width="700" height ="125"/>
 </center>
 
-CPTs of this model are: <left> $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$ </left> where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
+CPTs of this model are: <left> $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'}) \forall l \in {2, 3, ....., L}$ </left> where <left> $w$ and $w^{'}$ </left> could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
 
 ## Parameter Tuning
 
@@ -69,10 +69,8 @@ ${\cal L} = log(P(w_1, w_2, ...., w_L))$
 The relation between the likelihood of the model and the CPTs can easily be found using the [product rule](https://en.wikipedia.org/wiki/Chain_rule_(probability)) as follows:
 
 <center>
-$P(w_1, w_2, ...., w_L) = \prod_{l=1}^{L} P(w_l | pa(w_l))$
+$P(w_1, w_2, ...., w_L) = \prod_{l=1}^{L} P(w_l | pa(w_l))$ where $pa(w_l)$ are the parents of $w_l$ in BN.
 </center>
-
-where $pa(w_l)$ are the parents of $w_l$ in BN.
 
 <center>
 $\implies {\cal L} = log \left[ \prod_{l=1}^{L} P(w_l | pa(w_l)) \right]$
