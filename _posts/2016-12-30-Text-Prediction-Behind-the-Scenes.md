@@ -69,9 +69,9 @@ ${\cal L} = log(P(w_1, w_2, ...., w_L))$
 The relation between the likelihood of the model and the CPTs can easily be found using the [product rule](https://en.wikipedia.org/wiki/Chain_rule_(probability)) as follows:
 
 <center>
-$P(w_1, w_2, ...., w_L) = \prod_{l=1}^{L} P(w_l | pa(w_l))$ where $pa(w_l)$ are the parents of $w_l$ in BN.
+$P(w_1, w_2, ...., w_L) = \prod_{l=1}^{L} P(w_l | pa(w_l))$
 </center>
-
+where $pa(w_l)$ are the parents of $w_l$ in BN.
 <center>
 $\implies {\cal L} = log \left[ \prod_{l=1}^{L} P(w_l | pa(w_l)) \right]$
 </center>
