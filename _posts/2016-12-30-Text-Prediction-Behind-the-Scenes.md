@@ -162,8 +162,6 @@ $P_{ML}(w_i = x |\, w_{i-1}= {\pi}) = \frac{C_{x\pi}}{C_{\pi}}$
 
 to calculate the likelihood. Once we do that, we just have to select top-3 words with highest likelihoods. If we run our [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) of bigram model, top-5 tokens following "THE" on the basis of likelihood are:
 
-<center>
-  
 | Token | Likelihood |
 | :---: | :---: |
 | \<UNK\> | 0.615 |
@@ -171,8 +169,6 @@ to calculate the likelihood. Once we do that, we just have to select top-3 words
 | FIRST | 0.012 |
 | COMPANY | 0.012 |
 | NEW | 0.009 |
-
-</center>
 
 Having \<UNK\> as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after "THE" are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are "U.", "FIRST", and "COMPANY". This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
 
