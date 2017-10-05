@@ -54,8 +54,7 @@ We can represent $L$ words bigram model in terms of BN as follows:
 <img src="/images/text-prediction/bigram-model.png" width="700" height ="125"/>
 </center>
 
-<center>CPTs of this model are: $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$</center> 
-where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
+<left>CPTs of this model are: $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'})&nbsp;&nbsp;&nbsp;\forall l \in {2, 3, ....., L}$</left> where $w$ and $w^{'}$ could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
 
 ## Parameter Tuning
 
@@ -86,11 +85,11 @@ $\implies {\cal L} = \sum_{l=1}^{L} log \left[ P(w_l | pa(w_l)) \right]$
 Let $x$ represent all the values $w_l$ can take, $\pi$ represent all the values $pa(w_l)$ can take and $C_{x\pi}$ represent number of times $w_l$ assumes value $x$ and $pa(w_l)$ assume value $\pi$ together. Then, the likelihood can be written as
 
 <center>
-$\implies {\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l)={\pi}) \right]$
+${\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l)={\pi}) \right]$
 </center>
-
+or 
 <center>
-or ${\cal L} = \sum_{\pi} {\cal L_{\pi}}$ where ${\cal L_{\pi}} = \sum_{x} C_{x\pi} log \left[ P(w_l = x | pa(w_l) = {\pi}) \right]$
+${\cal L} = \sum_{\pi} {\cal L_{\pi}}$ where ${\cal L_{\pi}} = \sum_{x} C_{x\pi} log \left[ P(w_l = x | pa(w_l) = {\pi}) \right]$
 </center>
 
 Writing log-likelihood in this form would allow CPTs to be optimized independently for each parent configuration $\pi$. <left> Since, $P(w_l=x | pa(w_i)={\pi})$ is a probability distribution for a given $\pi$, it must sum to 1.</left> To take this constraint into consideration while maximizing the log-likelihood, we will make use of a [Lagrange multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier). Hence, the function to optimize becomes
@@ -164,12 +163,12 @@ $P_{ML}(w_i = x |\, w_{i-1}= {\pi}) = \frac{C_{x\pi}}{C_{\pi}}$
 to calculate the likelihood. Once we do that, we just have to select top-3 words with highest likelihoods. If we run our [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) of bigram model, top-5 tokens following "THE" on the basis of likelihood are:
 
 | Token | Likelihood |
-| --- | --- |
-| \<UNK\> | 0.615019810006 |
-| U. | 0.0133724994326 |
-| FIRST | 0.011720260675 |
-| COMPANY | 0.0116587880556 |
-| NEW | 0.00945148007652 |
+| :---: | :---: |
+| \<UNK\> | 0.615 |
+| U. | 0.013 |
+| FIRST | 0.012 |
+| COMPANY | 0.012 |
+| NEW | 0.009 |
 
 Having \<UNK\> as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after "THE" are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are "U.", "FIRST", and "COMPANY". This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
 
