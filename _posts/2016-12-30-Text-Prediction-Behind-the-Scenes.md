@@ -24,7 +24,11 @@ Let's see what each of these steps entail in detail.
 
 This step is also called the Representation step where we represent our knowledge of the problem using a mathematical model. Our goal for this step is to choose a model that accurately captures the relationships between words as they occur in a sentence/paragraph/article. Capturing this relationship would allow us to understand how the occurrences of certain words impact the occurrence of words to follow.
 
-One of the popular class of models for the applications of text prediction is called Markov models of language. The idea of [Markov models of language](http://www.cs.princeton.edu/courses/archive/spr05/cos126/assignments/markov.html) is that the likelihood of occurrence of a word depends on the words preceding it. This is quite understandable as any text has a certain well-defined structure. This structure governs the upcoming words in the text. Mathematically, we can represent this in terms of [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability) as $P(w_l | w_1, w_2, ...., w_{l-1})$, $w_l$ being the $l^{th}$ word in the text.
+One of the popular class of models for the applications of text prediction is called Markov models of language. The idea of [Markov models of language](http://www.cs.princeton.edu/courses/archive/spr05/cos126/assignments/markov.html) is that the likelihood of occurrence of a word depends on the words preceding it. This is quite understandable as any text has a certain well-defined structure. This structure governs the upcoming words in the text. Mathematically, we can represent this in terms of [conditional probability](https://en.wikipedia.org/wiki/Conditional_probability) as 
+<center>
+$P(w_l | w_1, w_2, ...., w_{l-1})$
+</center>
+$w_l$ being the $l^{th}$ word in the text.
 
 One thing to note at this point is that this is a very complex model, as we are considering all the preceding words to define the likelihood of the current word. However, in reality, the occurrence of a word is only impacted by few words preceding it i.e each word is defined by a finite context. Mathematically, this could be represented as:
 
