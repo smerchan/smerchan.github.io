@@ -93,7 +93,14 @@ $\implies {\cal L} = \sum_{x} \sum_{\pi} C_{x\pi} log \left[ P(w_l= x\,|\,pa(w_l
 $\implies {\cal L} = \sum_{\pi} {\cal L_{\pi}}$ where ${\cal L_{\pi}} = \sum_{x} C_{x\pi} log \left[ P(w_l = x | pa(w_l) = {\pi}) \right]$
 </center>
 
-Writing log-likelihood in this form would allow CPTs to be optimized independently for each parent configuration $\pi$. Since, $P(w_l=x | pa(w_i)={\pi})$ is a probability distribution for a given $\pi$, it must sum to 1. To take this constraint into consideration while maximizing the log-likelihood, we will make use of a [Lagrange multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier). Hence, the function to optimize becomes ${\cal L_{\pi}} + \lambda (\sum_{x} P(w_i = x | pa(w_i) = {\pi}) -1)$ where $\lambda$ is the Lagrange multiplier. We can find optimum for each word (and for each parent configuration $\pi$) by setting the first partial derivative with respect to each word to zero.
+Writing log-likelihood in this form would allow CPTs to be optimized independently for each parent configuration $\pi$. 
+
+<left> Since, $P(w_l=x | pa(w_i)={\pi})$ is a probability distribution for a given $\pi$, it must sum to 1. </left>
+
+To take this constraint into consideration while maximizing the log-likelihood, we will make use of a [Lagrange multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier). Hence, the function to optimize becomes
+
+<center>${\cal L_{\pi}} + \lambda (\sum_{x} P(w_i = x | pa(w_i) = {\pi}) -1)$ </center>
+where $\lambda$ is the Lagrange multiplier. We can find optimum for each word (and for each parent configuration $\pi$) by setting the first partial derivative with respect to each word to zero.
 
 <center>
 $\implies \frac{\partial}{\partial x} {\cal L_{\pi}} + \lambda (\sum_{x} P(w_i = x | pa(w_i) = {\pi}) -1)) = 0$
@@ -104,9 +111,9 @@ Solving the above equation for our bigram model, we would get the following resu
 <center>
 $P_{ML}(w_i = x |\, w_{i-1}= {\pi}) = \frac{C_{x\pi}}{C_{\pi}} \qquad \forall i \in {2, ..., L}$
 </center>
-and 
+
 <center>
-$P_{ML}(w_1 = x) = \frac{C_{x}}{L}$
+and $P_{ML}(w_1 = x) = \frac{C_{x}}{L}$
 </center>
 
 These values of CPTs maximize the likelihood of training data and hence are called the Maximum Likelihood (ML) estimates.
