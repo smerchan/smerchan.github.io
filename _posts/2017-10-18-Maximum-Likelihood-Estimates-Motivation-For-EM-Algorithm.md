@@ -11,7 +11,7 @@ Once we have obtained a dataset and designed a model, our next task is to find a
 Now, let's understand Maximum Likelihood approach in the context of Logistic Regression. Suppose, we have a dataset where we denote predictor variables with $X \in R^d$ and the target variable with $Y \in \{0,1\}$. The model could be depicted graphically as following:
 
 <center>
-<img src="/images/mle/logistic_model.PNG" width="500" height ="400"/>
+<img src="/images/mle/logistic_model.JPG" width="800" height ="400"/>
 </center>
 
 As we know, prediction probability of target variable in logistic regression is given by a sigmoid function like following:
