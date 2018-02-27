@@ -26,14 +26,21 @@ To that end, we will use the Maximum Likelihood approach where we'll try to find
 $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
 </center>
 
+
 <center>
 $L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
 where we've written $P(Y = y_i | X = x_i)$ in a general form.
 
 <center>
-$L(w) = \sum_{i=1}^N \left[ y_i. log\sigma(w.x_i) + (1 - y_i). log\sigma(-w.x_i) \right]$
+$L(w) = \sum_{i=1}^N \left[ y_i. log\sigma(w.x_i) + (1 - y_i). log\sigma(-w.x_i) \right]$ --- (A)
 </center>
+
+At this point, we should note that log likelihood $L(w)$ breaks down conveniently into per-instance form. Since, there's no coupling between two instances, optimization can be done easily and we'll see later why this is a good thing. Since $L(w)$ is a function of $w$, we don't have any closed form solution to equation (A). Thus, we would have to use iterative optimization methods like gradient ascent or newton's method to find $w$. An update for gradient ascent method would look like:
+<center>
+$w = w + \eta.\left( \sum_{i=1}^N [y_i - \sigma(w.x_i)].x_i \right)$ --- (B)
+</center>
+where $\eta$ is an appropriate learning rate. We repeat (B) until convergence and the final value of $w$ we opt for is called maximum likelihood estimate.
 
 
 To that end, let us discuss our first solution of Soft Margin Formulation, which would allow us to make few mistakes while keeping the margin as wide as possible.
