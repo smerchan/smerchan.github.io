@@ -6,9 +6,11 @@ comments: true
 mathjax: true
 ---
 
-Once we have obtained a dataset and designed a model, our next task is to find a way to estimate the parameters of the model based on the dataset we have, so that we can make predictions on unseen data. In this post, we will learn about how we can learn the parameters of the model using Maximum Likelihood approach which has a very simple premise: find parameters that maximize the likelihood of the observed data. Through that, I would motivate the Expectation-Maximization (EM) algorithm which is considered to be an important tool in statistical analysis.
+## Introduction
+To solve any data science problem, first we obtain a dataset, do exploration on it and then, guided by the findings, we try to come up with a model to tackle the problem. Once all of that is done, our next task is to find a way to estimate the parameters of the model based on the dataset we have, so that we can make predictions on unseen data. In this post, we will learn about how we can learn the parameters of the model using Maximum Likelihood approach which has a very simple premise: find parameters that maximize the likelihood of the observed data. Through that, I would motivate the Expectation-Maximization (EM) algorithm which is considered to be an important tool in statistical analysis.
 
-Now, let's understand Maximum Likelihood approach in the context of Logistic Regression. Suppose, we have a dataset where we denote predictor variables with $X \in R^d$ and the target variable with $Y \in \{0,1\}$. The model could be depicted graphically as following:
+## Maximum Likelihood approach in Logistic Regression
+Now, let's understand Maximum Likelihood approach in the context of Logistic Regression. Suppose, we have a dataset where we denote predictor variables with $X \in R^d$ and the target variable with $Y \in \\{0,1\\}$. The model could be depicted graphically as following:
 
 <center>
 <img src="/images/mle/logistic_model.JPG" width="600" height ="300"/>
@@ -27,10 +29,10 @@ $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
 </center>
 <br/>
 <center>
-$L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
+$ \implies L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
 where we've written $P(Y = y_i | X = x_i)$ in a general form.
-
+<br/>
 <center>
 $L(w) = \sum_{i=1}^N \left[ y_i. log\sigma(w.x_i) + (1 - y_i). log\sigma(-w.x_i) \right]$ --- (A)
 </center>
@@ -41,6 +43,11 @@ $w = w + \eta.\left( \sum_{i=1}^N [y_i - \sigma(w.x_i)].x_i \right)$ --- (B)
 </center>
 where $\eta$ is an appropriate learning rate. We repeat (B) until convergence. The final value of $w$ we opt for is called maximum likelihood estimate.
 
-While going through above steps, I skipped one detail about the model. If you notice, all the predictor variables in the model are observed. However, there can be situations, where we have latent (unobserved) predictor variables in the model. One great example for this kind of model is the [Hidden Markov model](https://en.wikipedia.org/wiki/Hidden_Markov_model). Briefly, in the hidden Markov model, the actual state is not directly visible, but the output, dependent on the state, is visible. This model has applications in speech, handwriting, gesture recognition, part-of-speech tagging, musical score following and other areas.
+### Case of latent variables in model 
+One detail I didn't point out about the Logistic Regression model was that all the predictor variables of the model are observed. However, there can be problem which require to have latent (unobserved) predictor variables in the model. One great example for this kind of model is the [Hidden Markov model](https://en.wikipedia.org/wiki/Hidden_Markov_model) where the actual state is not directly visible, but the output, dependent on the state, is visible. This model has applications in speech, handwriting, gesture recognition, part-of-speech tagging, musical score following and other areas. But, does it make any difference in estimation of parameters if we have hidden variables in our model? Let's see.
 
-Estimating model parameters in this case gets a little tricky for the reasons I'll describe following.
+## EM algorithm to the Rescue
+It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $X$ be the observed variables in the model, $Z$ be the latent variables in the model and $\theta$ be the model parameters. As per the maximum likelihood approach, our objective to maximize would be:
+<center>
+$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(V_i | \theta_i)$
+</center>
