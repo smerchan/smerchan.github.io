@@ -27,7 +27,7 @@ To that end, we will use the Maximum Likelihood approach where we'll try to find
 <center>
 $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
 </center>
-<br/>
+Here the data, $\\{x_i,y_i\\}^i$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ assuming data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). 
 <center>
 $ \implies L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
@@ -47,7 +47,12 @@ where $\eta$ is an appropriate learning rate. We repeat (B) until convergence. T
 One detail I didn't point out about the Logistic Regression model was that all the predictor variables of the model are observed. However, there can be problem which require to have latent (unobserved) predictor variables in the model. One great example for this kind of model is the [Hidden Markov model](https://en.wikipedia.org/wiki/Hidden_Markov_model) where the actual state is not directly visible, but the output, dependent on the state, is visible. This model has applications in speech, handwriting, gesture recognition, part-of-speech tagging, musical score following and other areas. But, does it make any difference in estimation of parameters if we have hidden variables in our model? Let's see.
 
 ## EM algorithm to the Rescue
-It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $X$ be the observed variables in the model, $Z$ be the latent variables in the model and $\theta$ be the model parameters. As per the maximum likelihood approach, our objective to maximize would be:
+It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $V$ be the observed variables (this includes the target variable) in the model and $Z$ be the latent variables in the model. As per the maximum likelihood approach, our objective to maximize would be:
 <center>
-$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(V_i | \theta_i)$
+$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(V_i) = \sum_{i=1}^N log P(V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(V_i, h)$
 </center>
+This can be written in form of conditional probabilities as following:
+<center>
+$L(w) = \sum_{i=1}^N log \sum_{h \in Z_i} \Pi_{j} P(X_j | \text{Pa}(X_j))$
+</center>
+where $X_j \in \\{V_i, Z_i\\}$ and $\text{Pa}(X_j)$ represents parent of $X_j$ in [belief network](http://artint.info/html/ArtInt_148.html) of the model.
