@@ -43,16 +43,25 @@ $w = w + \eta.\left( \sum_{i=1}^N [y_i - \sigma(w.x_i)].x_i \right)$ --- (B)
 </center>
 where $\eta$ is an appropriate learning rate. We repeat (B) until convergence. The final value of $w$ we opt for is called maximum likelihood estimate.
 
-### Case of latent variables in model 
+### Case of latent variables 
 One detail I didn't point out about the Logistic Regression model was that all the predictor variables of the model are observed. However, there can be problem which require to have latent (unobserved) predictor variables in the model. One great example for this kind of model is the [Hidden Markov model](https://en.wikipedia.org/wiki/Hidden_Markov_model) where the actual state is not directly visible, but the output, dependent on the state, is visible. This model has applications in speech, handwriting, gesture recognition, part-of-speech tagging, musical score following and other areas. But, does it make any difference in estimation of parameters if we have hidden variables in our model? Let's see.
 
 ## EM algorithm to the Rescue
-It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $V$ be the observed variables (this includes the target variable) in the model and $Z$ be the latent variables in the model. As per the maximum likelihood approach, our objective to maximize would be:
+It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $V$ be the observed variables (this includes the target variable) in the model, $Z$ be the latent variables in the model and $\theta$ be the set of model parameters. As per the maximum likelihood approach, our objective to maximize would be:
 <center>
 $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(V_i) = \sum_{i=1}^N log P(V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(V_i, h)$
 </center>
 This can be written in form of conditional probabilities as following:
 <center>
-$L(w) = \sum_{i=1}^N log \sum_{h \in Z_i} \Pi_{j} P(X_j | \text{Pa}(X_j))$
+$L(w) = \sum_{i=1}^N log \sum_{h \in Z_i} \Pi_{j} P(X_j | \text{Pa}(X_j))$ --- (C)
 </center>
-where $X_j \in \\{V_i, Z_i\\}$ and $\text{Pa}(X_j)$ represents parent of $X_j$ in [belief network](http://artint.info/html/ArtInt_148.html) of the model.
+where $X_j \in \\{V_i, Z_i\\}$ and $\text{Pa}(X_j)$ represents parent of $X_j$ in [belief network](http://artint.info/html/ArtInt_148.html) of the model. Comparing (A) with (C), we can see that in latter case, the parameters are coupled with each other because of summation inside the log. Because of this, the optimization using gradient descent or newton's method is not straightforward. To estimate the parameters in these situations we use EM algorithm which is compose of two iterative steps both of which try to maximize the objective.
+
+## Expectation Maximization (EM) Algorithm
+EM algorithm uses the fact that optimization of complete data log likelihood ($P(V,Z|\theta$) is much easier when we know the value of corresponding latent variables (thus, removing the summation from inside of log). However, since the only way to know the value of $Z$ is through posterior $P(Z|V,\theta)$, we instead consider the expected value of complete data log likelihood under the posterior distribution of latent variables. This step of finding the expectation is called the E-step. In the subsequent M-step, we maximize the expectation. Formally, EM algorithm can be written as:
+* Choose initial setting for the parameters $\theta^{\text{old}}$.
+* **E step** Evaluate $P(Z|X, \theta^{\text{old}})$
+* **M step** Evaluate $\theta^{\text{new}}$ given by
+<center>
+$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) ln P(X,Z|\theta)$
+</center>
