@@ -66,6 +66,7 @@ EM algorithm uses the fact that optimization of complete data log likelihood ($P
 $\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) \text{ln} P(X,Z|\theta)$
 </center>
 * Check for convergence of log likelihood or parameter values. If not converged, then $\theta^{\text{old}} = \theta^{\text{new}}$ and we return to E-step.
+
 Apart from using EM algorithms in models with latent variables, it could also be applied in situations of missing values in data set given that values are [missing at random](https://en.wikipedia.org/wiki/Missing_data#Missing_at_random).
 
 ## Concluding Remarks
