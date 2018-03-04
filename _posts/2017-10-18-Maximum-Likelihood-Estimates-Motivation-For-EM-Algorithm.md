@@ -60,8 +60,13 @@ where $X_j \in \\{V_i, Z_i\\}$ and $\text{Pa}(X_j)$ represents parent of $X_j$ i
 ## Expectation Maximization (EM) Algorithm
 EM algorithm uses the fact that optimization of complete data log likelihood ($P(V,Z|\theta$) is much easier when we know the value of corresponding latent variables (thus, removing the summation from inside of log). However, since the only way to know the value of $Z$ is through posterior $P(Z|V,\theta)$, we instead consider the expected value of complete data log likelihood under the posterior distribution of latent variables. This step of finding the expectation is called the E-step. In the subsequent M-step, we maximize the expectation. Formally, EM algorithm can be written as:
 * Choose initial setting for the parameters $\theta^{\text{old}}$.
-* **E step** Evaluate $P(Z|X, \theta^{\text{old}})$
+* **E step** Evaluate $ P(Z|X, \theta^{\text{old}})$
 * **M step** Evaluate $\theta^{\text{new}}$ given by
 <center>
-$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) ln P(X,Z|\theta)$
+$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) \text{ln} P(X,Z|\theta)$
 </center>
+* Check for convergence of log likelihood or parameter values. If not converged, then $\theta^{\text{old}} = \theta^{\text{new}}$ and we return to E-step.
+Apart from using EM algorithms in models with latent variables, it could also be applied in situations of missing values in data set given that values are [missing at random](https://en.wikipedia.org/wiki/Missing_data#Missing_at_random).
+
+## Conclusion
+This concludes the article. Hope you get a sense of when EM algorithm proves useful and how it works. However, as you could guess, usually performing EM steps are not so straightforward. In the future, I plan to write a post about the cases where evaluating the posterior (in E step) directly gets intractable and we have to resort to some approximation technique to perform the inference. Cheers!
