@@ -39,8 +39,9 @@ $\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z |
 </center>
 where the constant is simply the negative entropy of the $q$ distribution and is therefore independent of $\theta$. Thus in the M-step, the quantity that is being maximized is the expectation of the complete-data log likelihood. This is exactly what we saw in the outline of EM algorithm in the previous post.
 
-### Putting it together
+### Putting it all together
+To summarize all the steps, consider the following figure \[3\].
 <center>
 <img src="/images/em/em.JPG" width="400" height ="300"/>
 </center>
-The red curve depicts the (in-complete data) log likelihood function whose value we wish to maximize. We start with some initial parameter value $\theta^{\text{old}}$, and in the first E-step we evaluate the posterior distribution over latent variables, which gives rise to a lower bound $\mathcal{L}(q,\theta^{\text{old}})$ whose value equals the log likelihood at $\theta^{\text{old}}$, as shown by the blue curve. In the M step, the bound is maximized giving the value $\theta^{\text{new}}$, which gives a larger value of log likelihood than $\theta^{\text{old}}$. The subsequent E-step then constructs a bound that is tangential at $\theta^{\text{new}}$ as shown by the green curve.
+The red curve depicts the in-complete data log likelihood, $\text{ln} p(X | \theta)$, whose value we wish to maximize. We start with some initial parameter value $\theta^{\text{old}}$, and in the first E-step we evaluate the posterior distribution over latent variables, which gives rise to a lower bound $\mathcal{L}(q,\theta^{\text{old}})$ whose value equals the log likelihood at $\theta^{\text{old}}$, as shown by the blue curve. In the M step, the bound is maximized giving the value $\theta^{\text{new}}$, which gives a larger value of log likelihood than $\theta^{\text{old}}$. The subsequent E-step then constructs a bound that is tangential at $\theta^{\text{new}}$ as shown by the green curve.
