@@ -40,7 +40,7 @@ $\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z |
 where the constant is simply the negative entropy of the $q$ distribution and is therefore independent of $\theta$. Thus in the M-step, the quantity that is being maximized is the expectation of the complete-data log likelihood. This is exactly what we saw in the outline of EM algorithm in the previous post.
 
 ### Putting it all together
-To summarize all the steps, consider the following figure \[3\].
+I know it's a lot to digest at once. So, I'll try to summarize the discussion with the help of following figure \[3\] which would be helpful in connecting the dots.
 <center>
 <img src="/images/em/em.JPG" width="400" height ="300"/>
 </center>
