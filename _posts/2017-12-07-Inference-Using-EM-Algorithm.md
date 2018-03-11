@@ -23,7 +23,7 @@ At this point, we should carefully study the form of the above equation. The fir
 ### E-step
 Suppose that the current value of the parameter vector is $\theta^{text{old}}$. Keeping in mind the relation given by (A), in the E step, we try to maximize the lower bound $\mathcal{L}(q,\theta^{text{old}})$ with respect to $q(Z)$ while holding $\theta^{text{old}}$ fixed. The solution to this maximization problem is easily seen by noting that the value of $\text{ln} p(X | \theta^{text{old}})$ does not depend on $q(Z)$ and so the largest value of $\mathcal{L}(q,\theta^{text{old}})$ will occur when the Kullback-Leibler divergence vanishes, in other words when $q(Z)$ is equal to the posterior distribution $p(Z | X, \theta^{text{old}})$. In this case, the lower bound will equal the log likelihood, as illustrated in the following figure.
 <center>
-<img src="/images/em/e_step.JPG" width="800" height ="400" caption="E-step illustration"/>
+<img src="/images/em/e_step.JPG" width="1000" height ="400"/>
 </center>
 
 As we know, prediction probability of target variable in logistic regression is given by a sigmoid function like following:
