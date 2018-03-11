@@ -23,14 +23,14 @@ At this point, we should carefully study the form of the above equation. The fir
 ### E-step
 Suppose that the current value of the parameter vector is $\theta^{\text{old}}$. Keeping in mind the relation given by (A), in the E step, we try to maximize the lower bound $\mathcal{L}(q,\theta^{\text{old}})$ with respect to $q(Z)$ while holding $\theta^{\text{old}}$ fixed. The solution to this maximization problem is easily seen by noting that the value of $\text{ln} p(X | \theta^{\text{old}})$ does not depend on $q(Z)$ and so the largest value of $\mathcal{L}(q,\theta^{\text{old}})$ will occur when the Kullback-Leibler divergence vanishes, in other words when $q(Z)$ is equal to the posterior distribution $p(Z | X, \theta^{\text{old}})$. In this case, the lower bound will equal the log likelihood, as illustrated in the following figure \[1\].
 <center>
-<img src="/images/em/e_step.JPG" width="1000" height ="400"/>
+<img src="/images/em/e_step.JPG" width="800" height ="300"/>
 </center>
 
 ### M-step
 In the subsequent M-step, the distribution $q(Z)$ is held fixed and the lower bound $\mathcal{L}(q,\theta)$ is maximized with respect to $\theta$ to give some new value $\theta^{\text{new}}$. This will cause the lower bound $\mathcal{L}$ to increase (unless it is already at a maximum), which will necessarily cause the corresponding log likelihood function to increase. Because the distribution $q$ is determined using the old parameter values rather than the new values and is held fixed during the M step, it will not equal the new posterior distribution $p(Z|X, \theta^{\text{new}})$, and hence there will be a nonzero KL divergence. The increase in the
 log likelihood function is therefore greater than the increase in the lower bound, as shown in the following figure \[2\]. 
 <center>
-<img src="/images/em/m_step.JPG" width="1000" height ="400"/>
+<img src="/images/em/m_step.JPG" width="800" height ="400"/>
 </center>
 
 If we substitute $q(Z) = p(Z|X, \theta^{\text{old}})$ into the expression of $\mathcal{L}$, we see that, after the E step, the lower bound takes the following form:
@@ -41,9 +41,6 @@ where the constant is simply the negative entropy of the $q$ distribution and is
 
 ### Putting it together
 <center>
-<img src="/images/em/em.JPG" width="500" height ="300"/>
+<img src="/images/em/em.JPG" width="400" height ="300"/>
 </center>
 The red curve depicts the (in-complete data) log likelihood function whose value we wish to maximize. We start with some initial parameter value $\theta^{\text{old}}$, and in the first E-step we evaluate the posterior distribution over latent variables, which gives rise to a lower bound $\mathcal{L}(q,\theta^{\text{old}})$ whose value equals the log likelihood at $\theta^{\text{old}}$, as shown by the blue curve. In the M step, the bound is maximized giving the value $\theta^{\text{new}}$, which gives a larger value of log likelihood than $\theta^{\text{old}}$. The subsequent E-step then constructs a bound that is tangential at $\theta^{\text{new}}$ as shown by the green curve.
-
-## Concluding Remarks
-This concludes the article. Hope you get a sense of when EM algorithm proves useful and how it works. However, as you could guess, usually performing EM steps are not so straightforward. In the future, I plan to write a post about the cases where evaluating the posterior (in E step) directly gets intractable and we have to resort to some approximation technique to perform the inference. Cheers!
