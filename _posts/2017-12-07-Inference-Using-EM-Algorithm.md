@@ -16,12 +16,14 @@ $p(X | \theta) = \sum_{Z} p(X, Z | \theta)$
 </center>
 Now, let us consider a distribution $q(Z)$ over the latent variables. For any choice of $q(Z)$, we can decompose the likelihood in the following fashion:
 <center>
-$P(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- (A)
+$\text{ln} p(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z) | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta)}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- (A)
 </center>
-At this point, we should carefully study the form of the above equation. The first term contains joint distribution of $X$ and $Z$ whereass second term contains conditional distribution of $Z$ given $X$. The second term is a well known distance measure between two distributions and is known as [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). One of the properties of KL divergence is that it's always non-negative (i.e $\text{KL}(q||p) \ge 0$). Using this property in (A), we deduce that $\mathcal{L}(q,\theta) \le P(X | \theta)$, that is $\mathcal{L}(q,\theta)$ acts as a lower bound on the log likelihood.
+At this point, we should carefully study the form of the above equation. The first term contains joint distribution over $X$ and $Z$ whereas the second term contains conditional distribution of $Z$ given $X$. The second term is a well known distance measure between two distributions and is known as [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). One of the properties of KL divergence is that it's always non-negative (i.e $\text{KL}(q||p) \ge 0$). Using this property in (A), we deduce that $\mathcal{L}(q,\theta) \le \text{ln} p(X | \theta)$, that is $\mathcal{L}(q,\theta)$ acts as a lower bound on the log likelihood of data. These observations, very shortly, would help in demostrating that EM algorithm does indeed maximize the log likelihood.
 
+### E-step
+Suppose that the current value of the parameter vector is $\theta^{text{old}}$. Keeping in mind the relation given by (A), in the E step, we try to maximize the lower bound $\mathcal{L}(q,\theta^{text{old}})$ with respect to $q(Z)$ while holding $\theta^{text{old}}$ fixed. The solution to this maximization problem is easily seen by noting that the value of $\text{ln} p(X | \theta^{text{old}})$ does not depend on $q(Z)$ and so the largest value of $\mathcal{L}(q,\theta^{text{old}})$ will occur when the Kullback-Leibler divergence vanishes, in other words when $q(Z)$ is equal to the posterior distribution $p(Z | X, \theta^{text{old}})$. In this case, the lower bound will equal the log likelihood, as illustrated in the following figure.
 <center>
-<img src="/images/mle/logistic_model.JPG" width="600" height ="300"/>
+<img src="/images/em/e_step.JPG" width="800" height ="400" caption="E-step illustration"/>
 </center>
 
 As we know, prediction probability of target variable in logistic regression is given by a sigmoid function like following:
