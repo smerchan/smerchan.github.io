@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Maximum Likelihood Estimates - Motivation for EM algorithm
+title: Inference using EM algorithm
 comments: true
 mathjax: true
 ---
@@ -10,7 +10,15 @@ mathjax: true
 In the [previous post](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/), we learnt about scenarios where Expectation Maximization (EM) algorthm could be useful and a basic outline of the algorithm for inferring the model parameters. If you haven't already, I would encourage you to read that first so that you have the necessary context. In this post, we would dive deeper into the understanding the algorithm. First, we would try to understand how EM algorithm optimizes the log-likelihood at every step. Although, a bit mathematical, this would in-turn help us in understanding how we can use various approximation methods for inference when the E-step (calculating posterior of hidden variables given observed variables and parameters) is not tractable.
 
 ## Diving Deeper into EM
-Now, let's understand Maximum Likelihood approach in the context of Logistic Regression. Suppose, we have a dataset where we denote predictor variables with $X \in R^d$ and the target variable with $Y \in \\{0,1\\}$. The model could be depicted graphically as following:
+Let us consider $X$ to be a set of observed variables, $Z$ to be a set of hidden variables and $\theta$ to be a set of parameters. Then, our goal is to find a set of parameters, $\theta$, that maximizes the likelihood of the observed data:
+<center>
+$p(X | \theta) = \sum_{Z} p(X, Z | \theta)$
+</center>
+Now, let us consider a distribution $q(Z)$ over the latent variables. For any choice of $q(Z)$, we can decompose the likelihood in the following fashion:
+<center>
+$P(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- (A)
+</center>
+At this point, we should carefully study the form of the above equation. The first term contains joint distribution of $X$ and $Z$ whereass second term contains conditional distribution of $Z$ given $X$. The second term is a well known distance measure between two distributions and is known as [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). One of the properties of KL divergence is that it's always non-negative (i.e $\text{KL}(q||p) \ge 0$). Using this property in (A), we deduce that $\mathcal{L}(q,\theta) \le P(X | \theta)$, that is $\mathcal{L}(q,\theta)$ acts as a lower bound on the log likelihood.
 
 <center>
 <img src="/images/mle/logistic_model.JPG" width="600" height ="300"/>
