@@ -14,4 +14,4 @@ My work experience has helped me in understanding the intricacies involved in de
 
 ### Contact me
 
-I'd love to hear from you! Please drop me an email at [r1misra@ucsd.edu](mailto:r1misra@ucsd.edu)
+I'd love to hear from you! Please drop me an email at [rishabhmisra1994@gmail.com](mailto:rishabhmisra1994@gmail.com)
