@@ -22,16 +22,16 @@ $P(Y = 1 | X = x) = \sigma(w.x) = \frac{1}{1 + exp(-w.x)}$
 </center>
 Based on whether 1 or 0 has more probability of occuring based on the predictor variables, we output our prediction. But, how do we appropriate $w$ such that the error is minimized?
 
-To that end, we will use the Maximum Likelihood approach where we'll try to find the $w$ which maximizes the likelihood of the observed data. For mathematical convenience, we'll consider try to maximize the log of the likelihood. Likelihood of data, parameterized by $z$, can be written as: 
+To that end, we will use the Maximum Likelihood approach where we'll try to find the $w$ which maximizes the likelihood of the observed data. For mathematical convenience, we'll consider try to maximize the log of the likelihood. Parameterized by $z$, log likelihood can be written as: 
 
 <center>
 $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
 </center>
-Here the data, $\\{x_i,y_i\\}^i$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ assuming data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). 
+Here the data, $\\{x_i,y_i\\}^i \text{\ for\ } i \in \{1,2,.., N\}$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ with the assumption that data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). We can expand the equation as:
 <center>
 $ \implies L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
-where we've written $P(Y = y_i | X = x_i)$ in a general form.
+where we've written $P(Y = y_i | X = x_i)$ in a general form such that it is $\sigma(w.x_i)$ when $y_i = 1$ else $\sigma(-w.x_i)$. Upon further simplification, we can write the log likelihood as:
 <br/>
 <center>
 $L(w) = \sum_{i=1}^N \left[ y_i. log\sigma(w.x_i) + (1 - y_i). log\sigma(-w.x_i) \right]$ --- (A)
@@ -63,7 +63,7 @@ EM algorithm uses the fact that optimization of complete data log likelihood ($P
 * **E Step** Evaluate $P(Z \| X, \theta^{\text{old}})$
 * **M step** Evaluate $\theta^{\text{new}}$ given by
 <center>
-$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) \text{ln} P(X,Z|\theta)$
+$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) log P(X,Z|\theta)$
 </center>
 * Check for convergence of log likelihood or parameter values. If not converged, then $\theta^{\text{old}} = \theta^{\text{new}}$ and we return to E-step.
 
