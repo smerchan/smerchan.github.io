@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 ## Introduction
-In the [previous post](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/), we learnt about scenarios where Expectation Maximization (EM) algorthm could be useful and a basic outline of the algorithm for inferring the model parameters. If you haven't already, I would encourage you to read that first so that you have the necessary context. In this post, we would dive deeper into the understanding the algorithm. First, we would try to understand how EM algorithm optimizes the log-likelihood at every step. Although, a bit mathematical, this would in-turn help us in understanding how we can use various approximation methods for inference when the E-step (calculating posterior of hidden variables given observed variables and parameters) is not tractable.
+In the [previous post](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/), we learnt about scenarios where Expectation Maximization (EM) algorthm could be useful and a basic outline of the algorithm for inferring the model parameters. If you haven't already, I would encourage you to read that first so that you have the necessary context. In this post, we would dive deeper into the understanding the algorithm. First, we would try to understand how EM algorithm optimizes the log-likelihood at every step. Although, a bit mathematical, this would in-turn help us in understanding how we can use various approximation methods for inference when the E-step (calculating posterior of hidden variables given observed variables and parameters) is not tractable. \textbf{Disclaimer}: This post is a bit Mathemaical.
 
 ## Diving Deeper into EM
 Let us consider $X$ to be a set of observed variables, $Z$ to be a set of hidden variables and $\theta$ to be a set of parameters. Then, our goal is to find a set of parameters, $\theta$, that maximizes the likelihood of the observed data:
@@ -49,7 +49,7 @@ The red curve depicts the in-complete data log likelihood, $\text{ln} p(X | \the
 ## Approximation methods for inference in EM
 As we understood from the previous section, in the EM algorithm, we need to evaluate the expectation of the complete-data log likelihood with respect to the posterior distribution of the latent variables. However, for many models of practical interest, it will be infeasible to evaluate the posterior distribution or indeed to compute expectations with respect to this distribution. This could be because the dimensionality of the latent space is too high to work with directly (thus prohebi) or because the posterior distribution has a highly complex form for which expectations are not analytically tractable.
 
-In such situations, we need to resort to approximation schemes, and these fall broadly into two classes, according to whether they rely on stochastic or deterministic approximations. Stochastic techniques such as Markov chain Monte Carlo generally have the property that given infinite computational resource, they can generate exact results, and the approximation arises from the use of a finite amount of processor time. On the other hand, we also have deterministic approximation schemes which are based on analytical approximations
+In such situations, we need to resort to approximation schemes, and these fall broadly into two classes, according to whether they rely on \textbf{stochastic} or textbf{deterministic} approximations. Stochastic techniques such as Markov chain Monte Carlo generally have the property that given infinite computational resource, they can generate exact results, and the approximation arises from the use of a finite amount of processor time. On the other hand, we also have deterministic approximation schemes which are based on analytical approximations
 to the posterior distribution. As such, they can never generate exact results, and so their strengths and weaknesses are complementary to those of sampling methods. One such family of approximation techniques are called variational inference or variational Bayes. Let us try to get some high level understanding of how each type of technique works.
 
 ### Markov chain Monte Carlo
@@ -68,7 +68,7 @@ Unlike MCMC, Variational inference is based on analytical approximations to the 
 
 The approximation in Variational Inference comes from considering a restricted family of distributions $q(Z)$ and then seek the member of this family for which the KL divergence is minimized. The goal is to restrict the family sufficiently that they comprise only tractable distributions, while at the same time allowing the family to be sufficiently rich and flexible that it can provide a good approximation to the true posterior distribution.
 
-One such restriction comes from assuming that $q(Z)$ can be factorized as $q(Z) = \Pi_{i=1}^M q_i(Z_i)$ where $Z$ is partitioned into disjoint groups denoted by $Z_i$ where $i= 1, ..., M$. A thing to note is that apart from this assumption, we place no restriction on the distributions of individual factors. Without going into unnecessary mathematical details, it can be shown that the optimal solution for these factored distributions can be found as:
+One such restriction comes from assuming that $q(Z)$ can be factorized as $q(Z) = \Pi_{i=1}^M q_i(Z_i)$ where $Z$ is partitioned into disjoint groups denoted by $Z_i$ where $i= 1, ..., M$. Apart from this assumption, we place no restriction on the distributions of individual factors. Without going into Mathematical details, it can be shown that the optimal solution for these factored distributions can be found as:
 <center>
 $\text{ln} q_{j}^{*}(Z_j) \propto \textbf{E}_{i \neq j}[\text{ln} p(X,Z)]$
 </center>
@@ -77,6 +77,7 @@ where
 $\textbf{E}_{i \neq j}[\text{ln} p(X,Z)] = \sum_{Z} \text{ln} p(X, Z) \Pi_{i \neq j} q_i$
 </center>
 
-Aforementioned and other types of restrictions provide us an easy way to approximate the posterior after which using EM algorithm is straightforward.
+This form of solution conveys that the log of the optimal solution for factor $q_j$ is obtained simply by considering the log of the joint distribution over all hidden and visible variables and then taking the expectation with respect to all of the other factors $\{q_i\}$ for $i = j$. This and other types of restrictions provide us an easy way to approximate the posterior after which using EM algorithm is straightforward.
 
 ## Concluding Remarks
+This concludes the article. Hopefully, you understood how EM algorithms optimizes the log likelihood in each step (E and M) and how we can use some approximation techniques when evaluating posterior distribution of latent variables is not tractable. Let me know if you have any questions or feedback in the comments. Cheers!
