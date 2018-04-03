@@ -61,6 +61,22 @@ $\mathcal{Q}(\theta, \theta^{\text{old}}) \simeq \frac{1}{L} \sum_{l=1}^{L} \tex
 </center>
 where we have used sampling method to obtain $L$ samples, $\{Z^{(l)}\}$, to approximate the expectation over complete data log likelihood $\mathcal{Q}$. Now, next question you would have in mind is that how do we obtain these samples?
 
-To that end, we would use an MCMC algorithm called Gibbs Sampling. It works as follows: consider the distribution $p(Z \| X, \theta^{\text{old}})$ consisting of $M$ hidden variables $\{z_1, z_2, ..., z_M\}$ from which we wish to sample, and suppose that we have chosen some initial values for these variables (could be random). Then, each step of the Gibbs sampling procedure involves replacing the value of one of the variables by a value drawn from the distribution of that variable conditioned on the values of the remaining variables. That is, we replace $z_i$ by a value drawn from the distribution $p(z_i \| \{z_{\i}\}, X, \theta^{\text{old}})$, where $z_i$ denotes the $i^{th}$ component of $Z$, and $z_{\i}$ denotes $z_1, ... , z_M$ but with $z_i$ omitted. This process is repeated $L$ times to obtain the required samples. Once that is done, rest of the EM algorithm remains the same. This type of EM algorithm is known as \textbf{Gibbs EM}. 
+To that end, we would use an MCMC algorithm called Gibbs Sampling. It works as follows: consider the distribution $p(Z \| X, \theta^{\text{old}})$ consisting of $M$ hidden variables $\{z_1, z_2, ..., z_M\}$ from which we wish to sample, and suppose that we have chosen some initial values for these variables (could be random). Then, each step of the Gibbs sampling procedure involves replacing the value of one of the variables by a value drawn from the distribution of that variable conditioned on the values of the remaining variables. That is, we replace $z_i$ by a value drawn from the distribution $p(z_i \| \{z_{\\i}\}, X, \theta^{\text{old}})$, where $z_i$ denotes the $i^{th}$ component of $Z$, and $z_{\\i}$ denotes $z_1, ... , z_M$ but with $z_i$ omitted. This process is repeated $L$ times to obtain the required samples. Once that is done, rest of the EM algorithm remains the same. This type of EM algorithm is known as \textbf{Gibbs EM}. 
 
 ### Variational Inference
+Unlike MCMC, Variational inference is based on analytical approximations to the posterior distribution, for example by assuming that it factorizes in a particular way or that it has a specific parametric form such as a Gaussian. This type of assumption could also improve the scalability of these methods.
+
+The approximation in Variational Inference comes from considering a restricted family of distributions $q(Z)$ and then seek the member of this family for which the KL divergence is minimized. The goal is to restrict the family sufficiently that they comprise only tractable distributions, while at the same time allowing the family to be sufficiently rich and flexible that it can provide a good approximation to the true posterior distribution.
+
+One such restriction comes from assuming that $q(Z)$ can be factorized as $q(Z) = \Pi_{i=1}^M q_i(Z_i)$ where $Z$ is partitioned into disjoint groups denoted by $Z_i$ where $i= 1, ..., M$. A thing to note is that apart from this assumption, we place no restriction on the distributions of individual factors. Without going into unnecessary mathematical details, it can be shown that the optimal solution for these factored distributions can be found as:
+<center>
+$\text{ln} q_{j}^{*}(Z_j) \propto \textbf{E}_{i \neq j}[\text{ln} p(X,Z)]$
+</center>
+where 
+<center>
+$\textbf{E}_{i \neq j}[\text{ln} p(X,Z)] = \sum_{Z} \text{ln} p(X, Z) \Pi_{i \neq j} q_i$
+</center>
+
+Aforementioned and other types of restrictions provide us an easy way to approximate the posterior after which using EM algorithm is straightforward.
+
+## Concluding Remarks
