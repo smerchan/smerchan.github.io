@@ -16,7 +16,7 @@ $p(X | \theta) = \sum_{Z} p(X, Z | \theta)$
 </center>
 Now, let us consider a distribution $q(Z)$ over the latent variables. For any choice of $q(Z)$, we can decompose the likelihood in the following fashion:
 <center>
-$\text{ln} p(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z) | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta)}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- (A)
+$\text{ln} p(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z) | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta)}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- \textbf{(A)}
 </center>
 At this point, we should carefully study the form of the above equation. The first term contains joint distribution over $X$ and $Z$ whereas the second term contains conditional distribution of $Z$ given $X$. The second term is a well known distance measure between two distributions and is known as [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). One of the properties of KL divergence is that it's always non-negative (i.e $\text{KL}(q||p) \ge 0$). Using this property in (A), we deduce that $\mathcal{L}(q,\theta) \le \text{ln} p(X | \theta)$, that is $\mathcal{L}(q,\theta)$ acts as a lower bound on the log likelihood of data. These observations, very shortly, would help in demostrating that EM algorithm does indeed maximize the log likelihood.
 
@@ -35,7 +35,7 @@ log likelihood function is therefore greater than the increase in the lower boun
 
 If we substitute $q(Z) = p(Z|X, \theta^{\text{old}})$ into the expression of $\mathcal{L}$, we see that, after the E step, the lower bound takes the following form:
 <center>
-$\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z | \theta) - \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(Z|X, \theta^{\text{old}}) = \mathcal{Q}(\theta, \theta^{\text{old}}) + \text{const}$ 
+$\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z | \theta) - \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(Z|X, \theta^{\text{old}}) = \mathcal{Q}(\theta, \theta^{\text{old}}) + \text{const}$  --- \textbf{(B)}
 </center>
 where the constant is simply the negative entropy of the $q$ distribution and is therefore independent of $\theta$. Thus in the M-step, the quantity that is being maximized is the expectation of the complete-data log likelihood. This is exactly what we saw in the outline of EM algorithm in the previous post.
 
@@ -51,3 +51,14 @@ As we understood from the previous section, in the EM algorithm, we need to eval
 
 In such situations, we need to resort to approximation schemes, and these fall broadly into two classes, according to whether they rely on stochastic or deterministic approximations. Stochastic techniques such as Markov chain Monte Carlo generally have the property that given infinite computational resource, they can generate exact results, and the approximation arises from the use of a finite amount of processor time. On the other hand, we also have deterministic approximation schemes which are based on analytical approximations
 to the posterior distribution. As such, they can never generate exact results, and so their strengths and weaknesses are complementary to those of sampling methods. One such family of approximation techniques are called variational inference or variational Bayes. Let us try to get some high level understanding of how each type of technique works.
+
+### Markov chain Monte Carlo
+Since explaining Markov chain Monte Carlo (MCMC) algorithms in detail is out of scope for this post, I would try to give you a high level idea about it. MCMC methods comprise a class of algorithms for sampling from a probability distribution. By constructing a [Markov chain](https://en.wikipedia.org/wiki/Markov_chain) that has the desired distribution (in this case, the posterior of latent variables) as its equilibrium distribution, one can obtain a sample of the desired distribution by observing the chain after a number of steps. The more steps there are, the more closely the distribution of the sample matches the actual desired distribution.
+
+MCMC could be used to approximate the E Step of EM algorithm for models in which it can't be performed analytically. So, $\mathcal{Q}(\theta, \theta^{\text{old}})$ from equation (B) could be written as:
+<center>
+$\mathcal{Q}(\theta, \theta^{\text{old}}) \simeq \frac{1}{L} \sum_{l=1}^{L} \text{ln} p(X, Z^{(l)} | \theta)$
+</center>
+where we have used sampling method to obtain $L$ samples, $\{Z^(l)\}$, to approximate the expectation over complete data log likelihood $\mathcal{Q}$. Now, next question you would have in mind is that how do we obtain these samples?
+
+### Variational Inference
