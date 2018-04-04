@@ -16,7 +16,7 @@ $p(X | \theta) = \sum_{Z} p(X, Z | \theta)$
 </center>
 Now, let us consider a distribution $q(Z)$ over the latent variables. For any choice of $q(Z)$, we can decompose the likelihood in the following fashion:
 <center>
-$\text{ln} p(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z) | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta)}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)$ --- \textbf{(A)}
+$\text{ln} p(X | \theta) = \sum_{Z} q(Z) \text{ln} \frac{p(X, Z) | \theta}{q(Z)} - \sum_{Z} q(Z) \text{ln} \frac{p(Z | X, \theta)}{q(Z)} = \mathcal{L}(q,\theta) + \text{KL}(q||p)  \text{--- \textbf{(A)}}$
 </center>
 At this point, we should carefully study the form of the above equation. The first term contains joint distribution over $X$ and $Z$ whereas the second term contains conditional distribution of $Z$ given $X$. The second term is a well known distance measure between two distributions and is known as [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence). One of the properties of KL divergence is that it's always non-negative (i.e $\text{KL}(q||p) \ge 0$). Using this property in (A), we deduce that $\mathcal{L}(q,\theta) \le \text{ln} p(X | \theta)$, that is $\mathcal{L}(q,\theta)$ acts as a lower bound on the log likelihood of data. These observations, very shortly, would help in demostrating that EM algorithm does indeed maximize the log likelihood.
 
@@ -35,7 +35,7 @@ log likelihood function is therefore greater than the increase in the lower boun
 
 If we substitute $q(Z) = p(Z|X, \theta^{\text{old}})$ into the expression of $\mathcal{L}$, we see that, after the E step, the lower bound takes the following form:
 <center>
-$\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z | \theta) - \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(Z|X, \theta^{\text{old}}) = \mathcal{Q}(\theta, \theta^{\text{old}}) + \text{const}$  --- \textbf{(B)}
+$\mathcal{L}(q,\theta) = \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(X, Z | \theta) - \sum_{Z} p(Z|X, \theta^{\text{old}}) \text{ln} p(Z|X, \theta^{\text{old}}) = \mathcal{Q}(\theta, \theta^{\text{old}}) + \text{const}  \text{--- \textbf{(B)}}$
 </center>
 where the constant is simply the negative entropy of the $q$ distribution and is therefore independent of $\theta$. Thus in the M-step, the quantity that is being maximized is the expectation of the complete-data log likelihood. This is exactly what we saw in the outline of EM algorithm in the previous post.
 
