@@ -6,14 +6,17 @@ comments: true
 mathjax: true
 ---
 
+## Introduction
 This is the second part of the post on SVM where I'll discuss about Soft Margin Formulation and Kernel trick as ways to tackle linear inseparability problem. [First part](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) of the post discusses the motivation and basics of SVM. In the previous part, we left off with the case where the data points did not seem to be linearly separable.
 
 <center>
 <img src="/images/svm/non_separability.PNG" width="500" height ="400"/>
 </center>
 
-To that end, let us discuss our first solution of Soft Margin Formulation, which would allow us to make few mistakes while keeping the margin as wide as possible.
+## Soft Margin Formulation
+Let us discuss our first solution of Soft Margin Formulation, which would allow us to make few mistakes while keeping the margin as wide as possible.
 
+### Motivation
 To motivate this technique, please note following points:
 
 1 - Almost all the real world datasets have data that is not linearly separable. So, we would be presented with cases like these more frequently than we think.
@@ -26,6 +29,7 @@ To motivate this technique, please note following points:
 
 Here, the blue decision boundary perfectly separates all the training points. But is it really recommended to have this line as decision boundary? Would it be able to generalize well on unseen data? If we think about it, it would not, as it is too close to the points for each class. And for all we know, the plus point close to decision boundary is an outlier or a point labeled incorrectly. Thus, in this case, we would prefer black line as our decision boundary which makes a minimum number of mistakes while keeping the margin as wide as possible. So, this would be our goal from now on.
 
+### How it Works (Mathematically)
 Mathematically, our objective should be to minimize
 
 <center>
@@ -62,14 +66,19 @@ $L = \frac{1}{2} {\|\vec{w}\|}^{2} + C \sum_{i} \xi_{i} + \sum_{i} \lambda_{i} (
 
 Subsequently, we have to follow the same process we followed in the first part of the post. We first do partial differentiation with respect to the variables we want to optimize, then replace the obtained value in our objective function and optimize to find the values of $\lambda$s. In this case, our $\lambda$s would non-zero for the points which are closest to the margin as well as the points which are on the wrong side of the margin. This is because they'll play a key role in deciding the position of the decision boundary. Thus, these points would constitute our support vectors in the case of Soft Margin formulation.
 
-Now, let us move on to explore the second solution of using "Kernel trick" to tackle the problem of linear inseparability. Kernel functions are generalized functions which could be thought of as a black box which takes two vectors (of any dimension) as input and output how similar they are. Some popular kernel functions used in SVM could be found [here](https://en.wikipedia.org/wiki/Kernel_method#Popular_kernels). Moving on, if you recall the objective function from the previous part, it was:
+## Kernel Trick
+Now, let us explore the second solution of using "Kernel trick" to tackle the problem of linear inseparability. Kernel functions are generalized functions which could be thought of as a black box which takes two vectors (of any dimension) as input and output how similar they are. Some popular kernel functions used in SVM could be found [here](https://en.wikipedia.org/wiki/Kernel_method#Popular_kernels). 
+
+### Motivation
+Just as a recap, the objective function from the previous part is as follows:
 
 <center>
 $L = \sum_{i} \lambda_{i} - \frac{1}{2} \sum_{i} \sum_{j} \lambda_{i} \lambda_{j} y_i y_j \vec{x}_{i}.\vec{x}_{j}$
 </center>
 
-where we observed its dependence on dot product between input vector pairs. This dot product is nothing but the similarity measure between the two vectors. If the dot product is a small quantity, we say the vectors are very different and if it is large, we say they are quite similar. Hence, in order to generalize our objective function to higher dimensional spaces (and thus posing the problem of separating data points in multidimensional space), we can replace this dot product with the kernel function.
+Here we observed its dependence on dot product between input vector pairs. This dot product is nothing but the similarity measure between the two vectors. If the dot product is a small quantity, we say the vectors are very different and if it is large, we say they are quite similar. Hence, in order to generalize our objective function to higher dimensional spaces (and thus posing the problem of separating data points in multidimensional space), we can replace this dot product with the kernel function.
 
+### How it Works (Mathematically)
 Mathematically, a kernel function can be written as:
 
 <center>
@@ -112,4 +121,5 @@ But, how's the transformation inexpensive, you ask? Let us further simplify the 
 
 Hence, as we see, the kernel function is nothing but a simple transformation of the dot product of input vectors, making this technique computationally inexpensive. We usually choose appropriate kernel function for our application based on our domain knowledge and by cross-validating.
 
+## Concluding Remarks
 With this, we reached the end of this post. Hopefully, the details I provided here helped you in some way in understanding SVM more clearly. In case you have any questions or suggestions, please let me know in comments. Cheers!
