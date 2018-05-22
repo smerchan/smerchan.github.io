@@ -6,9 +6,11 @@ comments: true
 mathjax: true
 ---
 
+## Introduction
 In this post, you will learn about the basics of Support Vector Machines (SVM), which is a well-regarded supervised machine learning algorithm. This technique needs to be in everyone's tool-bag especially people who aspire to be a data scientist one day. Since there's a lot to learn about, I'll introduce SVM to you across two posts so that you can have a coffee break in between :)
 
-First, let us try to understand how SVM works in the context of a binary classification problem. In a binary classification problem, our data belong to two classes and we try to find a decision boundary that splits the data into those two classes while making minimum mistakes. Consider the diagram below which represents our (hypothetical) data on a 2-d plane. As we can see, the data is divided into two classes: Pluses and Stars.
+## Motivation
+First, let us try to understand the motivation behind SVM in the context of a binary classification problem. In a binary classification problem, our data belong to two classes and we try to find a decision boundary that splits the data into those two classes while making minimum mistakes. Consider the diagram below which represents our (hypothetical) data on a 2-d plane. As we can see, the data is divided into two classes: Pluses and Stars.
 
 Note: For the sake of simplicity, we'll only consider linearly separable data for now and learn about not linearly separable cases later on.
 
@@ -22,9 +24,10 @@ The goal of SVM, like any classification algorithm, is to find a decision bounda
 <img src="/images/svm/decision_boundaries.PNG" width="500" height ="400"/>
 </center>
 
-The yellow and the black decision boundaries do not seem to be a good choice. Why, you ask? This is simply because they might not generalize well to new data points as each of them is awfully close to one of the classes. In this sense, the blue line seems to be a good candidate as it is far away from both classes. Hence, by extending this chain of thought, we can say that an ideal decision boundary would be a line that is at a maximum distance from any data point. In this sense, if we think of the decision boundary as a road, we want that road to be as wide as possible. This is exactly what SVM aims to do.
+The yellow and the black decision boundaries do not seem to be a good choice. Why, you ask? This is simply because they might not generalize well to new data points as each of them is awfully close to one of the classes. In this sense, the blue line seems to be a good candidate as it is far away from both classes. Hence, by extending this chain of thought, we can say that an ideal decision boundary would be a line that is at a maximum distance from any data point. That is, if we think of the decision boundary as a road, we want that road to be as wide as possible. This is exactly what SVM aims to do.
 
-Phew. Now that we understand what SVM aims to do, our next step is to understand how it finds this decision boundary. So, let's start from scratch with the help of the following diagram.
+## How it Works (Mathematically)
+Now that we understand what SVM aims to do, our next step is to understand how it finds this decision boundary. So, let's start from scratch with the help of the following diagram.
 
 <center>
 <img src="/images/svm/threshold_equation.PNG" width="500" height ="400"/>
@@ -93,6 +96,7 @@ If you look closely, you would notice that optimization function now depends on 
 
 Now that we have everything, we could apply optimization routine like gradient descent to find the values of $\lambda$s. I would encourage you to implement it and observe the obtained values of$\lambda$s. Upon observing, you would notice that the value of $\lambda$ would be zero for all the points except the ones which are closest to the decision boundary on the either side. This means that the points which are far away from the decision boundary don't get a say in deciding where the decision boundary should be. All the importance (through non-zero $\lambda$s) is assigned to the points closest to the boundary, which was our understanding all along.
 
+## Does it work on more General Cases?
 So, now you know all about what SVM aims at and how it goes about it. But, what about the following case where the data points are not linearly separable:
 
 <center>
@@ -105,4 +109,5 @@ In this case, the SVM would get stuck in finding the optimal position of the dec
 
 2 - We can transform our data space into a higher dimension (say from 2d to 3d, but higher dimensions are also possible) in the hope that the points would be linearly separable in that space. We'll use the "kernel trick" in this case, which would be computationally inexpensive because of the dependence of objective function on the dot product of the input vectors.
 
-But, for now, you can take a break. We'll learn about these two methods in the next post. If you have any questions or suggestions, please let me know in the comments. Thanks for reading.
+## Concluding Remarks
+We'll learn about these two methods in the next post. If you have any questions or suggestions, please let me know in the comments. Thanks for reading.
