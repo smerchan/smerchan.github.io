@@ -6,6 +6,7 @@ comments: true
 mathjax: true
 ---
 
+## Introduction
 These days, one of the common features of a good keyboard application is the prediction of upcoming words. These predictions get better and better as you use the application, thus saving users' effort. Another application for text prediction is in Search Engines. Predictive search saves effort and guides visitors to results, rather than having them type searches that are slightly off and don't return a large number of results. As a consumer of these applications, I am sure you would have wondered "How exactly does this prediction works?" at least once. Well, wonder no more because, in this article, I will give you some insight into what goes behind the scenes of producing predictions. So, let's get started.
 
 Note: This article is going to use some concepts from Probability and Machine Learning theory. I'll try my best to keep it as general as possible and would provide links to background reading on essential concepts as and when I introduce them.
@@ -57,7 +58,6 @@ We can represent $L$ words bigram model in terms of BN as follows:
 CPTs of this model are: <left> $P(w_1 = w)$ and $P(w_l = w | w_{l-1} = w^{'}) \forall l \in {2, 3, ....., L}$ </left> where <left> $w$ and $w^{'}$ </left> could assume any value from vocabulary V. These CPTs are the parameters we have to tune in the next step.
 
 ## Parameter Tuning
-
 This step is also called the Learning step as we will learn the parameters (CPTs) of the model we introduced in the previous step. To facilitate this, we would collect historical data (or training data) consisting of raw text, which we assume is the natural representation of language's constructs. This can be done by [scraping](https://en.wikipedia.org/wiki/Web_scraping) multiple text-rich websites. Our goal in this step is to learn the parameters that best explain the training data. This is achieved by maximizing the likelihood of occurrence of words in the training data. Mathematically, this means we have to maximize $P(w_1, w_2, ...., w_{L})$ where $L$ is the total number of words in the training data.
 
 Now, the goal of maximizing $P(w_1, w_2, ...., w_{L})$ is the same as maximizing $log(P(w_1, w_2, ...., w_{L}))$. The latter function is called the [log-likelihood](https://onlinecourses.science.psu.edu/stat504/node/27) and will greatly simplify the calculations later on. Thus, we have to maximize:
@@ -113,7 +113,6 @@ and $P_{ML}(w_1 = x) = \frac{C_{x}}{L}$
 These values of CPTs maximize the likelihood of training data and hence are called the Maximum Likelihood (ML) estimates.
 
 ## Making Predictions
-
 Our final step is to make predictions using the parameters we learned in the previous step. Suppose, we have already written $l$ words and have to predict the $(l+1)^{th}$ word. The idea is to retrieve all the words that followed the $l^{th}$ word in the training data and select the one having maximum likelihood of occurrence. Mathematically, $(l+1)^{th}$ can be obtained as follows:
 
 <center>
@@ -127,7 +126,6 @@ $\implies w_{l+1} = argmax_{x} \left[ \frac{C_{x\pi}}{C_{\pi}}\right]$
 From this, we gather that the quality of prediction depends on the training data. If we have a huge amount of data, the counts would tend to be the true representative of the natural occurrence of words. Therefore, the quality of prediction would be good. Keyboard applications/search engines usually learn writing patterns from previous chats/queries and continue doing so as you use the application. That is why the quality of predictions improves with time.
 
 ## A Toy Problem
-
 Let's implement the proposed approach on a small dataset (obtained by scrapping several Wall Street Journal articles) to understand it better and to analyze how it behaves.
 
 First, let me provide the description of data files I prepared to perform predictions efficiently. These data files are:
@@ -170,4 +168,5 @@ to calculate the likelihood. Once we do that, we just have to select top-3 words
 
 Having \<UNK\> as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after "THE" are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are "U.", "FIRST", and "COMPANY". This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
 
+## Concluding Remarks
 This brings us to the end of the article about how to predict text using Maximum Likelihood method. Please let me know if you have any queries/feedback in comments. Wishing you a Happy New Year!
