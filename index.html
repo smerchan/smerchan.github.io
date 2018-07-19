@@ -2,6 +2,13 @@
 layout: default
 ---
 
-<div>
-  Hi !
+<div class="content">
+  {% for my_intro in site.content %}
+    <article class="post">
+      <div class="entry">
+      {{ my_intro.excerpt }}
+      </div>
+      <a href="{{ site.baseurl }}{{ my_intro.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
 </div>
