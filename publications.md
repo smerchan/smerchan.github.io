@@ -14,7 +14,7 @@ permalink: /publications/
 
 * [MUSE'15](https://www.kde.cs.uni-kassel.de/ws/muse2015)
 
-  * Avijit Saha*, **Rishabh Misra\***, Balaraman Ravindran, "**Scalable Bayesian Matrix Factorization**", InMUSE@ PKDD/ECML, 2015 Sep 7 (pp. 43-54), Porto, Portugal. (\* equal contribution)
+  * Avijit Saha*, **Rishabh Misra\***, Balaraman Ravindran, "**Scalable Bayesian Matrix Factorization**", In Proceedings of the 6th International Conference on Mining Ubiquitous and Social Environments (MUSE) @ PKDD/ECML, 2015 Sep 7 (pp. 43-54), Porto, Portugal. (\* equal contribution)
   * [Code](https://github.com/rishabhmisra/Scalable-Bayesian-Matrix-Factorization) \| [Paper](https://dl.acm.org/citation.cfm?id=3053877)
   
 
