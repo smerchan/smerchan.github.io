@@ -27,7 +27,7 @@ permalink: /publications/
 ## Datasets
 
 * [**Clothing Fit Dataset for Size Recommendation**](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home)
-  * Product size recommendation and fit prediction are critical in order to improve customers’ shopping experiences and to reduce product return rates. However, modeling customers’ fit feedback is challenging due to its subtle semantics, arising from the subjective evaluation of products and imbalanced label distribution (most of the feedbacks are "Fit"). These datasets, which are the only fit related datasets available publically at this time, collected from [ModCloth](https://www.modcloth.com/) and [RentTheRunWay](https://www.renttherunway.com/) could be used to address these challenges to improve the recommendation process.
+  * Product size recommendation and fit prediction are critical in order to improve customers’ shopping experiences and to reduce product return rates. However, modeling customers’ fit feedback is challenging due to its subtle semantics, arising from the subjective evaluation of products and imbalanced label distribution (most of the feedbacks are "Fit"). These datasets, which are the only fit related datasets available publically at this time, collected from [*ModCloth*](https://www.modcloth.com/) and [*RentTheRunWay*](https://www.renttherunway.com/) could be used to address these challenges to improve the recommendation process.
   
 
 * [**News Headlines Dataset For Sarcasm Detection**](https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection/home)
@@ -35,4 +35,4 @@ permalink: /publications/
 
 
 * [**News Category Dataset**](https://www.kaggle.com/rmisra/news-category-dataset/home)
-  * This dataset contains around 125k news headlines from the year 2013 to 2018 obtained from HuffPost. This dataset could be used to produce some interesting liguistic insights about the type of language used in different news articles or to simply identify tags for untracked news articles.
+  * This dataset contains around 125k news headlines from the year 2013 to 2018 obtained from [*HuffPost*](https://www.huffingtonpost.com/). This dataset could be used to produce some interesting liguistic insights about the type of language used in different news articles or to simply identify tags for untracked news articles.
