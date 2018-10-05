@@ -9,7 +9,7 @@ permalink: /publications/
 * [RecSys'18](https://recsys.acm.org/recsys18/)
 
   * **Rishabh Misra**, Mengting Wan, Julian McAuley, "**Decomposing Fit Semantics for Product Size Recommendation in Metric Spaces**", in Proc. of 2018 ACM Conference on Recommender Systems (RecSys'18), Vancouver, Canada, Oct. 2018.
-  * [Paper](https://cseweb.ucsd.edu/~m5wan/paper/recsys18_rmisra) \| [Code](https://github.com/rishabhmisra/Product-Catalog-Size-Recommendation-Framework) \| [Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
+  * [Paper](https://dl.acm.org/citation.cfm?id=3240398) \| [Code](https://github.com/rishabhmisra/Product-Catalog-Size-Recommendation-Framework) \| [Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
 
 
 * [MUSE'15](https://www.kde.cs.uni-kassel.de/ws/muse2015)
