@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
+permalink: /projectsDepricated/
 ---
 
 ### [Decomposing Fit Semantics for Product Size Recommendation in Metric Spaces](https://github.com/rishabhmisra/Product-Catalog-Size-Recommendation-Framework)
