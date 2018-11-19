@@ -324,8 +324,8 @@ footer {
 
 /* Projects */
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-	@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
-	body {
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
+body {
 	background: #eee;
 	padding: 40px 0px;
 }
@@ -423,6 +423,7 @@ footer {
     .left, .right {
         align-content: center;
         float: none;
+	}
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
