@@ -119,7 +119,7 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/Hotel-Recommendation-System">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/hotel_confusion.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -137,8 +137,7 @@ permalink: /projectsV2/
                         We explore Expedia's online hotel booking dataset to recommend hotels to users based on their preferences. The dataset was made available by Expedia as a Kaggle challenge. In this project, our aim is to contextualize customer data and predict the likelihood a user will stay at 100 different hotel groups. The goal is to provide not just one recommendation but to rank the predictions and return the top five most likely hotel clusters for each user’s particular search query in the test set. We use multiple models and techniques to arrive at our best solution. This includes (1) An ensemble of four different models (random forests, SGD classifier, XG Boost and Naive Bayes), (2) XG Boost that is preceded by completion of distance (between user and their potential destination) matrix - an important feature in the dataset which is currently incomplete, (3) Data leakage solution which takes advantage of the fact that there is a potential leak in the data provided to us, and (4) a mixture of the methods in (1) and (3).
                     </p>
                 </div>
-                <a class="btn" href="https://github.com/rishabhmisra/Hotel-Recommendation-System">Report</a>
-                <a class="btn" href="https://github.com/rishabhmisra/Hotel-Recommendation-System">Github</a>
+                <a class="btn" href="https://github.com/rishabhmisra/Hotel-Recommendation-System/blob/master/hotel-recommendation-system.pdf">Report</a>
             </div>
         </div>
         
@@ -146,7 +145,7 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/VARACNet">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/varacnet_usecase.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -165,7 +164,6 @@ permalink: /projectsV2/
                     </p>
                 </div>
                 <a class="btn" href="https://github.com/rishabhmisra/VARACNet/blob/master/VARACNet.pdf">Report</a>
-                <a class="btn" href="https://github.com/rishabhmisra/VARACNet">Github</a>
             </div>
         </div>
         
@@ -173,7 +171,7 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/Music-Generation-using-RNN">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/music_generation.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -188,10 +186,10 @@ permalink: /projectsV2/
                 </div>
                 <div class="card-exceprt">
                     <p>
-                        We explore Expedia's online hotel booking dataset to recommend hotels to users based on their preferences. The dataset was made available by Expedia as a Kaggle challenge. In this project, our aim is to contextualize customer data and predict the likelihood a user will stay at 100 different hotel groups. The goal is to provide not just one recommendation but to rank the predictions and return the top five most likely hotel clusters for each user’s particular search query in the test set. We use multiple models and techniques to arrive at our best solution. This includes (1) An ensemble of four different models (random forests, SGD classifier, XG Boost and Naive Bayes), (2) XG Boost that is preceded by completion of distance (between user and their potential destination) matrix - an important feature in the dataset which is currently incomplete, (3) Data leakage solution which takes advantage of the fact that there is a potential leak in the data provided to us, and (4) a mixture of the methods in (1) and (3).
+                        We train a Recurrent Neural Network (RNN) to learn the structure of music files in ABC format and then generate a music file based on what the model learns. We built a simple network with 1 hidden layer and fed the input sequence of length 25 to predict the next character in sequence. We experiment with different parameters like temperature, dropout, the number of neurons in the hidden layer and the effect of optimizers and observe their effect on model’s learning behavior. We also visualize the activations of neurons in RNN to understand the purpose of each hidden unit in the network.
                     </p>
                 </div>
-                <a class="btn" href="https://github.com/rishabhmisra/Music-Generation-using-RNN">Report</a>
+                <a class="btn" href="https://github.com/rishabhmisra/Music-Generation-using-RNN/blob/master/Music_generation_using_RNN_report.pdf">Report</a>
             </div>
         </div>
         
@@ -199,14 +197,14 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/Helpfulness-Prediction">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/helpfulness_example.png"
                     alt="Orange" />
                 </div>
             </a>
             <div class="card-body">
                 <div class="card-title">
                     <h3>
-                        Ensemble of Convolutional Neural Networks for Traffic Lights Recognition
+                        Prediction of Helpfulness of Reviews
                     </h3>
                     <time>
                         Feb 2017 - Mar 2017
@@ -214,18 +212,19 @@ permalink: /projectsV2/
                 </div>
                 <div class="card-exceprt">
                     <p>
-                        We developed an ensemble of multiple Convolutional Neural Networks (CNN) where each CNN is built with the motive of giving a superior performance while keeping the model size small. The sub-models have no more than 490k parameters but each achieves an accuracy greater than 87%. Models are tested and trained on the Nexar traffic lights challenge dataset with the aim of correctly recognizing the presence and state of traffic lights in images taken by the drivers using the Nexar app. We show that minimizing the number of parameters in each of the models allows quick training even when computational resources are not abundant. We also perform localization experiments using Faster R-CNN on a separate annotated dataset (UCSD traffic lights dataset) to demonstrate high performance for classification and detection tasks. The output is highly desirable and useful for deployment onto actual vehicles where the memory is limited and traffic light inferences have to be made in real-time. 
+                        This project was done as a part of a <a href="inclass.kaggle.com/c/cse158-258-helpfulness-prediction">Kaggle competition</a>. The dataset was Amazon product reviews dataset with 200,000 training examples and 14,000 test examples. Our aim was to predict the number of helpful votes a review would get out of all the votes given to the review. Accuracy was measured in terms of the mean absolute error (MAE). After pre-processing and cleaning of the data, I incorporated features which were the polynomial interactions (of degree 2) of some of the best attributes in the data and consequently applied linear regression. Please follow the link to the project to see my report where I’ve described my approach and model in detail. I ended up in top 12% at the end of the competition. 
                     </p>
                 </div>
-                <a class="btn" href="https://github.com/rishabhmisra/Helpfulness-Prediction">Report</a>
+                <a class="btn" href="https://github.com/rishabhmisra/Helpfulness-Prediction/blob/master/Helpfulness%20Prediction%20Report.pdf">Report</a>
                 <a class="btn" href="https://github.com/rishabhmisra/Helpfulness-Prediction">Github</a>
             </div>
         </div>
+        
         <!-- Product Rating Prediction  -->
         <div class="card">
             <a href="https://github.com/rishabhmisra/Rating-Prediction">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/helpfulness_example.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -240,7 +239,7 @@ permalink: /projectsV2/
                 </div>
                 <div class="card-exceprt">
                     <p>
-                        This project was done as a part of a Kaggle competition (inclass.kaggle.com/c/cse258-rating-prediction). The dataset was Amazon product reviews dataset with 200,000 training examples and 14,000 test examples. Our aim was to predict the rating user would give to an item. Accuracy was measured in terms of the mean squared error (MAE). I employed matrix factorization method with user and item biases to predict the missing ratings. I ended up in top 17% at the end of the competition.
+                        This project was done as a part of a <a href="inclass.kaggle.com/c/cse258-rating-prediction">Kaggle competition</a>. The dataset was Amazon product reviews dataset with 200,000 training examples and 14,000 test examples. Our aim was to predict the rating user would give to an item. Accuracy was measured in terms of the mean squared error (MAE). I employed matrix factorization method with user and item biases to predict the missing ratings. I ended up in top 17% at the end of the competition.
                     </p>
                 </div>
                 <a class="btn" href="https://github.com/rishabhmisra/Rating-Prediction">Github</a>
@@ -251,7 +250,7 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/Scalable-Bayesian-Matrix-Factorization">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/SBMF_framework.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -269,7 +268,7 @@ permalink: /projectsV2/
                         Factor based models have been used extensively in recommender systems based on collaborative filtering. Matrix Factorization is the simplest and most well studied factor based model and has been applied successfully in several domains. A fully Bayesian treatment of Matrix Factorization avoids the problem of overfitting and doesn't entail manual tuning of parameters, but the existing Bayesian Matrix Factorization method, based on the Markov-Chain-Monte-Carlo technique, has cubic time complexity with respect to the dimension of latent factors, which makes it difficult to apply it to very large datasets. In this project, we have proposed a scalable Bayesian Matrix Factorization approach, again based on the Markov-Chain-Monte-Carlo technique, but which has linear time complexity with respect to the dimension of latent factors and linear space complexity with respect to the number of training instances. Also, we show through extensive experiments on three sufficiently large real-world datasets that our method incurs only a small loss in the performance and takes much less time as compared to the baseline method for higher latent dimension.
                     </p>
                 </div>
-                <a class="btn" href="https://github.com/rishabhmisra/Scalable-Bayesian-Matrix-Factorization">Paper</a>
+                <a class="btn" href="http://ceur-ws.org/Vol-1521/paper6.pdf">Paper</a>
                 <a class="btn" href="https://github.com/rishabhmisra/Scalable-Bayesian-Matrix-Factorization">Github</a>
             </div>
         </div>
@@ -278,7 +277,7 @@ permalink: /projectsV2/
         <div class="card">
             <a href="https://github.com/rishabhmisra/Scalable-Variational-Bayesian-Factorization-Machine">
                 <div class="card-image">
-                    <img src="/images/projects/recsys18_framework.jpg"
+                    <img src="/images/projects/FM_example.png"
                     alt="Orange" />
                 </div>
             </a>
@@ -293,10 +292,10 @@ permalink: /projectsV2/
                 </div>
                 <div class="card-exceprt">
                     <p>
-                        Factorization Machine (FM) is a generic and powerful framework. Though FM has Bayesian MCMC sampling based inference, for very large data MCMC is difficult to apply due to convergence issues. We have developed variational Bayesian inference for FM which is an alternative to MCMC.
+                        Support Vector Machines (SVMs) are one of the most popular predictors in machine learning which work on the generic features extracted from the data. But SVMs fail on very sparse data as encountered in applications like recommender systems. On the other hand, factorization models like matrix factorization and tensor factorization consider interactions among all the variables and provably work well on sparse and high-dimensional data. However, designing a factorization model specific to a given problem requires expert’s knowledge. Factorization machine (FM) is a generic framework which combines the advantages of feature based representation of SVMs and the interaction of variables in factorization models. In this work, a scalable variational Bayesian inference algorithm for FM is developed which converges faster than the existing state-of-the-art Markov-Chain-Monte-Carlo based inference algorithm. Additionally, for large scale learning, a stochastic variational Bayesian algorithm for FM is also introduced which utilizes stochastic gradient descent (SGD) to optimize the lower bound in variational approximation. The variational method based on SGD outperforms existing online algorithm for FM as validated by extensive experiments performed on numerous large-scale real world datasets.
                     </p>
                 </div>
-                <a class="btn" href="https://github.com/rishabhmisra/Scalable-Variational-Bayesian-Factorization-Machine">Paper</a>
+                <a class="btn" href="https://www.researchgate.net/profile/Rishabh_Misra/publication/320408037_Scalable_Variational_Bayesian_Factorization_Machine/links/59e32a86aca2724cbfe36911/Scalable-Variational-Bayesian-Factorization-Machine.pdf">Pre-print</a>
                 <a class="btn" href="https://github.com/rishabhmisra/Scalable-Variational-Bayesian-Factorization-Machine">Github</a>
             </div>
         </div>
