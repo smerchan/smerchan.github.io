@@ -160,13 +160,13 @@ to calculate the likelihood. Once we do that, we just have to select top-3 words
 
 | Token | Likelihood |
 | :---: | :---: |
-| `\<UNK\>` | 0.615 |
+| `<UNK>` | 0.615 |
 | `U.` | 0.013 |
 | `FIRST` | 0.012 |
 | `COMPANY` | 0.012 |
 | `NEW` | 0.009 |
 
-Having `\<UNK\>` as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after `THE` are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are `U.`, `FIRST`, and `COMPANY`. This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
+Having `<UNK>` as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after `THE` are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are `U.`, `FIRST`, and `COMPANY`. This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
 
 ## Concluding Remarks
 This brings us to the end of the article about how to predict text using Maximum Likelihood method. Please let me know if you have any queries/feedback in comments. Wishing you a Happy New Year!
