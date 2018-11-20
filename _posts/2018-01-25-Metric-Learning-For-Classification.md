@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Metric Learning for Classification
+title: <center>Metric Learning for Classification</center>
 comments: true
 mathjax: true
 ---
