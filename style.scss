@@ -416,13 +416,6 @@ footer {
   box-shadow: 2px 2px 0 transparent;
 }
 
-@media screen and (max-width: 1024px) {
-    .left, .right {
-        align-content: center;
-        float: none;
-	}
-}
-
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
