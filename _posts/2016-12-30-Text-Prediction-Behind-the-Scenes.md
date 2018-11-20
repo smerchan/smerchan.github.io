@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Text Prediction - Behind the Scenes
+title: <center>Text Prediction - Behind the Scenes</center>
 comments: true
 mathjax: true
 ---
