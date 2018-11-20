@@ -144,29 +144,29 @@ index($w_1$)    index($w_2$)    count($w_1$,$w_2$)
 </center>
 One particular thing to note about our initial vocabulary is that there's an “unknown” token, which represents all the words that occur outside this basic vocabulary. This token is very useful as it is not possible to have all the possible words into our vocabulary, especially in the starting.
 
-Now, let us suppose, we just typed the word "THE" and want to give top-3 predictions for the next word. Here's an [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) in python for the same, which I'm going to explain briefly in this article. From step 3, we know that we can obtain the next word using
+Now, let us suppose, we just typed the word `THE` and want to give top-3 predictions for the next word. Here's an [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) in python for the same, which I'm going to explain briefly in this article. From step 3, we know that we can obtain the next word using
 
 <center>
 $\implies w_{l+1} = argmax_{x} \left[ \frac{C_{x\pi}}{C_{\pi}}\right]$
 </center>
 
-where $\pi$ would correspond to the token "THE" in this case. Using vocab.txt, we first obtain the index of "THE". Then, we can obtain $C_{\pi}$ from the respective index in unigram.txt. Next, all the words following "THE" can be obtained from the entries in bigram.txt where the first column has the index of "THE". The third column of each of these entries would provide $C_{x\pi}$. Now, we have all the quantities we need to calculate the likelihood of words that follow the token "THE". As mentioned in step 2, we can use
+where $\pi$ would correspond to the token `THE` in this case. Using vocab.txt, we first obtain the index of `THE`. Then, we can obtain $C_{\pi}$ from the respective index in unigram.txt. Next, all the words following `THE` can be obtained from the entries in bigram.txt where the first column has the index of `THE`. The third column of each of these entries would provide $C_{x\pi}$. Now, we have all the quantities we need to calculate the likelihood of words that follow the token `THE`. As mentioned in step 2, we can use
 
 <center>
 $P_{ML}(w_i = x |\, w_{i-1}= {\pi}) = \frac{C_{x\pi}}{C_{\pi}}$
 </center>
 
-to calculate the likelihood. Once we do that, we just have to select top-3 words with highest likelihoods. If we run our [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) of bigram model, top-5 tokens following "THE" on the basis of likelihood are:
+to calculate the likelihood. Once we do that, we just have to select top-3 words with highest likelihoods. If we run our [implementation](https://github.com/rishabhmisra/n-gram/blob/master/bigram.py) of bigram model, top-5 tokens following `THE` on the basis of likelihood are:
 
 | Token | Likelihood |
 | :---: | :---: |
-| \<UNK\> | 0.615 |
-| U. | 0.013 |
-| FIRST | 0.012 |
-| COMPANY | 0.012 |
-| NEW | 0.009 |
+| `\<UNK\>` | 0.615 |
+| `U.` | 0.013 |
+| `FIRST` | 0.012 |
+| `COMPANY` | 0.012 |
+| `NEW` | 0.009 |
 
-Having \<UNK\> as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after "THE" are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are "U.", "FIRST", and "COMPANY". This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
+Having `\<UNK\>` as the token with the highest likelihood of occurrence is expected, as most of the words which appear frequently after `THE` are not in our small vocabulary. This problem can be mitigated with time by augmenting the vocabulary with new words as and when they are encountered. But, until then, we would have to recommend other valid tokens, which in this case are `U.`, `FIRST`, and `COMPANY`. This behavior can be linked back to how the keyboard applications behave. Initially, they ask you to give them access to your previous chats to "personalize" the predictions. From there, it builds its initial dictionary. After that, as you use the application, it augments its vocabulary by recording the words you type and improves its quality of prediction.
 
 ## Concluding Remarks
 This brings us to the end of the article about how to predict text using Maximum Likelihood method. Please let me know if you have any queries/feedback in comments. Wishing you a Happy New Year!
