@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Maximum Likelihood Estimates - Motivation for EM algorithm
+title: <center>Maximum Likelihood Estimates - Motivation for EM algorithm</center>
 comments: true
 mathjax: true
 ---
