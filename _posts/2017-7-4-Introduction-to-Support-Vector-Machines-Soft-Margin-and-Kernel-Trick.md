@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Introduction to Support Vector Machines - Soft Margin Formulation and Kernel Trick
+title: <center>Introduction to Support Vector Machines - Soft Margin Formulation and Kernel Trick</center>
 comments: true
 mathjax: true
 ---
