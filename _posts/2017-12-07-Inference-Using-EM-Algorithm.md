@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Inference using EM algorithm
+title: <center>Inference using EM algorithm</center>
 comments: true
 mathjax: true
 ---
