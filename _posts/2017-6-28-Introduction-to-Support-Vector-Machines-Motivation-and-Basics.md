@@ -1,7 +1,7 @@
 ---
 layout: post
 type: blog
-title: Introduction to Support Vector Machines - Motivation and Basics
+title: <center>Introduction to Support Vector Machines - Motivation and Basics</center>
 comments: true
 mathjax: true
 ---
