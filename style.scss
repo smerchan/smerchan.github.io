@@ -363,7 +363,7 @@ footer {
 	transition-duration: .3s;
 }
 .card-body {
-	text-align: center;
+	text-align: left;
 	padding: 0em 2em 1em;
 	box-sizing: border-box;
 }
@@ -374,6 +374,11 @@ footer {
 .card-title {
 	text-align: center;
 	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.card-title-2 {
+	text-align: center;
 	font-weight: bold;
 	letter-spacing: 1px;
 }
