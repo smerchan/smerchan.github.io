@@ -50,6 +50,8 @@ We tackle the aforementioned challenges in the following ways: First, unlike pre
 We explain our approach in detail in following subsections.
 
 ### Learning Fit Semantics
+
+#### Formulation
 We quantify the fitness adopting latent factor model formulation as:
 <center>
 <img src="/images/fit/fit_score_eq.png" width="45%" height ="100"/>
@@ -63,5 +65,17 @@ Furthermore, to enable catalog size recommendation we enforce an order between f
 </center>
 
 We enforce this constraints by requiring that for each product $p$, all its latent factors are strictly larger (smaller) than the next smaller (larger) catalog product $p^{-}$ ($p^{+}$), if a smaller (larger) size exists. This works since for a given customer ($c$) and parent product ($pp$), fitness scores vary only based on $p$'s parameters.
+
+#### Optimization
+There is an inherent ordering among the output labels `small`, `fit`, and `large`, so it is preferable to model the loss function minimization problem as an ordinal regression problem. We can derive our loss function by reducing the ordinal
+regression problem to multiple binary classification problems with the help of threshold parameters.
+
+Let, $b_1$ and $b_2$ are threshold parameters with $b_2 > b_1$ that split the fit score into three segments such that a fit
+score greater than $b_2$ corresponds to `small`, a score less than $b_1$ corresponds to `large`, and scores in between $b_1$ and $b_2$ correspond to `fit`. Now, for each of three segments, we can consider greater than threshold score in the positive class and less than threshold score to be in the negative class. Upon solving these three binary classification problems, we can tell which class the purchase transaction belongs to. This concept can be manifested in form of Hinge loss as:
+<center>
+<img src="/images/fit/loss_eq.png" width="45%" height ="500"/>
+</center>
+
+We solve this optimization problem using Projected Gradient Descent method, which is nothing but the Stochastic Gradient Descent procedure with an additional step of enforcing constraints after each update. For monotonicity constraints between $p^{-}$, $p^{+}$, and $p$, this is as simple as taking the element-wise maximum and minimum.
 
 ### Handling Label Imbalance
