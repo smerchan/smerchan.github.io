@@ -56,4 +56,6 @@ We quantify the fitness adopting latent factor model formulation as:
 <img src="/images/fit/fit_score_eq.png" width="50%" height ="100"/>
 </center>
 
+where $\mathbf{u_{t_c}}$ and $\mathbf{v_{t_p}}$ are K-dimensional latent features, $\alpha$ is a global bias term, $\oplus$ denotes concatenation and $\odot$ denotes element-wise product. The bias term $b_{t_{\mathit{pp}}}$ captures the notion that certain products tend to be reported more `unfit` because of their inherent features/build, while $b_{t_c}$ captures the notion that certain customers are highly sensitive to fit while others could be more accommodating.
+
 ### Handling Label Imbalance
