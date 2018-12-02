@@ -51,8 +51,9 @@ We explain our approach in detail in following subsections.
 
 ### Learning Fit Semantics
 We quantify the fitness adopting latent factor model formulation as:
-$$
-f_w(t) = \left<\underbrace{\mathbf{w}}\_{{\text{weight vector}}},\overbrace{~\alpha \oplus b_{t_c} \oplus b_{t_{\mathit{pp}}}}^{{\text{fit bias terms}}} \oplus \underbrace{(\mathbf{u_{t_c} \odot v_{t_p}})}\_{{\text{fit compatibility}}} \right>
-$$
+
+<center>
+<img src="/images/fit/fit_score_eq.png" width="60%" height ="100"/>
+</center>
 
 ### Handling Label Imbalance
