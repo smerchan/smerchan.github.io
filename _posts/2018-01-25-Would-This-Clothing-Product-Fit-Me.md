@@ -29,7 +29,7 @@ For every customer and product, they consider a latent variable which denotes th
 
 They assign a fit score to each transaction $t$ as: $f_w(t)=w(u_{t_c} - v_{t_p})$, where $w$ is the non-negative weight parameter, and pose the machine learning objective as:
 
-"Given past customer transactions $D$, actual catalog sizes for products, and loss function $L(y_{t} , f_w(t))$ for transactions $t \in D$, compute true sizes {$u_{t_c}$} for customers and {$v_{t_p}$ } for child products such that $L = \sum_{t \in D} L(y_t , f_w(t)) is minimized."
+"Given past customer transactions $D$, actual catalog sizes for products, and loss function $L(y_{t} , f_w(t))$ for transactions $t \in D$, compute true sizes {$u_{t_c}$} for customers and {$v_{t_p}$} for child products such that $L = \sum_{t \in D} L(y_t , f_w(t))$ is minimized."
 
 Once we have the true sizes, we recommend the child product $p$ whose true size $v_p$ is closest to the customer’s true size $u_c$.
 
