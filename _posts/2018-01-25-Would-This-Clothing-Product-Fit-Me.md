@@ -44,7 +44,7 @@ Since the dataset used in Amazon's study was proprietary, for this research we c
 We tackle the aforementioned challenges in the following ways: First, unlike previous work which focuses on recovering "true" sizes, we develop a new model to factorize the semantics of customers’ fit feedback, so that representations can capture customers’ fit preferences on various product aspects (like shoulders, waist etc.). Second, using a heuristic we sample good representations from each class and project them to a metric space to address label imbalance issues. The overview of framework can be understood from the following diagram:
 
 <center>
-<img src="/images/projects/recsys18_framework.jpg" width="100%" height ="500"/>
+<img src="/images/projects/recsys18_framework.jpg" width="85%" height ="500"/>
 </center>
 
 We explain our approach in detail in following subsections.
