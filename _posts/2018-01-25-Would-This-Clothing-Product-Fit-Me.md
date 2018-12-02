@@ -76,6 +76,6 @@ score greater than $b_2$ corresponds to `small`, a score less than $b_1$ corresp
 <img src="/images/fit/loss_eq.png" width="55%" height ="200"/>
 </center>
 
-We solve this optimization problem using Projected Gradient Descent method, which is nothing but the Stochastic Gradient Descent procedure with an additional step of enforcing constraints after each update. For monotonicity constraints between $p^{-}$, $p^{+}$, and $p$, this is as simple as taking the element-wise maximum and minimum.
+We solve this optimization problem using Projected Gradient Descent method, which is nothing but the Stochastic Gradient Descent procedure with an additional step of enforcing constraints after each update. For monotonicity constraints between $v_{p^{-}}$, $v_{p^{+}}$, and $v_p$, this is as simple as taking the element-wise maximum and minimum.
 
 ### Handling Label Imbalance
