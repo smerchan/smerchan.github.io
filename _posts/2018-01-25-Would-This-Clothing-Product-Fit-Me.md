@@ -11,7 +11,7 @@ Online shopping is trending these days as it provides many benefits like conveni
 
 This is an explainatory post on my [recent RecSys paper](https://cseweb.ucsd.edu/~jmcauley/pdfs/recsys18e.pdf). The outline of this post is like following: i) We frame the catalog size recommendation problem; ii) Briefly explain the data we can use to tackle the problem; iii) Briefly explain a simple machine learning model developed by Amazon last year to tackle this problem; iv) Deep dive into the challenges overlooked by the aforementioned model; v) Elaborate a machine learning model that tries to address those challenges to further improve recommendations.
 
-## Prerequesite concepts
+### Prerequesite concepts
 Following concepts are required to understand this post thoroughly. Though, I'll briefly explain some of them, the corresponding links would provide in-depth knowledge.
 * [Latent Factor Model](http://www.ideal.ece.utexas.edu/seminar/LatentFactorModels.pdf)
 * [Stochastic Gradient Descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent)
@@ -22,10 +22,16 @@ Following concepts are required to understand this post thoroughly. Though, I'll
 Many online retailers nowadays allow customers to provide fit feedback (e.g. `small`, `fit` or `large`) on the purchased product size during the product return process or when leaving reviews. For distinction, we will refer to the product (e.g. a Northface Jacket) as parent product and the different size variations (e.g. a Medium sized Northface Jacket) as child products. So, each purchase can be represented as a triple of the form (customer, child product, fit feedback), which contributes two important signals: `product size purchased` and `fit feedback of customer on that size`. Given this type of data, the goal of catalog size recommendation is to learn customers' fit preferences and products' sizing related properties so that customers can be served with recommendations of better fitting product sizes.
 
 ## Data
-For the purpose of this research, we collected data from [ModCloth](https://www.modcloth.com/) and [RentTheRunWay](https://www.renttherunway.com/) websites. These datasets contain self-reported fit feedback from customers as well as other side information like reviews, ratings, product categories, catalog sizes, customers’ measurements (etc.). For more details and to get access to the data, please head over to the [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) on Kaggle. 
+For the purpose of this research, we collected data from [ModCloth](https://www.modcloth.com/) and [RentTheRunWay](https://www.renttherunway.com/) websites. These datasets contain self-reported fit feedback from customers as well as other side information like reviews, ratings, product categories, catalog sizes, customers’ measurements etc. For more details and to access the data, please head over to the [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) on Kaggle. 
 
 ## A [simple model](http://delivery.acm.org/10.1145/3110000/3109891/p243-sembium.pdf?ip=73.53.61.10&id=3109891&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E538B033CF25F0137&__acm__=1543720447_839bf53830210baf4493f6bd6457b777) developed by Amazon
-For every customer and product, we consider a latent variable which denotes their true sizes. Let $u_c$ denote the true size for customer $c$ and $v_p$ be the true size for product $p$. We can learn these variables using past transactions in which customers have provided their fit feedback. Once we have the true sizes, we recommend the child product $p$ whose true size $v_p$ is closest to the customer’s true size $u_c$.
+For every customer and product, they consider a latent variable which denotes their true sizes. Let $u_c$ denote the true size for customer $c$ and $v_p$ be the true size for product $p$. They learn these variables using past transactions in which customers have provided their fit feedback. Intuitively, if there's a transaction ($c$, $p$, `fit`), then the true sizes $u_c$ and $v_p$ must be close, that is, \|$u_c - v_p$\| must be small. On the other hand, if there's a transaction ($c$, $p$, `small`), then the customer's true size $u_c$ must be much larger than the product's true size $v_p$, or equivalently, \|$u_c - v_p$\| must be large. Similarly, for the `large` case, \|$v_p - u_c$\| must be small. 
+
+They assign a fit score to each transaction $t$ as: $f_w(t)=w(u_{t_c} - v_{t_p})$, where $w$ is the non-negative weight parameter, and pose the machine learning objective as:
+
+``Given past customer transactions $D$, actual catalog sizes for products, and loss function $L(y_{t} , f_w(t))$ for transactions $t \in D$, compute true sizes {$u_{t_c}$} for customers and {$v_{t_p}$ } for child products such that $L = \sum_{t \in D} L(y_t , f_w(t)) is minimized.`` 
+
+Once we have the true sizes, we recommend the child product $p$ whose true size $v_p$ is closest to the customer’s true size $u_c$.
 
 ## Challenges
 Before we talk about how we can serve catalog size recommendations, let's understand the complexity of the problem through the challenges it poses. Some of the challenges could be: 
