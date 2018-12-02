@@ -73,7 +73,7 @@ regression problem to multiple binary classification problems with the help of t
 Let, $b_1$ and $b_2$ are threshold parameters with $b_2 > b_1$ that split the fit score into three segments such that a fit
 score greater than $b_2$ corresponds to `small`, a score less than $b_1$ corresponds to `large`, and scores in between $b_1$ and $b_2$ correspond to `fit`. Now, for each of three segments, we can consider greater than threshold score in the positive class and less than threshold score to be in the negative class. Upon solving these three binary classification problems, we can tell which class the purchase transaction belongs to. This concept can be manifested in form of Hinge loss as:
 <center>
-<img src="/images/fit/loss_eq.png" width="50%" height ="300"/>
+<img src="/images/fit/loss_eq.png" width="55%" height ="200"/>
 </center>
 
 We solve this optimization problem using Projected Gradient Descent method, which is nothing but the Stochastic Gradient Descent procedure with an additional step of enforcing constraints after each update. For monotonicity constraints between $p^{-}$, $p^{+}$, and $p$, this is as simple as taking the element-wise maximum and minimum.
