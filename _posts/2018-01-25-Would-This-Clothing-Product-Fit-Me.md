@@ -53,7 +53,7 @@ We explain our approach in detail in following subsections.
 We quantify the fitness adopting latent factor model formulation as:
 
 <center>
-<img src="/images/fit/fit_score_eq.png" width="60%" height ="100"/>
+<img src="/images/fit/fit_score_eq.png" width="50%" height ="100"/>
 </center>
 
 ### Handling Label Imbalance
