@@ -51,11 +51,17 @@ We explain our approach in detail in following subsections.
 
 ### Learning Fit Semantics
 We quantify the fitness adopting latent factor model formulation as:
-
 <center>
-<img src="/images/fit/fit_score_eq.png" width="50%" height ="100"/>
+<img src="/images/fit/fit_score_eq.png" width="45%" height ="100"/>
 </center>
 
-where $\mathbf{u_{t_c}}$ and $\mathbf{v_{t_p}}$ are K-dimensional latent features, $\alpha$ is a global bias term, $\oplus$ denotes concatenation and $\odot$ denotes element-wise product. The bias term $b_{t_{\mathit{pp}}}$ captures the notion that certain products tend to be reported more `unfit` because of their inherent features/build, while $b_{t_c}$ captures the notion that certain customers are highly sensitive to fit while others could be more accommodating.
+where $\mathbf{u_{t_c}}$ and $\mathbf{v_{t_p}}$ are K-dimensional latent features, $\alpha$ is a global bias term, $\oplus$ denotes concatenation and $\odot$ denotes element-wise product. The bias term $b_{t_{\mathit{pp}}}$ captures the notion that certain parent products tend to be reported more `unfit` because of their inherent features/build, while $b_{t_c}$ captures the notion that certain customers are highly sensitive to fit while others could be more accommodating.
+
+Furthermore, to enable catalog size recommendation we enforce an order between fitness score of different size variants of a product. This is to ensure that if a product size is small (respectively large) for a customer, all smaller (larger) sizes of the corresponding parent product should also be small (large).
+<center>
+<img src="/images/fit/order_example.png" width="90%" height ="500"/>
+</center>
+
+We enforce this constraints by requiring that for each product $p$, all its latent factors are strictly larger (smaller) than the next smaller (larger) catalog product $p^{-}$ ($p^{+}$), if a smaller (larger) size exists. This works since for a given customer ($c$) and parent product ($pp$), fitness scores vary only based on $p$'s parameters.
 
 ### Handling Label Imbalance
