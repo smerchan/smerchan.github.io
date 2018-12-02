@@ -26,7 +26,7 @@ Researchers from Amazon India developed [a simple model](http://delivery.acm.org
 
 Intuitively, if there's a transaction ($c$, $p$, `fit`), then the true sizes $u_c$ and $v_p$ must be close, that is, \|$u_c - v_p$\| must be small. On the other hand, if there's a transaction ($c$, $p$, `small`), then the customer's true size $u_c$ must be much larger than the product's true size $v_p$, or equivalently, \|$u_c - v_p$\| must be large. Similarly, for the `large` case, $v_p - u_c$ must be large. They assign a fit score to each transaction $t$ as: $f_w(t)=w(u_{t_c} - v_{t_p})$, where $w$ is the non-negative weight parameter, and pose the machine learning objective as: "Given past customer transactions $D$, actual catalog sizes for products, and loss function $L(y_{t} , f_w(t))$ for transactions $t \in D$, compute true sizes {$u_{t_c}$} for customers and {$v_{t_p}$} for child products such that $L = \sum_{t \in D} L(y_t , f_w(t))$ is minimized."
 
-Once true sizes are learned, they use them as features in standard classifiers like Logistic Regression Classifier and Random Forest Classifier to produce the final fit outcome for recommendation.
+For the experimentation, they considered Hinge Loss as the loss function. Once true sizes are learned, they use them as features in standard classifiers like Logistic Regression Classifier and Random Forest Classifier to produce the final fit outcome for recommendation.
 
 ## Challenges
 Although the aforementioned model works, it does not address some key challenges mentioned following: 
@@ -38,4 +38,17 @@ Although the aforementioned model works, it does not address some key challenges
   
 
 ## Datasets
-For the purpose of this research, we collected data from [ModCloth](https://www.modcloth.com/) and [RentTheRunWay](https://www.renttherunway.com/) websites. These datasets contain self-reported fit feedback from customers as well as other side information like reviews, ratings, product categories, catalog sizes, customers’ measurements etc. For more details and to access the data, please head over to the [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) on Kaggle. 
+Since the dataset used in Amazon's study was proprietary, for this research we collected datasets from [ModCloth](https://www.modcloth.com/) and [RentTheRunWay](https://www.renttherunway.com/) websites. These datasets contain self-reported fit feedback from customers as well as other side information like reviews, ratings, product categories, catalog sizes, customers’ measurements etc. For more details and to access the data, please head over to the [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) on Kaggle.
+
+## A New Approach
+We tackle the aforementioned challenges in the following ways: First, unlike previous work which focuses on recovering "true" sizes, we develop a new model to factorize the semantics of customers’ fit feedback, so that representations can capture customers’ fit preferences on various product aspects (like shoulders, waist etc.). Second, using a heuristic we sample good representations from each class and project them to a metric space to address label imbalance issues. The overview of framework can be understood from the following diagram:
+
+<center>
+<img src="/images/projects/recsys18_framework.jpg" width="100%" height ="500"/>
+</center>
+
+We explain our approach in detail in following subsections.
+
+### Learning Fit Semantics
+
+### Handling Label Imbalance
