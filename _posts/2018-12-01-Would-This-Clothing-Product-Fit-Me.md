@@ -81,7 +81,7 @@ We solve this optimization problem using Projected Gradient Descent method, whic
 ### Handling Label Imbalance
 We propose the use of metric learning with prototyping to handle the issue of label imbalance. To that end, our prototyping technique first alters the training data distribution by re-sampling from different classes, which is shown to be effective in handling label imbalance issues. Secondly, we use Large Margin Nearest Neighbor (LMNN) metric learning technique that improves the local data neighborhood by moving transactions having same fit feedback closer and having different fit feedback farther, which is known to improve the overall k-NN classification. This approach is depicted in the following diagram for understandability.
 <center>
-<img src="/images/fit/mla_approach.png" width="60%" height ="350"/>
+<img src="/images/fit/mla_approach.png" width="55%" height ="350"/>
 </center>
 
 #### Metric Learning Technique
