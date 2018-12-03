@@ -91,3 +91,32 @@ The goal of metric learning is to learn a distance metric $D$ such that $D(k,l) 
 
 #### Prototyping
 One caveat of LMNN is that it fixes the k target neighbors for each transaction _before_ it runs, which allows constraints to be defined locally. However, this also makes the method very sensitive to the ability of the Euclidean distance to select relevant target neighbors. Prototyping techniques, which aim to select a few representative examples from the data, have been shown to increase processing speed while providing generalizability. Additionally, re-sampling methods are shown to tackle label imbalance issues. Thus, to mitigate the aforementioned limitation of Euclidean distances and tackle label imbalance issues, we develop a heuristic that provides a good representation for each class by reducing noise from outliers and other non-contributing transactions (like the ones which are too close to the centroid of their respective class or to already selected prototypes) by carefully sampling prototypes. You can get more details about the algorithm from the [paper](https://cseweb.ucsd.edu/~jmcauley/pdfs/recsys18e.pdf).
+
+## Experiments and Results
+
+### Experimental Setup
+We experiment with and compare the following five methods:
+* **1-LV-LR**: Method proposed in by Amazon as described above. Scoring function is of form $f_w(t)=w(u_{t_c} - v_{t_p})$ and method uses Logistic Regression (LR) for the final classification.
+* **K-LV-LR**: This is a simple extension of 1-LV-LR where $\mathbf{u_{t_c}}$ and $\mathbf{v_{t_p}}$ are $K$ dimensional latent variables. 
+* **K-LF-LR**: The proposed latent factor variation given in "Learning Fit Semantics" section. We use the learned factors directly into a Logistic Regression Classifier as features to produce the fit outcome.
+* **K-LV-ML**: This method is similar to **K-LV-LR** with a difference that it uses Metric Learning, instead of Logistic Regression, to produce the final fit outcome.
+* **K-LF-ML**: This is the proposed method.
+
+These methods are designed to evaluate:
+* Effectiveness of capturing fit semantics over "true" sizes 
+* Importance of learning good latent representations
+* Effectiveness of the proposed metric learning approach in handling label imbalance issues. 
+
+### Results
+<center>
+<img src="/images/fit/table_results.png" width="90%" height ="200"/>
+</center>
+We find that models with $K$-dimensional latent variables outperform the method with one latent variable. Furthermore, we observe that improvements on _ModCloth_ are relatively smaller than improvements on _RentTheRunWay_. This could be due to _ModCloth_ having relatively more cold products and customers (products and customers with very few transactions) compared to _RentTheRunWay_ (see statistics on [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home)). Of note is that metric learning approaches do not significantly improve performance when using representations from the K-LV method. The reason for this could be that K-LV does not capture biases from data, as bias terms merely act as an extra latent dimension, and learns representations which are not easily separable in the metric space. This underscores the importance of learning good representations for metric learning. Finally, we see that K-LF-ML substantially outperforms all other methods on both datasets. 
+
+<center>
+<img src="/images/fit/results_graph.png" width="90%" height ="500"/>
+</center>
+Besides learning good representations, good performance could be ascribed to the ability of the proposed metric learning approach in handling label imbalance issues as depicted in above graph. Furthermore, we compare how our method performs in cold-start and warm-start scenarios. For cold products, we notice that **K-LF-ML** consistently performs better than **1-LV-LR**, although their performances are slightly worse overall. As we consider products with more transactions, **K-LF-ML** improves quickly. The performance of **1-LV-LR** improves significantly given sufficiently many samples.
+
+## Future Work
+One direction for further improvement is utilizing reviews to improve interpretability of the model since currently it is hard to understand what each latent dimension correspond to. This is possible by integrating a language model with the latent factor model to assign a specific meaning to each latent dimension (denoted by corresponding topic) as done in [this paper](https://cs.stanford.edu/people/jure/pubs/reviews-recsys13.pdf). This would be challenging however, as not all the text mentioned in reviews is relevant to fit and also, many times, customers do not provide fit feedback in detail. Another scope of improvement comes from jointly learning about good prototypes and distance metric as done in [this paper](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Kostinger_Joint_Learning_of_2013_ICCV_paper.pdf).
