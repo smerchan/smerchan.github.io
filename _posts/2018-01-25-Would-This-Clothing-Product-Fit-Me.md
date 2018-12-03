@@ -109,7 +109,7 @@ These methods are designed to evaluate:
 
 ### Results
 <center>
-<img src="/images/fit/table_results.png" width="90%" height ="200"/>
+<img src="/images/fit/table_results.png" width="100%" height ="200"/>
 </center>
 We find that models with $K$-dimensional latent variables outperform the method with one latent variable. Furthermore, we observe that improvements on _ModCloth_ are relatively smaller than improvements on _RentTheRunWay_. This could be due to _ModCloth_ having relatively more cold products and customers (products and customers with very few transactions) compared to _RentTheRunWay_ (see statistics on [dataset page](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home)). Of note is that metric learning approaches do not significantly improve performance when using representations from the K-LV method. The reason for this could be that K-LV does not capture biases from data, as bias terms merely act as an extra latent dimension, and learns representations which are not easily separable in the metric space. This underscores the importance of learning good representations for metric learning. Finally, we see that K-LF-ML substantially outperforms all other methods on both datasets. 
 
