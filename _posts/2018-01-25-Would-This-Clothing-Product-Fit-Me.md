@@ -61,7 +61,7 @@ where $\mathbf{u_{t_c}}$ and $\mathbf{v_{t_p}}$ are K-dimensional latent feature
 
 Furthermore, to enable catalog size recommendation we enforce an order between fitness score of different size variants of a product. This is to ensure that if a product size is small (respectively large) for a customer, all smaller (larger) sizes of the corresponding parent product should also be small (large).
 <center>
-<img src="/images/fit/order_example.png" width="90%" height ="500"/>
+<img src="/images/fit/order_example.png" width="70%" height ="400"/>
 </center>
 
 We enforce this constraints by requiring that for each product $p$, all its latent factors are strictly larger (smaller) than the next smaller (larger) catalog product $p^{-}$ ($p^{+}$), if a smaller (larger) size exists. This works since for a given customer ($c$) and parent product ($pp$), fitness scores vary only based on $p$'s parameters.
@@ -81,7 +81,7 @@ We solve this optimization problem using Projected Gradient Descent method, whic
 ### Handling Label Imbalance
 We propose the use of metric learning with prototyping to handle the issue of label imbalance. To that end, our prototyping technique first alters the training data distribution by re-sampling from different classes, which is shown to be effective in handling label imbalance issues. Secondly, we use Large Margin Nearest Neighbor (LMNN) metric learning technique that improves the local data neighborhood by moving transactions having same fit feedback closer and having different fit feedback farther, which is known to improve the overall k-NN classification. This approach is depicted in the following diagram for understandability.
 <center>
-<img src="/images/fit/mla_approach.png" width="70%" height ="400"/>
+<img src="/images/fit/mla_approach.png" width="60%" height ="350"/>
 </center>
 
 #### Metric Learning Technique
