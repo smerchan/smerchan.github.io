@@ -39,3 +39,4 @@ permalink: /publications/
 
   * This dataset contains around 125k news headlines from the year 2013 to 2018 obtained from [*HuffPost*](https://www.huffingtonpost.com/). This dataset could be used to produce some interesting liguistic insights about the type of language used in different news articles or to simply identify tags for untracked news articles. (**1300+ downloads on Kaggle**)
 
+<center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
