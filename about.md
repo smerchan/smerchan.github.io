@@ -17,3 +17,6 @@ My work experience has helped me in understanding the intricacies involved in de
 ## Contact
 
 Please reach out to me @ [rishabhmisra1994@gmail.com](mailto:rishabhmisra1994@gmail.com)
+
+
+<center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
