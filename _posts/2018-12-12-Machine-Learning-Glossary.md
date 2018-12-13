@@ -15,6 +15,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J) . [K](#K) . [L](#L) . [M](#M) . [N](#N) . [O](#O) . [P](#P) . [Q](#Q) . [R](#R) . [S](#S) . [T](#T) . [U](#U) . [V](#V) . [W](#W) . [X](#X) . [Y](#Y) . [Z](#Z)
 
 ## A<a name="A"></a>
+* **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threhold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold or being robust to class imbalance in data and so on.
+  * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) | [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
 
 ## B<a name="B"></a>
 
@@ -25,6 +27,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## E<a name="E"></a>
 
 ## F<a name="F"></a>
+* **False Positive Rate**<a name="FPR"></a>:
 
 ## G<a name="G"></a>
 
@@ -53,6 +56,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## S<a name="S"></a>
 
 ## T<a name="T"></a>
+* **True Positive Rate**<a name="TPR"></a>:
 
 ## U<a name="U"></a>
 
