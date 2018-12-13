@@ -12,22 +12,22 @@ Goal of this post is to briefly explain popular (and unpopular) concepts in Mach
 ## Jump to
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J)
 
-## [A](#A)
+## A<a name="A"></a>
 
-## [B](#B)
+## B<a name="B"></a>
 
-## [C](#C)
+## C<a name="C"></a>
 
-## [D](#D)
+## D<a name="D"></a>
 
-## [E](#E)
+## E<a name="E"></a>
 
-## [F](#F)
+## F<a name="F"></a>
 
-## [G](#G)
+## G<a name="G"></a>
 
-## [H](#H)
+## H<a name="H"></a>
 
-## [I](#I)
+## I<a name="I"></a>
 
-## [J](#J)
+## J<a name="J"></a>
