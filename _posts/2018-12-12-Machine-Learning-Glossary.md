@@ -27,7 +27,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## E<a name="E"></a>
 
 ## F<a name="F"></a>
-* **False Positive Rate**<a name="FPR"></a>:
+* **False Positive Rate**<a name="FPR"></a>: The false positive rate is calculated as the ratio between the number of negative events wrongly categorized as positive (false positives) and the total number of actual negative events (regardless of classification).
+  * Useful links: [False Positive Rate Wiki](https://en.wikipedia.org/wiki/False_positive_rate)
 
 ## G<a name="G"></a>
 
@@ -49,13 +50,13 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## P<a name="P"></a>
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
- * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
  
 ## Q<a name="Q"></a>
 
 ## R<a name="R"></a>
 * **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class) that have been retrieved (or correctly classified) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
- * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 ## S<a name="S"></a>
 * **Sensitivity**<a name="Sensitivity"></a>: Same as [Recall](#Recall).
