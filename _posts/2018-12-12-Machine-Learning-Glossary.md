@@ -75,3 +75,6 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## Y<a name="Y"></a>
 
 ## Z<a name="Z"></a>
+
+
+<center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
