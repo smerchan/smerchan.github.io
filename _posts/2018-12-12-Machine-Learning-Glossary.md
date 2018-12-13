@@ -15,7 +15,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J) . [K](#K) . [L](#L) . [M](#M) . [N](#N) . [O](#O) . [P](#P) . [Q](#Q) . [R](#R) . [S](#S) . [T](#T) . [U](#U) . [V](#V) . [W](#W) . [X](#X) . [Y](#Y) . [Z](#Z)
 
 ## A<a name="A"></a>
-* **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threhold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold or being robust to class imbalance in data and so on.
+* **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threhold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold, being robust to class imbalance in data and so on.
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) | [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
 
 ## B<a name="B"></a>
@@ -48,15 +48,20 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## O<a name="O"></a>
 
 ## P<a name="P"></a>
-
+* **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
+ * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall).
+ 
 ## Q<a name="Q"></a>
 
 ## R<a name="R"></a>
+* **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class) that have been retrieved (or correctly classified) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
+ * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) | [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall).
 
 ## S<a name="S"></a>
+* **Sensitivity**<a name="Sensitivity"></a>: Same as [Recall](#Recall).
 
 ## T<a name="T"></a>
-* **True Positive Rate**<a name="TPR"></a>:
+* **True Positive Rate**<a name="TPR"></a>: Same as [Recall](#Recall).
 
 ## U<a name="U"></a>
 
