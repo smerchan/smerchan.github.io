@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 ## Introduction
-Goal of this post is to briefly explain popular (and unpopular) concepts in Machine Learning along with a collection of helpful links for further understanding. The idea for this post stemmed from my travails for finding good quality explainations of various Machine Learning concepts. Hopefully, this would be helpful to people who are just starting in Machine Learning as well as those who need a refresher on some concepts. If you want to contribute, you can create a pull request on [this post](https://github.com/rishabhmisra/rishabhmisra.github.io/edit/master/_posts/2018-12-12-Machine-Learning-Glossary.md).
+Goal of this post is to briefly explain popular (and unpopular) concepts in Machine Learning along with a collection of helpful links for further understanding. The idea for this post stemmed from my travails for finding good quality explainations of various Machine Learning concepts. Hopefully, this would be helpful to people who are just starting in Machine Learning as well as those who need a refresher on some concepts. If you want to contribute, you can create a pull request on [this post](https://github.com/rishabhmisra/rishabhmisra.github.io/blob/master/_posts/2018-12-12-Machine-Learning-Glossary.md).
 
 ## Jump to
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J) . [K](#K) . [L](#L) . [M](#M) . [N](#N) . [O](#O) . [P](#P) . [Q](#Q) . [R](#R) . [S](#S) . [T](#T) . [U](#U) . [V](#V) . [W](#W) . [X](#X) . [Y](#Y) . [Z](#Z)
