@@ -81,3 +81,6 @@ This form of solution conveys that the log of the optimal solution for factor $q
 
 ## Concluding Remarks
 This concludes the article. Hopefully, you understood how EM algorithms optimizes the log likelihood in each step (E and M) and how we can use some approximation techniques when evaluating posterior distribution of latent variables is not tractable. Let me know if you have any questions or feedback in the comments. Cheers!
+
+
+<center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
