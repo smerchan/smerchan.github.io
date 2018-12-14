@@ -19,6 +19,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) \| [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
 
 ## B<a name="B"></a>
+**Bias Variance Trade-off**<a name="bias-variance"></a>:
 
 ## C<a name="C"></a>
 
@@ -50,24 +51,32 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## P<a name="P"></a>
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
-  * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * See also: [Recall](#Recall)
+  * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
  
 ## Q<a name="Q"></a>
 
 ## R<a name="R"></a>
 * **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class $C$) that have been retrieved (or correctly classified in $C$) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
-  * Useful links: [Blog post on Precision and Recall](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * See also: [Precision](#Precision)
+  * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 ## S<a name="S"></a>
 * **Sensitivity**<a name="Sensitivity"></a>: Same as [Recall](#Recall).
-* **Specificity**<a name="Specificity"></a>: Same as [True Negative Rate](#TNR).
+* **Specificity**<a name="Specificity"></a>: If we are given a set of instances, specificity measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
+  * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity).
+* **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
+  * See also: [Unsupervised Learning](#UL)
+  * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning) 
 
 ## T<a name="T"></a>
 * **True Positive Rate**<a name="TPR"></a>: Same as [Recall](#Recall).
-* **True Negative Rate**<a name="TNR"></a>: If we are given a set of instances, true negative rate measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
-  * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity)
+* **True Negative Rate**<a name="TNR"></a>: Same as [Specificity](#Specificity).
 
 ## U<a name="U"></a>
+**Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering underlying structure of the data.
+  * See also: [Supervised Learning](#SL)
+  * Useful links: [Blog post by Hackernoon](https://hackernoon.com/unsupervised-learning-demystified-4060eecedeaf) \| [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/unsupervised-learning-olRZo) 
 
 ## V<a name="V"></a>
 
