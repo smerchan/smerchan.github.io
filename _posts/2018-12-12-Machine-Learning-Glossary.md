@@ -74,7 +74,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **True Negative Rate**<a name="TNR"></a>: Same as [Specificity](#Specificity).
 
 ## U<a name="U"></a>
-**Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering underlying structure of the data.
+* **Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering underlying structure of the data.
   * See also: [Supervised Learning](#SL)
   * Useful links: [Blog post by Hackernoon](https://hackernoon.com/unsupervised-learning-demystified-4060eecedeaf) \| [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/unsupervised-learning-olRZo) 
 
