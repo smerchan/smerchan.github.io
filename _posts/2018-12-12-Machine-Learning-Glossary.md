@@ -19,7 +19,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) \| [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
 
 ## B<a name="B"></a>
-**Bias Variance Trade-off**<a name="bias-variance"></a>:
+* **Bias Variance Trade-off**<a name="bias-variance"></a>:
 
 ## C<a name="C"></a>
 
