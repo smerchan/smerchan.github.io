@@ -23,7 +23,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post by towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
 
 ## C<a name="C"></a>
-* **Curse of Dimensionality**<a name="COD"></a>: In a model, as the number of features or dimensions grows, the amount of data needed to make our model generalizable with good performance grows exponentially, which unnecessarily increases storage space and processing time for the particular modelling algorithm. In this sense, value added by additional dimension becomes much smaller compared to overhead it adds to the algorithm.
+* **Curse of Dimensionality**<a name="COD"></a>: In a model, as the number of features or dimensions grows, the amount of data needed to make the model generalizable with good performance grows exponentially, which unnecessarily increases storage space and processing time for a modeling algorithm. In this sense, value added by an additional dimension becomes much smaller compared to overhead it adds to the algorithm.
   * Also see: [Dimensionality Reduction](#DR)
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=UvxHOkYQl8g) \| [Elaborate post on Medium](https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335)
 
