@@ -19,9 +19,11 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) \| [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
 
 ## B<a name="B"></a>
-* **Bias Variance Trade-off**<a name="bias-variance"></a>:
+* **Bias Variance Trade-off**<a name="bias-variance"></a>: Bias is the difference between the average prediction of a model and the correct value which we are trying to predict. Variance is the variability of model prediction for a given data point because of its sinsitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.
+  * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post by towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
 
 ## C<a name="C"></a>
+* **Curse of Dimensionality**<a name="COD"></a>: 
 
 ## D<a name="D"></a>
 
@@ -40,6 +42,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## J<a name="J"></a>
 
 ## K<a name="K"></a>
+* **K-Nearest Neighbor**<a name="KNN"></a>: KNN is essentially a classification technique that finds the ($K$) data points in the training data which are most similar to an unseen data point, and takes majority vote to make classifications. KNN is a non-parametric method which means that it does not make any assumptions on the underlying data distribution. Performance of KNN methods depend on the data representation and the definition of closeness/similarity.
+  * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=vVj2itVNku4) \| [Blog post on Medium](https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7)
 
 ## L<a name="L"></a>
 
@@ -51,14 +55,14 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## P<a name="P"></a>
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
-  * See also: [Recall](#Recall)
+  * Also see: [Recall](#Recall)
   * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
  
 ## Q<a name="Q"></a>
 
 ## R<a name="R"></a>
 * **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class $C$) that have been retrieved (or correctly classified in $C$) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
-  * See also: [Precision](#Precision)
+  * Also see: [Precision](#Precision)
   * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 ## S<a name="S"></a>
@@ -66,7 +70,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Specificity**<a name="Specificity"></a>: If we are given a set of instances, specificity measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
   * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity).
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
-  * See also: [Unsupervised Learning](#UL)
+  * Also see: [Unsupervised Learning](#UL)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning) 
 
 ## T<a name="T"></a>
@@ -75,7 +79,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## U<a name="U"></a>
 * **Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering underlying structure of the data.
-  * See also: [Supervised Learning](#SL)
+  * Also see: [Supervised Learning](#SL)
   * Useful links: [Blog post by Hackernoon](https://hackernoon.com/unsupervised-learning-demystified-4060eecedeaf) \| [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/unsupervised-learning-olRZo) 
 
 ## V<a name="V"></a>
