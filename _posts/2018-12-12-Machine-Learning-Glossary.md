@@ -11,12 +11,14 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 **Didn't find what you were looking for? Consider contributing by creating a pull request on this post [here](https://github.com/rishabhmisra/rishabhmisra.github.io/blob/master/_posts/2018-12-12-Machine-Learning-Glossary.md)**.
 
-## Jump to
+## Jump to<a name="top"></a>
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J) . [K](#K) . [L](#L) . [M](#M) . [N](#N) . [O](#O) . [P](#P) . [Q](#Q) . [R](#R) . [S](#S) . [T](#T) . [U](#U) . [V](#V) . [W](#W) . [X](#X) . [Y](#Y) . [Z](#Z)
 
 ## A<a name="A"></a>
 * **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threhold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold, being robust to class imbalance in data and so on.
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) \| [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
+  
+[Back to Top](#top)
 
 ## B<a name="B"></a>
 * **Bias Variance Trade-off**<a name="bias-variance"></a>: Bias is the difference between the average prediction of a model and the correct value which we are trying to predict. Variance is the variability of model prediction for a given data point because of its sensitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.
@@ -28,7 +30,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=UvxHOkYQl8g) \| [Elaborate post on Medium](https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335)
 
 ## D<a name="D"></a>
-* **Dimensionality Reduction**<a name="DR"></a>:
+* **Dimensionality Reduction**<a name="DR"></a>: The goal of dimensionality reduction methods is to find a low-dimensional representation of the data that retains as much information as possible. This low-dimensional data representation in turn helps in fighting the [Curse of Dimensionality](#COD).
+  * Also see: [Principle Component Analysis](#PCA)
+  * Useful links: [Video Explanation by Robert Tibshirani](https://www.youtube.com/watch?v=QlyROnAjnEk) \| [Blog post from towardsdatascience](https://towardsdatascience.com/https-medium-com-abdullatif-h-dimensionality-reduction-for-dummies-part-1-a8c9ec7b7e79)
 
 ## E<a name="E"></a>
 
@@ -60,7 +64,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
   * Also see: [Recall](#Recall)
   * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
- 
+* **Principle Component Analysis**<a name="PCA"></a>:
+
+
 ## Q<a name="Q"></a>
 
 ## R<a name="R"></a>
@@ -94,6 +100,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## Y<a name="Y"></a>
 
 ## Z<a name="Z"></a>
+
+[Back to Top](#top)
 
 
 <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
