@@ -29,7 +29,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## C<a name="C"></a>
 * **Classification**<a name="Classification"></a>: Classification is the problem of identifying to which of a set of categories a new observation belongs, on the basis of a training set of data containing observations whose category membership is known.
-  * Also see: [Boosting](#Boosting) \| [Decision Trees](#DT) \| [K-Nearest Neighbor](#KNN) \| [Logistic Regression](#LoR) \| [Random Forest](#RF)
+  * Also see: [Boosting](#Boosting) \| [Decision Trees](#DT) \| [K-Nearest Neighbor](#KNN) \| [Logistic Regression](#LoR) \| [Random Forest](#RF) \| [Naive Bayes Classifier](#NBC)
   * Useful links: [Classification Wiki](https://en.wikipedia.org/wiki/Statistical_classification)
 * **Curse of Dimensionality**<a name="COD"></a>: In a model, as the number of features or dimensions grows, the amount of data needed to make the model generalizable with good performance grows exponentially, which unnecessarily increases storage space and processing time for a modeling algorithm. In this sense, value added by an additional dimension becomes much smaller compared to overhead it adds to the algorithm.
   * Also see: [Dimensionality Reduction](#DR)
@@ -88,7 +88,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## N<a name="N"></a>
-  
+* **Naive Bayes Classifier**<><a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated with the presence of any other feature and they all independently contribute towards the class probability.
+  * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post by towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
+
 [Back to Top](#top)
 
 ## O<a name="O"></a>
