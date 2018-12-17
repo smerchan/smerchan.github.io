@@ -88,7 +88,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## N<a name="N"></a>
-* **Naive Bayes Classifier**<><a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated with the presence of any other feature and they all independently contribute towards the class probability.
+* **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated with the presence of any other feature and they all independently contribute towards the class probability.
   * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post by towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 
 [Back to Top](#top)
