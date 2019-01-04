@@ -21,9 +21,14 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## B<a name="B"></a>
+* **Bagging**<a name="Bagging"></a>: Bagging is a procedure that produces several different training sets of the same size with replacement and then trains a machine learning model for each set. The predictions are produced by taking majority vote in a [classification](#Classification) task and by averaging in a [regression](#Regression) task. Bagging helps in reducing variance from models.
+  * Also see: [Random Forest](#RF)
+  * Useful links: [Video explanation by Udacity](https://www.youtube.com/watch?v=2Mg8QD0F1dQ) \| [Blog post on Medium](https://medium.com/@harishkandan95/bagging-the-skill-of-bagging-bootstrap-aggregating-83c18dcabdf1)
 * **Bias Variance Trade-off**<a name="bias-variance"></a>: Bias is the difference between the average prediction of a model and the correct value which we are trying to predict. Variance is the variability of model prediction for a given data point because of its sensitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post by towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
-* **Boosting**<a name="Boosting"></a>:
+* **Boosting**<a name="Boosting"></a>: Boosting is an ensemble method for improving the model predictions of any given learning algorithm. The idea is to train weak learners sequentially, each trying to correct its predecessor, to build strong learners. A weak learner is defined to be a classifier that is only slightly correlated with the true classification (it can label examples better than random guessing). In contrast, a strong learner is a classifier that is arbitrarily well-correlated with the true classification.
+  * Also see: [Bagging](#Bagging)
+  * Useful links: [Lecture by Patrick Winston](https://www.youtube.com/watch?v=UHBmv7qCey4) \| [Boosting wiki](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
 
 [Back to Top](#top)
 
