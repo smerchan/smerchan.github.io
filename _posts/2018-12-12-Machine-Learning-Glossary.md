@@ -25,7 +25,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Random Forest](#RF)
   * Useful links: [Video explanation by Udacity](https://www.youtube.com/watch?v=2Mg8QD0F1dQ) \| [Blog post on Medium](https://medium.com/@harishkandan95/bagging-the-skill-of-bagging-bootstrap-aggregating-83c18dcabdf1)
 * **Bias Variance Trade-off**<a name="bias-variance"></a>: Bias is the difference between the average prediction of a model and the correct value which we are trying to predict. Variance is the variability of model prediction for a given data point because of its sensitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.
-  * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post by towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
+  * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post on towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
 * **Boosting**<a name="Boosting"></a>: Boosting is an ensemble method for improving the model predictions of any given learning algorithm. The idea is to train weak learners sequentially, each trying to correct its predecessor, to build strong learners. A weak learner is defined to be a classifier that is only slightly correlated with the true classification (it can label examples better than random guessing). In contrast, a strong learner is a classifier that is arbitrarily well-correlated with the true classification.
   * Also see: [Bagging](#Bagging)
   * Useful links: [Lecture by Patrick Winston](https://www.youtube.com/watch?v=UHBmv7qCey4) \| [Boosting wiki](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
@@ -43,10 +43,12 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## D<a name="D"></a>
-* **Decision Trees**<a name="DT"></a>:
+* **Decision Tree**<a name="DT"></a>: A Decision Tree can be used to visually and explicitly represent decisions and decision making. Each non-leaf node in the tree represents a decision based on one of the features in the dataset. Leaves of the trees represent the final output after a series of decisions; for classification, output is class membership based on majority vote from node members and for regression, output is the average value of node members. The feature used to make decision at each step is chosen such that the [information gain](#IG) is maximized.
+  * Also see: [Random Forest](#RF) \| [Boosting](#Boosting)
+  * Useful links: [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=SXBG3RGr_Rc) \| [Blog post on towardsdatascience](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052)
 * **Dimensionality Reduction**<a name="DR"></a>: The goal of dimensionality reduction methods is to find a low-dimensional representation of the data that retains as much information as possible. This low-dimensional data representation in turn helps in fighting the [Curse of Dimensionality](#COD).
   * Also see: [Principle Component Analysis](#PCA)
-  * Useful links: [Video Explanation by Robert Tibshirani](https://www.youtube.com/watch?v=QlyROnAjnEk) \| [Blog post from towardsdatascience](https://towardsdatascience.com/https-medium-com-abdullatif-h-dimensionality-reduction-for-dummies-part-1-a8c9ec7b7e79)
+  * Useful links: [Video Explanation by Robert Tibshirani](https://www.youtube.com/watch?v=QlyROnAjnEk) \| [Blog post on towardsdatascience](https://towardsdatascience.com/https-medium-com-abdullatif-h-dimensionality-reduction-for-dummies-part-1-a8c9ec7b7e79)
   
 [Back to Top](#top)
 
@@ -69,7 +71,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## I<a name="I"></a>
-  
+* **Information Gain**<a name="IG"></a>: See [Kullback–Leibler Divergence](#KLD).
+
 [Back to Top](#top)
 
 ## J<a name="J"></a>
@@ -79,6 +82,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## K<a name="K"></a>
 * **K-Nearest Neighbor**<a name="KNN"></a>: KNN is essentially a classification technique that finds the ($K$) data points in the training data which are most similar to an unseen data point, and takes majority vote to make classifications. KNN is a non-parametric method which means that it does not make any assumptions on the underlying data distribution. Performance of KNN methods depend on the data representation and the definition of closeness/similarity.
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=vVj2itVNku4) \| [Blog post on Medium](https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7)
+* **Kullback–Leibler Divergence**<a name="KLD"></a>: Kullback–Leibler divergence is a measure of how one probability distribution is different from a second, reference probability distribution. A familiar use case for this is when we replace observed data or a complex distributions with a simpler approximating distribution, we can use KL Divergence to measure just how much information we lose when we choose an approximation.
+  * Useful links: [Blog post on countbayesie](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) \| [Blog post on towardsdatascience](https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68)
   
 [Back to Top](#top)
 
@@ -94,7 +99,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## N<a name="N"></a>
 * **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated with the presence of any other feature and they all independently contribute towards the class probability.
-  * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post by towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
+  * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post on towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 
 [Back to Top](#top)
 
@@ -105,7 +110,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## P<a name="P"></a>
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
   * Also see: [Recall](#Recall)
-  * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 * **Principle Component Analysis**<a name="PCA"></a>: PCA is a statistical procedure that transforms a set of observations of possibly correlated variables into a set of observations with linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component variance in decreasing order with the constraint that it is orthogonal to the preceding components. Utilizing only few components that capture most of the variance in data helps in fighting the [Curse of Dimensionality](#COD).
   * Useful links: [Video Explanation by Stanford Profs](https://www.youtube.com/watch?v=ipyxSYXgzjQ) \| [Online Lesson by Penn State University](https://onlinecourses.science.psu.edu/stat505/node/49/)
   
@@ -116,13 +121,16 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## R<a name="R"></a>
-* **Random Forest**<a name="RF"></a>: 
+* **Random Forest**<a name="RF"></a>: Random Forest is a supervised learning algorithm that builds an ensemble of [Decision Trees](#DT), where each decision tree is allowed to use fixed number of randomly chosen features. The decision trees are trained using the [Bagging](#Bagging) technique and the output of trees are merged together to get a more accurate and stable prediction.
+  * Also see: [Boosting](#Boosting)
+  * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd) \| [Blog post on Medium](https://medium.com/@williamkoehrsen/random-forest-simple-explanation-377895a60d2d)
 * **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class $C$) that have been retrieved (or correctly classified in $C$) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
   * Also see: [Precision](#Precision)
-  * Useful links: [Blog post by towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+  * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 * **Regression**<a name="Regression"></a>: Regression is the problem of approximating a mapping function ($f$) from input variables ($X$) to a continuous output variable ($y$), on the basis of a training set of data containing observations in the form of input-output pairs.
   * Also see: [Linear Regression](#LiR)
   * Useful links: [Video Explanation by Trevor Hastie](https://www.youtube.com/watch?v=WjyuiK5taS8)
+* **Relative Entropy**<a name="relative-entropy"></a>: See [Kullback–Leibler Divergence](#KLD). 
 
 [Back to Top](#top)
 
@@ -133,7 +141,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning)
-* **Support Vector Machines**<a name="SVM"></a>:
+* **Support Vector Machine**<a name="SVM"></a>: Support Vector Machine (SVM), in simplest terms, is a classification algorithm which aims to find a decision boundary that separates two classes such that the closest data points from either class are as far as possible. Having a good margin between two classes contributes to robustness and generalizability of SVM.
+  * Useful links: [Blog post by Me](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) \| [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=_PwhiWxHK8o)
   
 [Back to Top](#top)
 
