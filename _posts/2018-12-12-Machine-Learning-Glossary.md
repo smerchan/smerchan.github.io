@@ -53,7 +53,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## E<a name="E"></a>
-  
+* **Expectation Maximization**<a name="EM"></a>: Expectation-Maximization (EM) algorithm is a way to find [maximum likelihood estimates](#MLE) for model parameters when the data is incomplete, has missing data points, or has unobserved (hidden) latent variables. It uses an iterative approach to approximate the maximum likelihood function.
+  * Useful links: [Introductory blog post by me](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/) \| [Advanced blog post by me](https://rishabhmisra.github.io/Inference-Using-EM-Algorithm/)
+
 [Back to Top](#top)
 
 ## F<a name="F"></a>
@@ -96,7 +98,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## M<a name="M"></a>
-  
+* **Maximum Likelihood Estimation**<a name="MLE"></a>: Maximum likelihood estimation is a method of estimating the parameters of a statistical model $\theta$ such that the likelihood function $L(\theta; x)$, which is a function of model parameters given observed data $x$, is maximized. Intuitively, this selects the parameters $\theta$ that make the observed data most probable.
+  * Useful links: [Video explanation by Trevor Hastie](https://youtu.be/31Q5FGRnxt4?t=145) \| [Blog post on towardsdatascience](https://towardsdatascience.com/probability-concepts-explained-maximum-likelihood-estimation-c7b4342fdbb1)
+
 [Back to Top](#top)
 
 ## N<a name="N"></a>
