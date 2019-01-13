@@ -65,11 +65,16 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## G<a name="G"></a>
-  
+* **Gradient Descent**<a name="GD"></a>: Gradient Descent is an optimization technique to minimize a loss function by computing the gradients of the loss function with respect to the model's parameters, conditioned on training data. Informally, gradient descent iteratively adjusts parameters and gradually finding the best combination to minimize the loss.
+  * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0) \| [Blog post on kdnuggets](https://www.kdnuggets.com/2017/04/simple-understand-gradient-descent-algorithm.html)
+
 [Back to Top](#top)
 
 ## H<a name="H"></a>
-  
+* **Hinge Loss**<a name="HL"></a>: Hinge loss is used in context of classification problems and is defined as $l(y) = max(0, 1 - t.y)$, where t is the actual output and y is the classifier's score. Observing the function, we can see that classifier is penalized unless it classifies data points correctly with 100% confidence. This leads to "maximum-margin" classification where each training data point is as far from classifier's decision boundary as possible.
+  * Also see: [Support Vector Machines](#SVM)
+  * Useful links: [Hinge Loss Wiki](https://en.wikipedia.org/wiki/Hinge_loss)
+
 [Back to Top](#top)
 
 ## I<a name="I"></a>
@@ -78,7 +83,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## J<a name="J"></a>
-  
+
+
 [Back to Top](#top)
 
 ## K<a name="K"></a>
@@ -93,6 +99,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Linear Regression**<a name="LiR"></a>: Linear regression models linear relationship between a scalar dependent variable (usually called target) and several independent variables (usually called predictors). It can be used for forecasting outcomes once the model parameters are learned using supervision from a relevant dataset. Additionally, the learned model parameters can also be used to explain the strength of the relationship between the target and the predictors (procedure known as linear regression analysis). The model parameters are usually learned by minimizing mean squared error.
   * Useful links: [Video playlist from Stanford](https://www.youtube.com/playlist?list=PL5-da3qGB5IBSSCPANhTgrw82ws7w_or9) \| [Blog post on towardsdatascience](https://towardsdatascience.com/linear-regression-detailed-view-ea73175f6e86)
 * **Logistic Regression**<a name="LoR"></a>: Logistic regression models the probability of a certain binary outcome given some predictor variables which influence the outcome. It uses a linear function on predictor variables like linear regression but then transforms it into a probability using the logistic function ($\sigma(z) = \frac{1}{1 + e^{-z}}$). The model parameters are usually learned by maximizing likelihood of observed data.
+  * Also see: [Maximum Likelihood Estimation](#MLE)
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=31Q5FGRnxt4) \| [Blog post on towardsdatascience](https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc)
 
 [Back to Top](#top)
@@ -110,7 +117,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## O<a name="O"></a>
-  
+* **Ordinal Regression**<a name="OR"></a>: 
+
 [Back to Top](#top)
 
 ## P<a name="P"></a>
@@ -148,6 +156,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning)
 * **Support Vector Machine**<a name="SVM"></a>: Support Vector Machine (SVM), in simplest terms, is a classification algorithm which aims to find a decision boundary that separates two classes such that the closest data points from either class are as far as possible. Having a good margin between two classes contributes to robustness and generalizability of SVM.
+  * Also see: [Hinge Loss](#HL)
   * Useful links: [Blog post by Me](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) \| [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=_PwhiWxHK8o)
   
 [Back to Top](#top)
