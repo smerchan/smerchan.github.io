@@ -70,7 +70,7 @@ $\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}})
 Apart from using EM algorithms in models with latent variables, it could also be applied in situations of missing values in data set given that values are [missing at random](https://en.wikipedia.org/wiki/Missing_data#Missing_at_random).
 
 ## Concluding Remarks
-This concludes the article. Hope you get a sense of when EM algorithm proves useful and high level idea of how it works. However, as you could guess, usually performing EM steps are not so straightforward. In [this followup post](https://rishabhmisra.github.io/Inference-Using-EM-Algorithm/), I exapnd on the cases where evaluating the posterior (in E step) directly gets intractable and we have to resort to some approximation technique to perform the inference. Let me know if you have any questions or feedback in the comments. Cheers!
+This concludes the article. Hope you get a sense of when EM algorithm proves useful and high level idea of how it works. However, as you could guess, usually performing EM steps are not so straightforward. In [this follow up post](https://rishabhmisra.github.io/Inference-Using-EM-Algorithm/), I expand on the cases where evaluating the posterior (in E step) directly gets intractable and we have to resort to some approximation technique to perform the inference. Let me know if you have any questions or feedback in the comments. Cheers!
 
 
 <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
