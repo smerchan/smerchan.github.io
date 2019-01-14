@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 ## Introduction
-The goal of this post is to briefly explain popular (and unpopular) concepts in Machine Learning, the idea for which stemmed from my travails for finding good quality explanations of various Machine Learning concepts on the web. Unlike similar posts on the web, here you'll also find links to good quality resources and to related concepts for more wholistic understanding. Hopefully, this post would be helpful to the people who are just starting in Machine Learning as well as to the people who need a quick refresher on some concepts. 
+The goal of this post is to briefly explain popular (and unpopular) concepts in Machine Learning, the idea for which stemmed from my travails for finding good quality explanations of various Machine Learning concepts on the web. Unlike similar posts on the web, here you'll also find links to good quality resources and to related concepts for more holistic understanding. Hopefully, this post would be helpful to the people who are just starting in Machine Learning as well as to the people who need a quick refresher on some concepts. 
 
 **Didn't find what you were looking for? Consider contributing by creating a pull request on this post [here](https://github.com/rishabhmisra/rishabhmisra.github.io/blob/master/_posts/2019-01-01-Machine-Learning-Glossary.md)**.
 
