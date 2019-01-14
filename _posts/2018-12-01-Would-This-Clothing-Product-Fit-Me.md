@@ -15,8 +15,8 @@ This is an explainatory post of my [recent RecSys paper](https://cseweb.ucsd.edu
 Following concepts are required to understand this post thoroughly. Though, I'll briefly explain some of them, the corresponding links would provide in-depth knowledge.
 * [Latent Factor Model](http://www.ideal.ece.utexas.edu/seminar/LatentFactorModels.pdf)
 * [Stochastic Gradient Descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent)
-* [Ordinal Regression](http://www.norusis.com/pdf/ASPC_v13.pdf)
-* [Hinge Loss](https://en.wikipedia.org/wiki/Hinge_loss)
+* [Ordinal Regression](https://rishabhmisra.github.io/Machine-Learning-Glossary/#OR)
+* [Hinge Loss](https://rishabhmisra.github.io/Machine-Learning-Glossary/#HL)
 
 ## Catalog Size Recommendation Problem<a name="section-1"></a>
 Many online retailers nowadays allow customers to provide fit feedback (e.g. `small`, `fit` or `large`) on the purchased product size during the product return process or when leaving reviews. For distinction, we will refer to the product (e.g. a Northface Jacket) as parent product and the different size variations (e.g. a Medium sized Northface Jacket) as child products. So, each purchase can be represented as a triple of the form (customer, child product, fit feedback), which contributes two important signals: `product size purchased` and `fit feedback of customer on that size`. Given this type of data, the goal of catalog size recommendation is to learn customers' fit preferences and products' sizing related properties so that customers can be served with recommendations of better fitting product sizes.
