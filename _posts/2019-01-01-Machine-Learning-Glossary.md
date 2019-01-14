@@ -44,7 +44,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## D<a name="D"></a>
 * **Decision Tree**<a name="DT"></a>: A Decision Tree can be used to visually and explicitly represent decisions and decision making. Each non-leaf node in the tree represents a decision based on one of the features in the dataset. Leaves of the trees represent the final output after a series of decisions; for classification, output is class membership based on majority vote from node members and for regression, output is the average value of node members. The feature used to make decision at each step is chosen such that the [information gain](#IG) is maximized.
-  * Also see: [Random Forest](#RF) \| [Boosting](#Boosting)
+  * Also see: [Boosting](#Boosting) \| [Random Forest](#RF)
   * Useful links: [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=SXBG3RGr_Rc) \| [Blog post on towardsdatascience](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052)
 * **Dimensionality Reduction**<a name="DR"></a>: The goal of dimensionality reduction methods is to find a low-dimensional representation of the data that retains as much information as possible. This low-dimensional data representation in turn helps in fighting the [Curse of Dimensionality](#COD).
   * Also see: [Principle Component Analysis](#PCA)
@@ -84,7 +84,6 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 
 ## J<a name="J"></a>
 
-
 [Back to Top](#top)
 
 ## K<a name="K"></a>
@@ -117,7 +116,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## O<a name="O"></a>
-* **Ordinal Regression**<a name="OR"></a>: 
+* **Ordinal Classification**<a name="OC"></a>: Same as [Ordinal Regression](#OR). 
+* **Ordinal Regression**<a name="OR"></a>: Ordinal Regression is used for predicting ordinal outcomes, i.e. whose value exists on an arbitrary scale where only the relative ordering between different values is significant, based on various predictor variables. That is why, it is considered as an intermediate problem between [regression](#Regression) and [classification](#Classification). Usually ordinal regression problem is reduced to multiple binary classification problems with the help of threshold parameters such that classifier's score falling within certain threshold correspond to one of the ordinal outcomes.
+  * Useful links: [Ordinal Regression Wiki](https://en.wikipedia.org/wiki/Ordinal_regression) \| [Post on applying Ordinal Regression to predict clothing fit](https://rishabhmisra.github.io/Would-This-Clothing-Product-Fit-Me/)
 
 [Back to Top](#top)
 
@@ -152,6 +153,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Sensitivity**<a name="Sensitivity"></a>: Same as [Recall](#Recall).
 * **Specificity**<a name="Specificity"></a>: If we are given a set of instances, specificity measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
   * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity).
+* **Standard Score**<a name="SS"></a>: Same as [Z-score](#ZS).
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning)
@@ -162,6 +164,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## T<a name="T"></a>
+* **T-Test**<a name="TT"></a>: 
 * **True Positive Rate**<a name="TPR"></a>: Same as [Recall](#Recall).
 * **True Negative Rate**<a name="TNR"></a>: Same as [Specificity](#Specificity).
   
@@ -191,6 +194,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## Z<a name="Z"></a>
+* **Z-score**<a name="ZS"></a>: Z-score is a measure of how many standard deviations below or above the population mean a raw score is, thus giving us a good picture when we want to compare results from a test to a "normal" population.
+  * Also see: [T-Test](#TT)
+  * Useful links: [Z-score Wiki](https://en.wikipedia.org/wiki/Standard_score) \| [Khan Academy tutorial on Z-score](https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data#z-scores)
 
 [Back to Top](#top)
 
