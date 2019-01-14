@@ -118,7 +118,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## O<a name="O"></a>
 * **Ordinal Classification**<a name="OC"></a>: Same as [Ordinal Regression](#OR). 
 * **Ordinal Regression**<a name="OR"></a>: Ordinal Regression is used for predicting ordinal outcomes, i.e. whose value exists on an arbitrary scale where only the relative ordering between different values is significant, based on various predictor variables. That is why, it is considered as an intermediate problem between [regression](#Regression) and [classification](#Classification). Usually ordinal regression problem is reduced to multiple binary classification problems with the help of threshold parameters such that classifier's score falling within certain threshold correspond to one of the ordinal outcomes.
-  * Useful links: [Ordinal Regression Wiki](https://en.wikipedia.org/wiki/Ordinal_regression) \| [Post on applying Ordinal Regression to predict clothing fit](https://rishabhmisra.github.io/Would-This-Clothing-Product-Fit-Me/)
+  * Useful links: [Ordinal Regression Wiki](https://en.wikipedia.org/wiki/Ordinal_regression) \| [Book Chapter](http://www.norusis.com/pdf/ASPC_v13.pdf) \| [Post on applying Ordinal Regression to predict clothing fit](https://rishabhmisra.github.io/Would-This-Clothing-Product-Fit-Me/)
 
 [Back to Top](#top)
 
