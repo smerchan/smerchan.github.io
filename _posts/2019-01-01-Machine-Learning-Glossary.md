@@ -36,6 +36,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Classification**<a name="Classification"></a>: Classification is the problem of identifying to which of a set of categories a new observation belongs, on the basis of a training set of data containing observations whose category membership is known.
   * Also see: [Boosting](#Boosting) \| [Decision Trees](#DT) \| [K-Nearest Neighbor](#KNN) \| [Logistic Regression](#LoR) \| [Random Forest](#RF) \| [Naive Bayes Classifier](#NBC)
   * Useful links: [Classification Wiki](https://en.wikipedia.org/wiki/Statistical_classification)
+* **Correlation**<a name="Correlation"></a>: Correlation is a statistical technique that can show whether and how strongly pairs of variables are related. [Pearson’s Correlation Coefficient](#PCC) is used to measure the strength of correlation between two variables.
+  * Useful links: [Blog post on Correlation](http://statisticsbyjim.com/basics/correlations/) \| [Detailed Explanation of Correlation](https://www.surveysystem.com/correlation.htm)
+  * Useful links: [Blog post by surveysystem](https://www.surveysystem.com/correlation.htm)
 * **Curse of Dimensionality**<a name="COD"></a>: In a model, as the number of features or dimensions grows, the amount of data needed to make the model generalizable with good performance grows exponentially, which unnecessarily increases storage space and processing time for a modeling algorithm. In this sense, value added by an additional dimension becomes much smaller compared to overhead it adds to the algorithm.
   * Also see: [Dimensionality Reduction](#DR)
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=UvxHOkYQl8g) \| [Elaborate post on Medium](https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335)
@@ -83,6 +86,9 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## J<a name="J"></a>
+* **Jaccard Similarity**<a name="JS"></a>: Jaccard Similarity is a statistic used for comparing the similarity and diversity of finite sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets ($J(A, B) = \frac{|A \cap B|}{|A \cup B|}$). 
+  * Also see: [Correlation](#Correlation)
+  * Useful links: [Jaccard Similarity Wiki](https://en.wikipedia.org/wiki/Jaccard_index) \| [Explanation with examples](https://www.statisticshowto.datasciencecentral.com/jaccard-index/)
 
 [Back to Top](#top)
 
@@ -123,6 +129,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## P<a name="P"></a>
+* **Pearson’s Correlation Coefficient**<a name="PCC"></a>: Correlation coefficient ($\rho$) ranges from -1 to +1. The closer $\rho$ is to +1 or -1, the more closely the two variables are related and if it is close to 0, the variables have no relation with each other. It is defined as $\pho_{X, Y} = \frac{Cov(X, Y)}{\sigma_{X}.\sigma_{Y}}$.
+  * Useful links: [Pearson Correlation Wiki](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
   * Also see: [Recall](#Recall)
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
