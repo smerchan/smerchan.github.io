@@ -86,7 +86,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## J<a name="J"></a>
-* **Jaccard Similarity**<a name="JS"></a>: Jaccard Similarity is a statistic used for comparing the similarity and diversity of finite sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets ($J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|}$). 
+* **Jaccard Similarity**<a name="JS"></a>: Jaccard Similarity is a statistic used for comparing the similarity and diversity of finite sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets $\left(J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|}\right)$). 
   * Also see: [Correlation](#Correlation)
   * Useful links: [Jaccard Similarity Wiki](https://en.wikipedia.org/wiki/Jaccard_index) \| [Explanation with examples](https://www.statisticshowto.datasciencecentral.com/jaccard-index/)
 
