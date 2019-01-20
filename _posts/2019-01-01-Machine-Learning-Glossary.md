@@ -86,7 +86,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## J<a name="J"></a>
-* **Jaccard Similarity**<a name="JS"></a>: Jaccard Similarity is a statistic used for comparing the similarity and diversity of finite sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets ($J(A, B) = \frac{|A \cap B|}{|A \cup B|}$). 
+* **Jaccard Similarity**<a name="JS"></a>: Jaccard Similarity is a statistic used for comparing the similarity and diversity of finite sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets ($J(A, B) = \frac{\|A \cap B\|}{\|A \cup B\|}$). 
   * Also see: [Correlation](#Correlation)
   * Useful links: [Jaccard Similarity Wiki](https://en.wikipedia.org/wiki/Jaccard_index) \| [Explanation with examples](https://www.statisticshowto.datasciencecentral.com/jaccard-index/)
 
@@ -129,7 +129,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## P<a name="P"></a>
-* **Pearson’s Correlation Coefficient**<a name="PCC"></a>: Correlation coefficient ($\rho$) ranges from -1 to +1. The closer $\rho$ is to +1 or -1, the more closely the two variables are related and if it is close to 0, the variables have no relation with each other. It is defined as $\pho_{X, Y} = \frac{Cov(X, Y)}{\sigma_{X}.\sigma_{Y}}$.
+* **Pearson’s Correlation Coefficient**<a name="PCC"></a>: Correlation coefficient ($\rho$) ranges from -1 to +1. The closer $\rho$ is to +1 or -1, the more closely the two variables are related and if it is close to 0, the variables have no relation with each other. It is defined as $\rho_{X, Y} = \frac{Cov(X, Y)}{\sigma_{X}.\sigma_{Y}}$.
   * Useful links: [Pearson Correlation Wiki](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
   * Also see: [Recall](#Recall)
