@@ -7,13 +7,13 @@ permalink: /publications/
 
 * [RecSys'18](https://recsys.acm.org/recsys18/)
 
-  * **Rishabh Misra**, Mengting Wan, Julian McAuley, "**Decomposing Fit Semantics for Product Size Recommendation in Metric Spaces**", in Proc. of 2018 ACM Conference on Recommender Systems (RecSys'18), Vancouver, Canada, Oct. 2018.
+  * **Rishabh Misra**, Mengting Wan, Julian McAuley, "**Decomposing Fit Semantics for Product Size Recommendation in Metric Spaces**", in Proceedings of 2018 ACM Conference on Recommender Systems (RecSys'18), Vancouver, Canada, Oct. 2018. (**25% acceptance rate**)
   * [Paper](http://cseweb.ucsd.edu/~jmcauley/pdfs/recsys18e.pdf) \| [Code](https://github.com/rishabhmisra/Product-Catalog-Size-Recommendation-Framework) \| [Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
 
 
 * [MUSE'15](https://www.kde.cs.uni-kassel.de/ws/muse2015)
 
-  * Avijit Saha*, **Rishabh Misra\***, Balaraman Ravindran, "**Scalable Bayesian Matrix Factorization**", In Proceedings of the 6th International Conference on Mining Ubiquitous and Social Environments (MUSE) @ PKDD/ECML, 2015 Sep 7 (pp. 43-54), Porto, Portugal. (\* equal contribution)
+  * Avijit Saha*, **Rishabh Misra\***, Balaraman Ravindran, "**Scalable Bayesian Matrix Factorization**", In Proceedings of the 6th International Workshop on Mining Ubiquitous and Social Environments (MUSE) @ PKDD/ECML, 2015 Sep 7 (pp. 43-54), Porto, Portugal. (\* equal contribution)
   * [Paper](https://www.kde.cs.uni-kassel.de/wp-content/uploads/ws/muse2015/papers/saha.pdf) \| [Code](https://github.com/rishabhmisra/Scalable-Bayesian-Matrix-Factorization)
   
 
@@ -27,7 +27,7 @@ permalink: /publications/
 
 * [**Clothing Fit Dataset for Size Recommendation**](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) \[**Released**: August 2018\]
 
-  * Product size recommendation and fit prediction are critical in order to improve customers’ shopping experiences and to reduce product return rates. However, modeling customers’ fit feedback is challenging due to its subtle semantics, arising from the subjective evaluation of products and imbalanced label distribution (most of the feedbacks are "Fit"). These datasets, which are the only fit related datasets available publically at this time, collected from [*ModCloth*](https://www.modcloth.com/) and [*RentTheRunWay*](https://www.renttherunway.com/) could be used to address these challenges to improve the recommendation process. (**200+ downloads on Kaggle**)
+  * Product size recommendation and fit prediction are critical in order to improve customers’ shopping experiences and to reduce product return rates. However, modeling customers’ fit feedback is challenging due to its subtle semantics, arising from the subjective evaluation of products and imbalanced label distribution (most of the feedbacks are "Fit"). These datasets, which are the only fit related datasets available publically at this time, collected from [*ModCloth*](https://www.modcloth.com/) and [*RentTheRunWay*](https://www.renttherunway.com/) could be used to address these challenges to improve the recommendation process. (**300+ downloads on Kaggle**)
   
 
 * [**News Headlines Dataset For Sarcasm Detection**](https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection/home) \[**Released**: June 2018\]
