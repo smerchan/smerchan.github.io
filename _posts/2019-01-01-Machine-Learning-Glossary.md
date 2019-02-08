@@ -30,6 +30,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Bagging](#Bagging)
   * Useful links: [Bootstrapping wiki](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) \| [Blog post by machinelearningmastery](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
 
+
 * **Boosting**<a name="Boosting"></a>: Boosting is an ensemble method for improving the model predictions of any given learning algorithm. The idea is to train weak learners sequentially, each trying to correct its predecessor, to build strong learners. A weak learner is defined to be a classifier that is only slightly correlated with the true classification (it can label examples better than random guessing). In contrast, a strong learner is a classifier that is arbitrarily well-correlated with the true classification.
   * Also see: [Bagging](#Bagging)
   * Useful links: [Lecture by Patrick Winston](https://www.youtube.com/watch?v=UHBmv7qCey4) \| [Boosting wiki](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
