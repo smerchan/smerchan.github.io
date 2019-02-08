@@ -172,7 +172,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## T<a name="T"></a>
-* **T-Test**<a name="TT"></a>: 
+* **T-Test**<a name="TT"></a>: The t-test is one type of inferential statistics that is used to determine whether there is a significant difference between the means of two groups. We assume that these two groups follow normal distribution and calculate the t-value (extension of [z-score](#ZS)) which is inextricably linked to certain probability value (p-value). This probability denotes the likelihood of two distribution being the same and if the value is below a certain agreed upon threshold, we can say that the two distributions are sufficiently different.
+  * Useful links: [Blog post by University of Connecticut](https://researchbasics.education.uconn.edu/t-test/) \| [Description on investopedia](https://www.investopedia.com/terms/t/t-test.asp)
 * **True Positive Rate**<a name="TPR"></a>: Same as [Recall](#Recall).
 * **True Negative Rate**<a name="TNR"></a>: Same as [Specificity](#Specificity).
   
