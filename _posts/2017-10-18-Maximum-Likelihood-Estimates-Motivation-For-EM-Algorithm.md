@@ -27,14 +27,14 @@ To that end, we will use the Maximum Likelihood approach where we'll try to find
 <center>
 $L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
 </center>
-Here the data, $\\{x_i,y_i\\}^i \text{\\ for\\ } i \in \{1,2,.., N\}$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ with the assumption that data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). We can expand the equation as:
+Here the data, $\\{x_i,y_i\\}^i$ for $i \in \{1,2,.., N\}$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ with the assumption that data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). We can expand the equation as:
 <center>
-$ \implies L(w) = \sum_{i=1}^N log  P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
+$ \implies L(w) = \sum_{i=1}^N log\left(P(Y = y_i | X = x_i)\right) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
 where we've written $P(Y = y_i | X = x_i)$ in a general form such that it is $\sigma(w.x_i)$ when $y_i = 1$ else $\sigma(-w.x_i)$. Upon further simplification, we can write the log likelihood as:
 <br/>
 <center>
-$L(w) = \sum_{i=1}^N \left[ y_i. log\sigma(w.x_i) + (1 - y_i). log\sigma(-w.x_i) \right]$ --- (A)
+$L(w) = \sum_{i=1}^N \left[ y_i. log\left(\sigma(w.x_i)\right) + (1 - y_i). log\left(\sigma(-w.x_i)\right) \right]$ --- (A)
 </center>
 
 At this point, we should note that log likelihood $L(w)$ breaks down conveniently into per-instance form. Since, there's no coupling between the parameters, optimization can be done easily and we'll see later why this is a good thing. Since $L(w)$ is a function of $w$, we don't have any closed form solution to equation (A). Thus, we would have to use iterative optimization methods like gradient ascent or newton's method to find $w$. An update for gradient ascent method would look like:
