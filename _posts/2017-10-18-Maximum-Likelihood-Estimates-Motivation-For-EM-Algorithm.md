@@ -49,7 +49,7 @@ One detail I didn't point out about the Logistic Regression model was that all t
 ## EM algorithm to the Rescue
 It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $V$ be the observed variables (this includes the target variable) in the model, $Z$ be the latent variables in the model and $\theta$ be the set of model parameters. As per the maximum likelihood approach, our objective to maximize would be:
 <center>
-$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y_i \| V_i) = \sum_{i=1}^N log P(Y_i \| V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(Y_i \| V_i, h)$
+$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y_i | V_i) = \sum_{i=1}^N log P(Y_i | V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(Y_i | V_i, h)$
 </center>
 This can be written in form of conditional probabilities as following:
 <center>
