@@ -25,11 +25,11 @@ Based on whether 1 or 0 has more probability of occuring based on the predictor 
 To that end, we will use the Maximum Likelihood approach where we'll try to find the $w$ which maximizes the likelihood of the observed data. For mathematical convenience, we'll consider try to maximize the log of the likelihood. Parameterized by $z$, log likelihood can be written as: 
 
 <center>
-$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i)$
+$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y = y_i | X = x_i) = \sum_{i=1}^N log\left(P(Y = y_i | X = x_i)\right)$
 </center>
 Here the data, $\\{x_i,y_i\\}^i$ for $i \in \{1,2,.., N\}$, is represented in terms of multiplication of conditional probabilities $P(Y = y_i | X = x_i)$ with the assumption that data samples are independently and identically distributed (so called the [i.i.d assumption](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)). We can expand the equation as:
 <center>
-$ \implies L(w) = \sum_{i=1}^N log\left(P(Y = y_i | X = x_i)\right) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
+$ \implies L(w) = \sum_{i=1}^N log\left[\sigma(w.x_i)^{y_i} . \sigma(-w.x_i)^{1 - y_i} \right]$
 </center>
 where we've written $P(Y = y_i | X = x_i)$ in a general form such that it is $\sigma(w.x_i)$ when $y_i = 1$ else $\sigma(-w.x_i)$. Upon further simplification, we can write the log likelihood as:
 <br/>
@@ -49,7 +49,7 @@ One detail I didn't point out about the Logistic Regression model was that all t
 ## EM algorithm to the Rescue
 It turns out, estimating model parameters does gets a little tricky if latent variables are involved. Let's see why. Let $V$ be the observed variables (this includes the target variable) in the model, $Z$ be the latent variables in the model and $\theta$ be the set of model parameters. As per the maximum likelihood approach, our objective to maximize would be:
 <center>
-$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(V_i) = \sum_{i=1}^N log P(V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(V_i, h)$
+$L(w) = log P(\text{data}) = log \Pi_{i=1}^N P(Y_i \| V_i) = \sum_{i=1}^N log P(Y_i \| V_i) = \sum_{i=1}^N log \sum_{h \in Z_i} P(Y_i \| V_i, h)$
 </center>
 This can be written in form of conditional probabilities as following:
 <center>
