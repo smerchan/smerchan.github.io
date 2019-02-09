@@ -60,10 +60,10 @@ where $X_j \in \\{V_i, Z_i\\}$ and $\text{Pa}(X_j)$ represents parent of $X_j$ i
 ## Expectation Maximization (EM) Algorithm
 EM algorithm uses the fact that optimization of complete data log likelihood ($P(V,Z|\theta$) is much easier when we know the value of corresponding latent variables (thus, removing the summation from inside of log). However, since the only way to know the value of $Z$ is through posterior $P(Z|V,\theta)$, we instead consider the expected value of complete data log likelihood under the posterior distribution of latent variables. This step of finding the expectation is called the E-step. In the subsequent M-step, we maximize the expectation. Formally, EM algorithm can be written as:
 * Choose initial setting for the parameters $\theta^{\text{old}}$
-* **E Step** Evaluate $P(Z \| X, \theta^{\text{old}})$
+* **E Step** Evaluate $P(Z|V, \theta^{\text{old}})$
 * **M step** Evaluate $\theta^{\text{new}}$ given by
 <center>
-$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|X, \theta^{\text{old}}) log P(X,Z|\theta)$
+$\theta^{\text{new}} = \text{argmax}_\theta \sum_{z} P(Z|V, \theta^{\text{old}}) log P(V,Z|\theta)$
 </center>
 * Check for convergence of log likelihood or parameter values. If not converged, then $\theta^{\text{old}} = \theta^{\text{new}}$ and we return to E-step.
 
