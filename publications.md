@@ -5,6 +5,11 @@ permalink: /publications/
 
 ## Research Papers
 
+
+* [ACL'19](http://www.acl2019.org/EN/index.xhtml) \[*Under Review*\]
+
+  * Mengting Wan\*, **Rishabh Misra\***, Ndapa Nakashole, Julian McAuley, "**Fine-Grained Spoiler Detection from Large-Scale Review Corpora**". (\* equal contribution)
+
 * [RecSys'18](https://recsys.acm.org/recsys18/)
 
   * **Rishabh Misra**, Mengting Wan, Julian McAuley, "**Decomposing Fit Semantics for Product Size Recommendation in Metric Spaces**", in Proceedings of 2018 ACM Conference on Recommender Systems (RecSys'18), Vancouver, Canada, Oct. 2018. (**25% acceptance rate**)
