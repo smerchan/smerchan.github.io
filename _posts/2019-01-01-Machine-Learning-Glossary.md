@@ -15,16 +15,16 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [A](#A) . [B](#B) . [C](#C) . [D](#D) . [E](#E) . [F](#F) . [G](#G) . [H](#H) . [I](#I) . [J](#J) . [K](#K) . [L](#L) . [M](#M) . [N](#N) . [O](#O) . [P](#P) . [Q](#Q) . [R](#R) . [S](#S) . [T](#T) . [U](#U) . [V](#V) . [W](#W) . [X](#X) . [Y](#Y) . [Z](#Z)
 
 ## A<a name="A"></a>
-* **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threhold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold, being robust to class imbalance in data and so on.
+* **AUC**<a name="AUC"></a>: AUC is the **A**rea **U**nder the Receiver Operating Characteristic (ROC) **C**urve. ROC curve is obtained by varying the classification threshold of a binary classifier and plotting the true positive rate ([TPR](#TPR)) against the false positive rate ([FPR](#FPR)) at each threshold. It is a popular classification performance metric and has several nice properties like being independent of decision threshold, being robust to the class imbalance in data and so on.
   * Useful links: [Video Explanation of AUC](https://www.youtube.com/watch?v=OAl6eAyP-yo) \| [Probabilistic interpretation of AUC](https://www.alexejgossmann.com/auc/)
   
 [Back to Top](#top)
 
 ## B<a name="B"></a>
-* **Bagging**<a name="Bagging"></a>: Bagging is a procedure that produces several different training sets of the same size with replacement and then trains a machine learning model for each set. The predictions are produced by taking majority vote in a [classification](#Classification) task and by averaging in a [regression](#Regression) task. Bagging helps in reducing variance from models.
+* **Bagging**<a name="Bagging"></a>: Bagging is a procedure that produces several different training sets of the same size with replacement and then trains a machine learning model for each set. The predictions are produced by taking a majority vote in a [classification](#Classification) task and by averaging in a [regression](#Regression) task. Bagging helps in reducing variance from models.
   * Also see: [Random Forest](#RF)
   * Useful links: [Video explanation by Udacity](https://www.youtube.com/watch?v=2Mg8QD0F1dQ) \| [Blog post on Medium](https://medium.com/@harishkandan95/bagging-the-skill-of-bagging-bootstrap-aggregating-83c18dcabdf1)
-* **Bias Variance Trade-off**<a name="bias-variance"></a>: Bias here refers to the difference between average prediction of a model and target value the model is trying to predict. Variance refers to the variability in the model predictions for a given data point because of its sensitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters, then it may have high variance and low bias. Thus, we need to find the right/good balance between bias and variance without overfitting and underfitting the data.
+* **Bias-Variance Trade-off**<a name="bias-variance"></a>: Bias here refers to the difference between the average prediction of a model and target value the model is trying to predict. Variance refers to the variability in the model predictions for a given data point because of its sensitivity to small fluctuations in the training set. If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand, if our model has a large number of parameters, then it may have high variance and low bias. Thus, we need to find the right/good balance between bias and variance without overfitting and underfitting the data.
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=VusKAosxxyk) \| [Blog post on towardsdatascience](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
 * **Bootstrapping**<a name="Bootstrapping"></a>: Bootstrapping is the process of dividing the dataset into multiple subsets, with replacement. Each subset is of the same size of the dataset and the samples are called bootstrap samples. It is used in [bagging](#Bagging).
   * Also see: [Bagging](#Bagging)
@@ -51,7 +51,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## D<a name="D"></a>
-* **Decision Tree**<a name="DT"></a>: A Decision Tree can be used to visually and explicitly represent decisions and decision making. Each non-leaf node in the tree represents a decision based on one of the features in the dataset. Leaves of the trees represent the final output after a series of decisions; for classification, output is class membership based on majority vote from node members and for regression, output is the average value of node members. The feature used to make decision at each step is chosen such that the [information gain](#IG) is maximized.
+* **Decision Tree**<a name="DT"></a>: A Decision Tree can be used to visually and explicitly represent decisions and decision making. Each non-leaf node in the tree represents a decision based on one of the features in the dataset. Leaves of the trees represent the final output after a series of decisions; for classification, the output is class membership based on a majority vote from node members and for regression, the output is the average value of node members. The feature used to make a decision at each step is chosen such that the [information gain](#IG) is maximized.
   * Also see: [Boosting](#Boosting) \| [Random Forest](#RF)
   * Useful links: [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=SXBG3RGr_Rc) \| [Blog post on towardsdatascience](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052)
 * **Dimensionality Reduction**<a name="DR"></a>: The goal of dimensionality reduction methods is to find a low-dimensional representation of the data that retains as much information as possible. This low-dimensional data representation in turn helps in fighting the [Curse of Dimensionality](#COD).
@@ -98,15 +98,15 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## K<a name="K"></a>
-* **K-Nearest Neighbor**<a name="KNN"></a>: KNN is essentially a classification technique that finds the ($K$) data points in the training data which are most similar to an unseen data point, and takes majority vote to make classifications. KNN is a non-parametric method which means that it does not make any assumptions on the underlying data distribution. Performance of KNN methods depend on the data representation and the definition of closeness/similarity.
+* **K-Nearest Neighbor**<a name="KNN"></a>: KNN is essentially a classification technique that finds the ($K$) data points in the training data which are most similar to an unseen data point, and takes a majority vote to make classifications. KNN is a non-parametric method which means that it does not make any assumptions on the underlying data distribution. Performance of KNN methods depends on the data representation and the definition of closeness/similarity.
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=vVj2itVNku4) \| [Blog post on Medium](https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7)
-* **Kullback–Leibler Divergence**<a name="KLD"></a>: Kullback–Leibler divergence is a measure of how one probability distribution is different from a second, reference probability distribution. A familiar use case for this is when we replace observed data or a complex distributions with a simpler approximating distribution, we can use KL Divergence to measure just how much information we lose when we choose an approximation.
+* **Kullback–Leibler Divergence**<a name="KLD"></a>: Kullback–Leibler divergence is a measure of how one probability distribution is different from a second, reference probability distribution. A familiar use case for this is when we replace observed data or complex distributions with a simpler approximating distribution, we can use KL Divergence to measure just how much information we lose when we choose an approximation.
   * Useful links: [Blog post on countbayesie](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) \| [Blog post on towardsdatascience](https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68)
   
 [Back to Top](#top)
 
 ## L<a name="L"></a>
-* **Linear Regression**<a name="LiR"></a>: Linear regression models linear relationship between a scalar dependent variable (usually called target) and several independent variables (usually called predictors). It can be used for forecasting outcomes once the model parameters are learned using supervision from a relevant dataset. Additionally, the learned model parameters can also be used to explain the strength of the relationship between the target and the predictors (procedure known as linear regression analysis). The model parameters are usually learned by minimizing mean squared error.
+* **Linear Regression**<a name="LiR"></a>: Linear regression models linear relationship between a scalar dependent variable (usually called target) and several independent variables (usually called predictors). It can be used for forecasting outcomes once the model parameters are learned using supervision from a relevant dataset. Additionally, the learned model parameters can also be used to explain the strength of the relationship between the target and the predictors (a procedure known as linear regression analysis). The model parameters are usually learned by minimizing mean squared error.
   * Useful links: [Video playlist from Stanford](https://www.youtube.com/playlist?list=PL5-da3qGB5IBSSCPANhTgrw82ws7w_or9) \| [Blog post on towardsdatascience](https://towardsdatascience.com/linear-regression-detailed-view-ea73175f6e86)
 * **Logistic Regression**<a name="LoR"></a>: Logistic regression models the probability of a certain binary outcome given some predictor variables which influence the outcome. It uses a linear function on predictor variables like linear regression but then transforms it into a probability using the logistic function $\left( \sigma(z) = \frac{1}{1 + e^{-z}} \right)$. The model parameters are usually learned by maximizing likelihood of observed data.
   * Also see: [Maximum Likelihood Estimation](#MLE)
@@ -121,7 +121,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## N<a name="N"></a>
-* **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated with the presence of any other feature and they all independently contribute towards the class probability.
+* **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature and they all independently contribute towards the class probability.
   * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post on towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
 
 [Back to Top](#top)
@@ -139,7 +139,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Precision**<a name="Precision"></a>: If we are given a set of instances, precision is the fraction of relevant instances (those correctly classified into a certain class $C$) among the retrieved instances (those belonging to a certain class $C$). A perfect precision score of 1.0 means that every result retrieved by a search was relevant, but says nothing about whether all relevant documents were retrieved.
   * Also see: [Recall](#Recall)
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
-* **Principle Component Analysis**<a name="PCA"></a>: PCA is a statistical procedure that transforms a set of observations of possibly correlated variables into a set of observations with linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component variance in decreasing order with the constraint that it is orthogonal to the preceding components. Utilizing only few components that capture most of the variance in data helps in fighting the [Curse of Dimensionality](#COD).
+* **Principle Component Analysis**<a name="PCA"></a>: PCA is a statistical procedure that transforms a set of observations of possibly correlated variables into a set of observations with linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component variance in decreasing order with the constraint that it is orthogonal to the preceding components. Utilizing only a few components that capture most of the variance in data helps in fighting the [Curse of Dimensionality](#COD).
   * Useful links: [Video Explanation by Stanford Profs](https://www.youtube.com/watch?v=ipyxSYXgzjQ) \| [Online Lesson by Penn State University](https://onlinecourses.science.psu.edu/stat505/node/49/)
   
 [Back to Top](#top)
@@ -149,7 +149,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## R<a name="R"></a>
-* **Random Forest**<a name="RF"></a>: Random Forest is a supervised learning algorithm that builds an ensemble of [Decision Trees](#DT), where each decision tree is allowed to use fixed number of randomly chosen features. The decision trees are trained using the [Bagging](#Bagging) technique and the output of trees are merged together to get a more accurate and stable prediction.
+* **Random Forest**<a name="RF"></a>: Random Forest is a supervised learning algorithm that builds an ensemble of [Decision Trees](#DT), where each decision tree is allowed to use a fixed number of randomly chosen features. The decision trees are trained using the [Bagging](#Bagging) technique and the output of trees are merged together to get a more accurate and stable prediction.
   * Also see: [Boosting](#Boosting)
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd) \| [Blog post on Medium](https://medium.com/@williamkoehrsen/random-forest-simple-explanation-377895a60d2d)
 * **Recall**<a name="Recall"></a>: If we are given a set of instances, recall is the fraction of relevant instances (belonging to a certain class $C$) that have been retrieved (or correctly classified in $C$) over the total number of relevant instances. A recall of 1.0 means that every item from class $C$ was labeled as belonging to class $C$, but does not say anything about other items that were incorrectly labeled as belonging to class $C$.
@@ -170,14 +170,14 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning)
-* **Support Vector Machine**<a name="SVM"></a>: Support Vector Machine (SVM), in simplest terms, is a classification algorithm which aims to find a decision boundary that separates two classes such that the closest data points from either class are as far as possible. Having a good margin between two classes contributes to robustness and generalizability of SVM.
+* **Support Vector Machine**<a name="SVM"></a>: Support Vector Machine (SVM), in simplest terms, is a classification algorithm which aims to find a decision boundary that separates two classes such that the closest data points from either class are as far as possible. Having a good margin between the two classes contributes to robustness and generalizability of SVM.
   * Also see: [Hinge Loss](#HL)
   * Useful links: [Blog post by Me](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) \| [Video Lecture by Patrick Winston](https://www.youtube.com/watch?v=_PwhiWxHK8o)
   
 [Back to Top](#top)
 
 ## T<a name="T"></a>
-* **T-Test**<a name="TT"></a>: The t-test is one type of inferential statistics that is used to determine whether there is a significant difference between the means of two groups. T-test assumes that the two groups follow normal distribution and calculates the t-value (extension of [z-score](#ZS)), which is inextricably linked to certain probability value (p-value). P-value denotes the likelihood of two distribution being the same and if the value is below a certain agreed upon threshold, t-test concludes that the two distributions are sufficiently different.
+* **T-Test**<a name="TT"></a>: The t-test is one type of inferential statistics that is used to determine whether there is a significant difference between the means of two groups. T-test assumes that the two groups follow a normal distribution and calculates the t-value (extension of [z-score](#ZS)), which is inextricably linked to certain probability value (p-value). P-value denotes the likelihood of two distribution being the same and if the value is below a certain agreed-upon threshold, t-test concludes that the two distributions are sufficiently different.
   * Useful links: [Blog post by University of Connecticut](https://researchbasics.education.uconn.edu/t-test/) \| [Description on investopedia](https://www.investopedia.com/terms/t/t-test.asp)
 * **True Positive Rate**<a name="TPR"></a>: Same as [Recall](#Recall).
 * **True Negative Rate**<a name="TNR"></a>: Same as [Specificity](#Specificity).
@@ -185,7 +185,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## U<a name="U"></a>
-* **Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering underlying structure of the data.
+* **Unsupervised Learning**<a name="UL"></a>: Unsupervised learning is the task of inferring patterns from data without having any reference to known, or labeled, outcomes. It is generally used for discovering the underlying structure of the data.
   * Also see: [Principle Component Analysis](#PCA)
   * Useful links: [Blog post by Hackernoon](https://hackernoon.com/unsupervised-learning-demystified-4060eecedeaf) \| [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/unsupervised-learning-olRZo) 
   
