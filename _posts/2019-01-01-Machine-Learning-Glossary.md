@@ -30,7 +30,6 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Bagging](#Bagging)
   * Useful links: [Bootstrapping wiki](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) \| [Blog post by machinelearningmastery](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
 
-
 * **Boosting**<a name="Boosting"></a>: Boosting is an ensemble method for improving the model predictions of any given learning algorithm. The idea is to train weak learners sequentially, each trying to correct its predecessor, to build strong learners. A weak learner is defined to be a classifier that is only slightly correlated with the true classification (it can label examples better than random guessing). In contrast, a strong learner is a classifier that is arbitrarily well-correlated with the true classification.
   * Also see: [Bagging](#Bagging)
   * Useful links: [Lecture by Patrick Winston](https://www.youtube.com/watch?v=UHBmv7qCey4) \| [Boosting wiki](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
@@ -41,9 +40,11 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Classification**<a name="Classification"></a>: Classification is the problem of identifying to which of a set of categories a new observation belongs, on the basis of a training set of data containing observations whose category membership is known.
   * Also see: [Boosting](#Boosting) \| [Decision Trees](#DT) \| [K-Nearest Neighbor](#KNN) \| [Logistic Regression](#LoR) \| [Random Forest](#RF) \| [Naive Bayes Classifier](#NBC)
   * Useful links: [Classification Wiki](https://en.wikipedia.org/wiki/Statistical_classification)
+* **Confusion Matrix**<a name="CM"></a>:
 * **Correlation**<a name="Correlation"></a>: Correlation is a statistical technique that can show whether and how strongly pairs of variables are related. [Pearson’s Correlation Coefficient](#PCC) is used to measure the strength of correlation between two variables.
   * Useful links: [Blog post on Correlation](http://statisticsbyjim.com/basics/correlations/) \| [Detailed Explanation of Correlation](https://www.surveysystem.com/correlation.htm)
   * Useful links: [Blog post by surveysystem](https://www.surveysystem.com/correlation.htm)
+* **Cross Validation**<a name="CV"></a>:
 * **Curse of Dimensionality**<a name="COD"></a>: In a model, as the number of features or dimensions grows, the amount of data needed to make the model generalizable with good performance grows exponentially, which unnecessarily increases storage space and processing time for a modeling algorithm. In this sense, value added by an additional dimension becomes much smaller compared to overhead it adds to the algorithm.
   * Also see: [Dimensionality Reduction](#DR)
   * Useful links: [Video explanation by Trevor Hastie](https://www.youtube.com/watch?v=UvxHOkYQl8g) \| [Elaborate post on Medium](https://medium.freecodecamp.org/the-curse-of-dimensionality-how-we-can-save-big-data-from-itself-d9fa0f872335)
@@ -57,10 +58,12 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Dimensionality Reduction**<a name="DR"></a>: The goal of dimensionality reduction methods is to find a low-dimensional representation of the data that retains as much information as possible. This low-dimensional data representation in turn helps in fighting the [Curse of Dimensionality](#COD).
   * Also see: [Principle Component Analysis](#PCA)
   * Useful links: [Video Explanation by Robert Tibshirani](https://www.youtube.com/watch?v=QlyROnAjnEk) \| [Blog post on towardsdatascience](https://towardsdatascience.com/https-medium-com-abdullatif-h-dimensionality-reduction-for-dummies-part-1-a8c9ec7b7e79)
+* **Discriminative Classifiers**<a name="DC"></a>: 
   
 [Back to Top](#top)
 
 ## E<a name="E"></a>
+* **Error Analysis**<a name="Error-Analysis"></a>:
 * **Expectation Maximization**<a name="EM"></a>: Expectation-Maximization (EM) algorithm is a way to find [maximum likelihood estimates](#MLE) for model parameters when the data is incomplete, has missing data points, or has unobserved (hidden) latent variables. It uses an iterative approach to approximate the maximum likelihood function.
   * Useful links: [Introductory blog post by me](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/) \| [Advanced blog post by me](https://rishabhmisra.github.io/Inference-Using-EM-Algorithm/)
 
@@ -69,12 +72,15 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## F<a name="F"></a>
 * **False Positive Rate**<a name="FPR"></a>: The false positive rate is calculated as the ratio between the number of negative events wrongly categorized as positive (false positives) and the total number of actual negative events (regardless of classification).
   * Useful links: [False Positive Rate Wiki](https://en.wikipedia.org/wiki/False_positive_rate)
+* **Feature Selection**<a name="Feature-Selection"></a>:
   
 [Back to Top](#top)
 
 ## G<a name="G"></a>
+* **Generative Classifiers**<a name="GC"></a>: 
 * **Gradient Descent**<a name="GD"></a>: Gradient Descent is an optimization technique to minimize a loss function by computing the gradients of the loss function with respect to the model's parameters, conditioned on training data. Informally, gradient descent iteratively adjusts parameters and gradually finding the best combination to minimize the loss.
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0) \| [Blog post on kdnuggets](https://www.kdnuggets.com/2017/04/simple-understand-gradient-descent-algorithm.html)
+* **Grid Search**<a name="Grid-Search"></a>: 
 
 [Back to Top](#top)
 
@@ -106,6 +112,8 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## L<a name="L"></a>
+* **Learning Curve**<a name="Error-Analysis"></a>:
+* **Linear Discriminant Analysis**<a name="LDA-Dim"></a>:
 * **Linear Regression**<a name="LiR"></a>: Linear regression models linear relationship between a scalar dependent variable (usually called target) and several independent variables (usually called predictors). It can be used for forecasting outcomes once the model parameters are learned using supervision from a relevant dataset. Additionally, the learned model parameters can also be used to explain the strength of the relationship between the target and the predictors (a procedure known as linear regression analysis). The model parameters are usually learned by minimizing mean squared error.
   * Useful links: [Video playlist from Stanford](https://www.youtube.com/playlist?list=PL5-da3qGB5IBSSCPANhTgrw82ws7w_or9) \| [Blog post on towardsdatascience](https://towardsdatascience.com/linear-regression-detailed-view-ea73175f6e86)
 * **Logistic Regression**<a name="LoR"></a>: Logistic regression models the probability of a certain binary outcome given some predictor variables which influence the outcome. It uses a linear function on predictor variables like linear regression but then transforms it into a probability using the logistic function $\left( \sigma(z) = \frac{1}{1 + e^{-z}} \right)$. The model parameters are usually learned by maximizing likelihood of observed data.
@@ -117,12 +125,14 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 ## M<a name="M"></a>
 * **Maximum Likelihood Estimation**<a name="MLE"></a>: Maximum likelihood estimation is a method of estimating the parameters of a statistical model $\theta$ such that the likelihood function $L(\theta; x)$, which is a function of model parameters given observed data $x$, is maximized. Intuitively, this selects the parameters $\theta$ that make the observed data most probable.
   * Useful links: [Video explanation by Trevor Hastie](https://youtu.be/31Q5FGRnxt4?t=145) \| [Blog post on towardsdatascience](https://towardsdatascience.com/probability-concepts-explained-maximum-likelihood-estimation-c7b4342fdbb1)
+* **Model Selection**<a name="MS"></a>: 
 
 [Back to Top](#top)
 
 ## N<a name="N"></a>
-* **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes Classifier is based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature and they all independently contribute towards the class probability.
+* **Naive Bayes Classifier**<a name="NBC"></a>: Naive Bayes is a [generative classification](#GC) technique based on [Bayes’ Theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem). It assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature and they all independently contribute towards the class probability.
   * Useful links: [Video Explanation by Trevor Hastie](https://youtu.be/6FiNGTYAOAA?t=275) \| [Blog post on towardsdatascience](https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c)
+* **Neural Network**<a name="NN"></a>: 
 
 [Back to Top](#top)
 
@@ -140,6 +150,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Recall](#Recall)
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c) \| [Precision and Recall Wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 * **Principle Component Analysis**<a name="PCA"></a>: PCA is a statistical procedure that transforms a set of observations of possibly correlated variables into a set of observations with linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component variance in decreasing order with the constraint that it is orthogonal to the preceding components. Utilizing only a few components that capture most of the variance in data helps in fighting the [Curse of Dimensionality](#COD).
+  * Also see: [Linear Discriminant Analysis](#LDA-Dim)
   * Useful links: [Video Explanation by Stanford Profs](https://www.youtube.com/watch?v=ipyxSYXgzjQ) \| [Online Lesson by Penn State University](https://onlinecourses.science.psu.edu/stat505/node/49/)
   
 [Back to Top](#top)
@@ -149,6 +160,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## R<a name="R"></a>
+* **$R^2$**<a name="R-squared"></a>:
 * **Random Forest**<a name="RF"></a>: Random Forest is a supervised learning algorithm that builds an ensemble of [Decision Trees](#DT), where each decision tree is allowed to use a fixed number of randomly chosen features. The decision trees are trained using the [Bagging](#Bagging) technique and the output of trees are merged together to get a more accurate and stable prediction.
   * Also see: [Boosting](#Boosting)
   * Useful links: [Blog post on towardsdatascience](https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd) \| [Blog post on Medium](https://medium.com/@williamkoehrsen/random-forest-simple-explanation-377895a60d2d)
@@ -167,6 +179,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Specificity**<a name="Specificity"></a>: If we are given a set of instances, specificity measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
   * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity).
 * **Standard Score**<a name="SS"></a>: Same as [Z-score](#ZS).
+* **Stratified Cross Validation**<a name="SCV"></a>:
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
   * Useful links: [Coursera Video Explanation](https://www.coursera.org/lecture/machine-learning/supervised-learning-1VkCb) \| [Supervised Learning Wiki](https://en.wikipedia.org/wiki/Supervised_learning)
