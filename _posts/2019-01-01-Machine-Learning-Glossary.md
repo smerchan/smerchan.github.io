@@ -63,6 +63,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## E<a name="E"></a>
+* **Entropy**<a name="Error-Analysis"></a>:
 * **Error Analysis**<a name="Error-Analysis"></a>:
 * **Expectation Maximization**<a name="EM"></a>: Expectation-Maximization (EM) algorithm is a way to find [maximum likelihood estimates](#MLE) for model parameters when the data is incomplete, has missing data points, or has unobserved (hidden) latent variables. It uses an iterative approach to approximate the maximum likelihood function.
   * Useful links: [Introductory blog post by me](https://rishabhmisra.github.io/Maximum-Likelihood-Estimates-Motivation-For-EM-Algorithm/) \| [Advanced blog post by me](https://rishabhmisra.github.io/Inference-Using-EM-Algorithm/)
