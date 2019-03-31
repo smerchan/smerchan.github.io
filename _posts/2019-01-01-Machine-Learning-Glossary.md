@@ -63,6 +63,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## E<a name="E"></a>
+* **Elastic Net Regression**<a name="Elastic-Net"></a>:
 * **Entropy**<a name="Error-Analysis"></a>:
 * **Error Analysis**<a name="Error-Analysis"></a>:
 * **Expectation Maximization**<a name="EM"></a>: Expectation-Maximization (EM) algorithm is a way to find [maximum likelihood estimates](#MLE) for model parameters when the data is incomplete, has missing data points, or has unobserved (hidden) latent variables. It uses an iterative approach to approximate the maximum likelihood function.
@@ -113,6 +114,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 [Back to Top](#top)
 
 ## L<a name="L"></a>
+* **Lasso Regression**<a name="Lasso"></a>:
 * **Learning Curve**<a name="Error-Analysis"></a>:
 * **Linear Discriminant Analysis**<a name="LDA-Dim"></a>:
 * **Linear Regression**<a name="LiR"></a>: Linear regression models linear relationship between a scalar dependent variable (usually called target) and several independent variables (usually called predictors). It can be used for forecasting outcomes once the model parameters are learned using supervision from a relevant dataset. Additionally, the learned model parameters can also be used to explain the strength of the relationship between the target and the predictors (a procedure known as linear regression analysis). The model parameters are usually learned by minimizing mean squared error.
@@ -172,6 +174,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
   * Also see: [Linear Regression](#LiR)
   * Useful links: [Video Explanation by Trevor Hastie](https://www.youtube.com/watch?v=WjyuiK5taS8)
 * **Relative Entropy**<a name="relative-entropy"></a>: See [Kullback–Leibler Divergence](#KLD). 
+* **Ridge Regression**<a name="Ridge"></a>:
 
 [Back to Top](#top)
 
