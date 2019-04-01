@@ -155,6 +155,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Principle Component Analysis**<a name="PCA"></a>: PCA is a statistical procedure that transforms a set of observations of possibly correlated variables into a set of observations with linearly uncorrelated variables called principal components. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component variance in decreasing order with the constraint that it is orthogonal to the preceding components. Utilizing only a few components that capture most of the variance in data helps in fighting the [Curse of Dimensionality](#COD).
   * Also see: [Linear Discriminant Analysis](#LDA-Dim)
   * Useful links: [Video Explanation by Stanford Profs](https://www.youtube.com/watch?v=ipyxSYXgzjQ) \| [Online Lesson by Penn State University](https://onlinecourses.science.psu.edu/stat505/node/49/)
+* **Pruning**<a name="Pruning"></a>:
   
 [Back to Top](#top)
 
@@ -183,6 +184,7 @@ The goal of this post is to briefly explain popular (and unpopular) concepts in 
 * **Specificity**<a name="Specificity"></a>: If we are given a set of instances, specificity measures the proportion of actual negatives (instances not belonging to a particular class) that are correctly identified as such (e.g., the percentage of healthy people who are correctly identified as not having the condition).
   * Useful links: [Specificity Wiki](https://en.wikipedia.org/wiki/Sensitivity_and_specificity#Sensitivity).
 * **Standard Score**<a name="SS"></a>: Same as [Z-score](#ZS).
+* **Standard Error**<a name="SE"></a>:
 * **Stratified Cross Validation**<a name="SCV"></a>:
 * **Supervised Learning**<a name="SL"></a>: Supervised learning is a task of learning a function that can map an unseen input to an output as accurately as possible based on the example input-output pairs known as training data.
   * Also see: [Classification](#Classification) \| [Regression](#Regression)
