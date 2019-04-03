@@ -7,17 +7,17 @@ mathjax: true
 ---
 
 ## Introduction
-This is the second part of the post on SVM where I'll discuss about Soft Margin Formulation and Kernel trick as ways to tackle linear inseparability problem. [First part](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) of the post discusses the motivation and basics of SVM. In the previous part, we left off with the case where the data points did not seem to be linearly separable.
+This is the second part of the post on SVM where I'll discuss Soft Margin Formulation and Kernel trick as ways to tackle linear inseparability problem. [First part](https://rishabhmisra.github.io/Introduction-to-Support-Vector-Machines-Motivation-and-Basics/) of the post discusses the motivation and basics of SVM. In the previous part, we left off with the case where the data points did not seem to be linearly separable.
 
 <center>
 <img src="/images/svm/non_separability.PNG" width="500" height ="400"/>
 </center>
 
 ## Soft Margin Formulation
-Let us discuss our first solution of Soft Margin Formulation, which would allow us to make few mistakes while keeping the margin as wide as possible.
+Let us discuss our first solution of Soft Margin Formulation, which would allow us to make a few mistakes while keeping the margin as wide as possible.
 
 ### Motivation
-To motivate this technique, please note following points:
+To motivate this technique, please note the following points:
 
 1 - Almost all the real world datasets have data that is not linearly separable. So, we would be presented with cases like these more frequently than we think.
 
@@ -27,7 +27,7 @@ To motivate this technique, please note following points:
 <img src="/images/svm/soft_margin_motivation.PNG" width="500" height ="400"/>
 </center>
 
-Here, the blue decision boundary perfectly separates all the training points. But is it really recommended to have this line as decision boundary? Would it be able to generalize well on unseen data? If we think about it, it would not, as it is too close to the points for each class. And for all we know, the plus point close to decision boundary is an outlier or a point labeled incorrectly. Thus, in this case, we would prefer black line as our decision boundary which makes a minimum number of mistakes while keeping the margin as wide as possible. So, this would be our goal from now on.
+Here, the blue decision boundary perfectly separates all the training points. But is it really recommended to have this line as a decision boundary? Would it be able to generalize well on unseen data? If we think about it, it would not, as it is too close to the points for each class. And for all we know, the plus point close to decision boundary is an outlier or a point labeled incorrectly. Thus, in this case, we would prefer the black line as our decision boundary which makes a minimum number of mistakes while keeping the margin as wide as possible. So, this would be our goal from now on.
 
 ### How it Works (Mathematically)
 Mathematically, our objective should be to minimize
@@ -56,7 +56,7 @@ which loosely translates to maximizing the margin while minimizing the number of
 $y_{i}(\vec{w}.\vec{x}_{i} + b) \ge 1 - \xi_{i}$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B)
 </center>
 
-The left-hand side of the inequality could be thought of as the confidence of classification. If it is $\ge$ 1, then we are hundred percent confident that the point is correctly classified and value of the penalty ($\xi$) would be zero. If it is less than 1, we would incur a linear penalty and the value of $\xi$ would be proportional to how far away the point is from the margin.
+The left-hand side of the inequality could be thought of like the confidence of classification. If it is $\ge$ 1, then we are a hundred percent confident that the point is correctly classified and value of the penalty ($\xi$) would be zero. If it is less than 1, we would incur a linear penalty and the value of $\xi$ would be proportional to how far away the point is from the margin.
 
 Next, we'll make use of [Lagrange Multiplier](https://en.wikipedia.org/wiki/Lagrange_multiplier) again to enforce the constraint from the equation (B). Formally, our objective would then become to minimize the following with respect to $\vec{w}, b, \xi_{i}$:
 
@@ -87,7 +87,7 @@ $K(x, y) = \ <\phi(x), \phi(y)>$
 
 Here $x$ and $y$ are input vectors and $\phi$ is a transformation function. Thus, kernel function essentially takes the dot product of transformed input vectors.
 
-Now, the trick to tackle linear separability problem in two-dimensional space is to project/transform the input vectors into higher dimensional space and hope that the data points now can be perfectly separable by a hyperplane in that space like shown in figure below.
+Now, the trick to tackle linear separability problem in two-dimensional space is to project/transform the input vectors into higher dimensional space and hope that the data points now can be perfectly separable by a hyperplane in that space like shown in the figure below.
 
 <center>
 <img src="/images/svm/kernel_mapping.PNG" width="500" height ="400"/>
@@ -119,7 +119,7 @@ But, how's the transformation inexpensive, you ask? Let us further simplify the 
 <center> $K(P_1, P_2) = (x_{1}x_{2} + y_{1}y_{2})^{2}$ </center>  
 <center> $K(P_1, P_2) = (P_1^{T}P_2)^{2}$ </center>
 
-Hence, as we see, the kernel function is nothing but a simple transformation of the dot product of input vectors, making this technique computationally inexpensive. We usually choose appropriate kernel function for our application based on our domain knowledge and by cross-validating.
+Hence, as we see, the kernel function is nothing but a simple transformation of the dot product of input vectors, making this technique computationally inexpensive. We usually choose the appropriate kernel function for our application based on our domain knowledge and by cross-validating.
 
 ## Concluding Remarks
 With this, we reached the end of this post. Hopefully, the details I provided here helped you in some way in understanding SVM more clearly. In case you have any questions or suggestions, please let me know in comments. Cheers!
