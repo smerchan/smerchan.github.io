@@ -37,12 +37,12 @@ permalink: /publications/
 
 * [**News Headlines Dataset For Sarcasm Detection**](https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection/home) \[**Released**: June 2018\]
 
-  * Past studies in Sarcasm Detection mostly make use of Twitter datasets collected using hashtag based supervision but such datasets are noisy in terms of labels and language. Furthermore, many tweets are replies to other tweets and detecting sarcasm in these requires the availability of contextual tweets. To overcome the limitations related to noise in Twitter datasets, this **News Headlines dataset for Sarcasm Detection** is collected from two news website. [*TheOnion*](https://www.theonion.com/) aims at producing sarcastic versions of current events and we collected all the headlines from News in Brief and News in Photos categories (which are sarcastic). We collect real (and non-sarcastic) news headlines from [*HuffPost*](https://www.huffingtonpost.com/). (**2500+ downloads on Kaggle**)
+  * Past studies in Sarcasm Detection mostly make use of Twitter datasets collected using hashtag based supervision but such datasets are noisy in terms of labels and language. Furthermore, many tweets are replies to other tweets and detecting sarcasm in these requires the availability of contextual tweets. To overcome the limitations related to noise in Twitter datasets, this **News Headlines dataset for Sarcasm Detection** is collected from two news website. [*TheOnion*](https://www.theonion.com/) aims at producing sarcastic versions of current events and we collected all the headlines from News in Brief and News in Photos categories (which are sarcastic). We collect real (and non-sarcastic) news headlines from [*HuffPost*](https://www.huffingtonpost.com/). (**3000+ downloads on Kaggle**)
 
 
 * [**News Category Dataset**](https://www.kaggle.com/rmisra/news-category-dataset/home) \[**Released**: June 2018\]
 
-  * This dataset contains around 125k news headlines from the year 2013 to 2018 obtained from [*HuffPost*](https://www.huffingtonpost.com/). This dataset could be used to produce some interesting liguistic insights about the type of language used in different news articles or to simply identify tags for untracked news articles. (**2500+ downloads on Kaggle**)
+  * This dataset contains around 125k news headlines from the year 2013 to 2018 obtained from [*HuffPost*](https://www.huffingtonpost.com/). This dataset could be used to produce some interesting liguistic insights about the type of language used in different news articles or to simply identify tags for untracked news articles. (**3000+ downloads on Kaggle**)
 
 
 <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
