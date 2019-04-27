@@ -4,7 +4,7 @@ permalink: /publications/
 ---
 
 ## Publications
-### <center> [Research Papers](#papers) | [Datasets](#datasets) </center>
+### [Research Papers](#papers) | [Datasets](#datasets)
 
 ### Research Papers<a name="papers"></a>
 
