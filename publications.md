@@ -3,7 +3,10 @@ layout: default
 permalink: /publications/
 ---
 
-## Research Papers
+## Publications
+### <center> [Research Papers](#papers) | [Datasets](#datasets) </center>
+
+### Research Papers<a name="papers"></a>
 
 
 * [ACL'19](http://www.acl2019.org/EN/index.xhtml) \[*Under Review*\]
@@ -28,7 +31,7 @@ permalink: /publications/
   * [Paper](https://www.researchgate.net/profile/Rishabh_Misra/publication/320408037_Scalable_Variational_Bayesian_Factorization_Machine/links/59e32a86aca2724cbfe36911/Scalable-Variational-Bayesian-Factorization-Machine.pdf) \| [Code](https://github.com/rishabhmisra/Scalable-Variational-Bayesian-Factorization-Machine)
 
 
-## Datasets
+### Datasets<a name="datasets"></a>
 
 * [**Clothing Fit Dataset for Size Recommendation**](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation/home) \[**Released**: August 2018\]
 
