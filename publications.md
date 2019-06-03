@@ -9,10 +9,10 @@ permalink: /publications/
 ### Research Papers<a name="papers"></a>
 
 
-* [ACL'19](http://www.acl2019.org/EN/index.xhtml) \[*Accepted*\]
+* [ACL'19](http://www.acl2019.org/EN/index.xhtml)
 
-  * Mengting Wan, **Rishabh Misra**, Ndapa Nakashole, Julian McAuley, "**Fine-Grained Spoiler Detection from Large-Scale Review Corpora**", in Proceedings of 57th Annual Meeting of the Association for Computational Linguistics 2019 (ACL'19)
-  * [Dataset](https://cseweb.ucsd.edu/~jmcauley/datasets.html#spoilers)
+  * Mengting Wan, **Rishabh Misra**, Ndapa Nakashole, Julian McAuley, "**Fine-Grained Spoiler Detection from Large-Scale Review Corpora**", in Proceedings of 57th Annual Meeting of the Association for Computational Linguistics 2019 (ACL'19), Florence, Italy, Jul. 2019.
+  * [Paper](https://128.84.21.199/pdf/1905.13416.pdf) | [Dataset](https://cseweb.ucsd.edu/~jmcauley/datasets.html#spoilers)
 
 * [RecSys'18](https://recsys.acm.org/recsys18/)
 
