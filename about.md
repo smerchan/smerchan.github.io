@@ -14,6 +14,8 @@ Apart from this, I interned at Amazon in Summer 2017 where my project was to bri
 
 My work experience is helping me in understanding the intricacies involved in developing critical and time-intensive software and my research experience is providing me in-depth knowledge of Machine Learning field. All of my work is driven by these learnings.
 
+#### Last updated: 20th June 2019
+
 ## Contact
 
 Please reach out to me @ [rishabhmisra1994@gmail.com](mailto:rishabhmisra1994@gmail.com)
