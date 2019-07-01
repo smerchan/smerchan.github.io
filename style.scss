@@ -330,6 +330,27 @@ footer {
   text-align: center;
 }
 
+/* Index page */
+.column {
+  float: left;
+  padding: 5px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Projects */
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
