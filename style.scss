@@ -344,6 +344,18 @@ footer {
   width: 30%;
 }
 
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+  .leftcol {
+    width: 100%;
+  }
+  .rightcol {
+    width: 100%;
+  }
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
