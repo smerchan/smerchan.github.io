@@ -63,6 +63,8 @@ sass:
 
 theme: jekyll-theme-cayman
 
+repository: rishabhmisra/rishabhmisra.github.io
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
