@@ -4,7 +4,14 @@ title: About Me
 permalink: /about/
 ---
 
-My interests are in the Network Analysis, Data Mining, Information Retrieval, Applied ML and NLP. 
+Interested in Network Analysis, Data Mining, Knowledge Graphs and Information Retrieval
+
+Experience with Keras, TensorFlow, Numpy, Pandas, Kafka, Redis, Elasticsearch, InfluxDB, MongoDB and Neo4j 
+
+Other areas of Expertise:
+Application Monitoring, Network Analytics, Machine Learning, 
+Kubernetes, Container Networking, IaaS Cloud Solutions, 
+Data Center Networking, Software Defined Networking
 
 #### Last updated: 20th June 2019
 
