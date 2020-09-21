@@ -4,20 +4,21 @@ title: About Me
 permalink: /about/
 ---
 
-Interested in Network Analysis, Data Mining, Knowledge Graphs and Information Retrieval
+Passionate about Network Analysis, Graph Neural Networks, Knowledge Graphs, Data Mining and Information Retrieval
 
-Experience with Keras, TensorFlow, Numpy, Pandas, Kafka, Redis, Elasticsearch, InfluxDB, MongoDB and Neo4j 
+Strong skills in Pytorch, Networkx, Numpy, Pandas and keras
 
-Other areas of Expertise:
+Experience with Redis, Elasticsearch, Postgres, MongoDB and Neo4j 
+
+Other Expertise:
 Application Monitoring, Network Analysis, Machine Learning, 
-Kubernetes, Container Networking, IaaS Cloud Solutions, 
-Data Center Networking and Software Defined Networking
+Kubernetes, Container Networking, IaaS Cloud Solutions (AWS and GCP), 
+Data Center Networking and Network Virtualization 
 
 #### Last updated: 20th June 2019
 
 ## Contact
 
 Please reach out to me @ [merchantsameer2014@gmail.com](mailto:merchantsameer2014@gmail.com)
-
 
 <center> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> </center>
